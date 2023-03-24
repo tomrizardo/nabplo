@@ -1,0 +1,42 @@
+@import './colors';
+
+// custom vertical nav/menus =================================
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+    background-color: transparent;
+    border-left: 4px solid $bg-green1;
+    color: $bg-green1;
+    font-weight: 500;
+}
+
+.nav-pills .nav-link {
+    border-radius: unset;
+}
+// custom vertical nav/menus end =============================
+
+// custom horizontal nav/menus =================================
+.nav-tabs {
+    border-bottom: 4px solid #dee2e6;
+
+    .nav-item {
+        margin-bottom: -4px;
+    }
+    .nav-link {
+        border: none;
+    }
+}
+
+.nav-tabs .nav-link.active, .nav-tabs .nav-item.show .nav-link {
+    color: $bg-green1;
+    background-color: transparent;
+    border-color: transparent;
+    border-bottom: 4px solid $bg-green1;
+    font-weight: 500;
+    margin-bottom: 0;
+}
+
+.nav-tabs .nav-link:hover, .nav-tabs .nav-link:focus {
+    color: $bg-green1;
+}
+
+
+// custom horizontal nav/menus end =============================

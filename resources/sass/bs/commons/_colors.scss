@@ -1,0 +1,18 @@
+$def-white: #fafafa;
+$bg-green1: #43A047;
+$bg-blue1: #26a69a;
+
+$def-black: rgba(0, 0, 0, 0.54);
+$def-black2: #3f3f3f;
+$def-black3: #444444;
+
+$body-bg: $def-white;
+$body-color: $def-black2;
+
+$theme-colors: (
+  "primary": #26a69a,
+  "danger": #ce5851
+);
+
+$enable-responsive-font-sizes: true;
+$enable-validation-icons: false;

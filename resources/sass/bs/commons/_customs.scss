@@ -1,0 +1,26 @@
+@import '../commons/colors';
+
+html, body {
+    height: 100%;
+    // overflow-x: hidden;
+}
+
+label, p {
+    font-size: 14px;
+}
+
+.wrapper {
+    display: flex;
+    width: 100%;
+}
+
+.bg-green2 {
+    background-color: $bg-green1 !important;
+    color: #fff !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    .spinner-border {
+        border-width: medium;
+    }
+}

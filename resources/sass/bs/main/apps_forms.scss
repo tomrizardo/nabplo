@@ -1,0 +1,126 @@
+@import '../main/app.scss';
+@import '../commons/colors';
+@import "~bootstrap/scss/tables";
+@import "~bootstrap/scss/progress";
+@import "~bootstrap/scss/tooltip";
+
+@import '../commons/custom_dt_table';
+
+
+#form-group-link {
+    margin-top: 15px;
+    padding-left: 20px;
+    
+    li {
+        padding: 5px;
+    }
+    
+}
+
+// form steps =================================
+$step_inactive_color: #ddd;
+
+#stepper-navs {
+
+    
+    .nav-item {
+        position: relative;
+
+        .step-dot {
+            content: "";
+            height: 16px;
+            width: 16px;
+            display: block;
+            margin-bottom: 15px;
+            background-color: $step_inactive_color;
+        }
+
+        // .step-line:after {
+        //     content: "";
+        //     height: 1px;
+        //     position: absolute;
+        //     border-bottom: 1px solid $step_inactive_color;
+        //     top: 15px;
+        //     z-index: -1;
+        //     width: 150%;
+        //     right: 0;
+        // }
+
+        // .step-line:last-child::after {
+        //     content: "";
+        //     height: 1px;
+        //     position: absolute;
+        //     border-bottom: 1px solid $step_inactive_color;
+        //     top: 15px;
+        //     z-index: -1;
+        //     width: 50%;
+        //     right: 0;
+        // }
+        
+        &:not(:first-child):before {
+            content: "";
+            height: 1px;
+            position: absolute;
+            border-bottom: 1px solid $step_inactive_color;
+            top: 15px;
+            z-index: -1;
+            width: 100%;
+            left: 0;
+            margin-left: -55%;
+        }
+
+        // &:not(:first-child):after {
+        //     content: "";
+        //     height: 1px;
+        //     position: absolute;
+        //     border-bottom: 1px solid $step_inactive_color;
+        //     top: 15px;
+        //     z-index: -1;
+        //     width: 50%;
+        //     left: 0;
+        // }
+
+        // &:first-child .step-dot::after, &:last-child .step-dot::before {
+        //     content: none;
+        // }
+
+        // .nav-link::before, .nav-link::after {
+        //     content: "";
+        //     height: 1px;
+        //     position: absolute;
+        //     border-bottom: 1px solid $step_inactive_color;
+        //     top: 15px;
+        //     z-index: -1;
+        //     width: 50%;
+        // }
+
+        &.active:not(:first-child):before {
+            border-color: $bg-blue1 !important;
+        }
+
+        .nav-link.active, .nav-link.app-tab-done {
+            .step-dot {
+                background-color: $bg-blue1 !important;
+            }
+
+        }
+        
+    }
+
+    // // .nav-link.active::after {
+    // //     border-color: $bg-blue1 !important;
+    // //     background-color: $bg-blue1 !important;
+    // // }
+    
+    // .nav-item:not(:last-child)::after {
+    //     content: "";
+    //     height: 1px;
+    //     position: absolute;
+    //     border-bottom: 1px solid $step_inactive_color;
+    //     top: 15px;
+    //     z-index: -1;
+    //     width: 100%;
+    // }
+    
+}
+// form steps end =============================

@@ -1,0 +1,55 @@
+// for includeing forms
+@import "~bootstrap/scss/forms";
+// @import "~bootstrap/scss/custom-forms"; // deprecated na ata to kaya nag eeror sa compile
+@import "~bootstrap/scss/forms/input-group";
+@import "~bootstrap/scss/list-group";
+@import "~bootstrap/scss/dropdown";
+@import "~bootstrap/scss/spinners";
+// end
+
+// form inputs ================================
+.form-control:focus, .form-control-plaintext:focus{
+    border-color: #1e7e34;
+    box-shadow: 0 0 0 0.2rem #28a7454d;
+    background-color: transparent;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+}
+
+.form-control {
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    border-radius: 0;
+    background: transparent;
+    padding: 0 5px;
+}
+
+.form-control:disabled, .form-control[readonly] {
+    background-color: transparent;
+    color: rgba(0, 0, 0, 0.42);
+    border-bottom: 1px dotted rgba(0, 0, 0, 0.42);
+}
+
+.input-group-text {
+    border-bottom-left-radius: 0;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    background-color: transparent;
+    color: $def-black;
+}
+// form inputs end ============================
+
+// dropdown ===================================
+.dropdown-item.active, .dropdown-item:active, .dropdown-item.text-success:active, .dropdown-item.text-primary:active{
+    color: #fff !important;
+}
+// dropdown End ===============================
+
+// custom file input ===================================
+.custom-file-btn-height {
+    height: 35px;
+}
+// custom file input End ===============================

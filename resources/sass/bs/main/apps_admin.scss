@@ -1,0 +1,44 @@
+@import '../main/app.scss';
+@import "~bootstrap/scss/progress";
+@import '../commons/custom_dt_table';
+@import "~bootstrap/scss/tooltip";
+@import '../commons/custom_tabs';
+
+// new line of business modal ============================================= 
+#line-biz-displayed-tbl {
+    td {
+        vertical-align: middle;
+    }
+}
+// new line of business modal end ========================================= 
+
+@include media-breakpoint-down(sm) {
+
+    #div-infos-holder {
+        .border-right {
+            border-right: unset !important;
+        }
+
+        .sticky-top {
+            position: unset !important;
+        }
+    }
+    
+    #disp-biz-name {
+        margin-top: 20px;
+    }
+}
+
+@include media-breakpoint-down(md) {
+    .staff-lob-buttons {
+        display: block;
+    }
+}
+
+@include media-breakpoint-only(md) {
+    #div-infos-holder {
+        #disp-app-no {
+            font-size: 22px;
+        }
+    }
+}

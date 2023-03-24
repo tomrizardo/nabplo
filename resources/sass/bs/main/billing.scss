@@ -1,0 +1,164 @@
+@import '../main/app.scss';
+@import "~bootstrap/scss/tables";
+@import "~bootstrap/scss/progress";
+@import "~bootstrap/scss/carousel";
+@import '../commons/custom_tabs';
+
+
+.tbl-biz-info-div {
+    position: relative;
+    max-height: 515px;
+    overflow: auto;
+
+}
+
+.text-primary:disabled {
+    color: #26a69a !important;
+    -webkit-text-fill-color: #26a69a !important;
+    opacity: 1 !important;
+}
+
+#tbl-biz-info-disp {
+    td {
+        padding-bottom: 20px;
+    }
+}
+
+#tbl-bill-details {
+    // thead th {
+    //     padding: 0 5px;
+    //     padding-bottom: 10px;
+    //     border: none;
+    // }
+    
+    tbody {
+        
+        td {
+            // border: 1px solid #ddd;
+            padding: 5px;
+        }   
+    }
+
+    
+}
+
+#online-payment-div::before {
+    content: 'OR';
+    position: absolute;
+    top: 50%;
+    font-weight: bold;
+    color: #26a69a;
+    margin-left: -20px;
+}
+
+.pay-logo {
+    height: 100px;
+    filter: grayscale(100%);
+    padding: 3px;
+    transition: all 0.2s;
+}
+
+.pay-logo:hover, .pay-logo-centered:not(.online-payment-btn.active) img:hover{
+    filter: grayscale(0%);
+    padding: 0;
+    transition: all 0.2s;
+}
+
+.online-payment-btn.active img{
+    filter: grayscale(0%);
+    padding: 0;
+}
+
+.pay-logo-centered img {
+    filter: grayscale(100%);
+    padding: 3px;
+    transition: all 0.2s;
+}
+
+.pay-logo-centered {
+    display: flex;
+    align-items: center;
+}
+
+.carousel-control-prev, .carousel-control-next {
+    color: #97e7e0;
+}
+
+.carousel-control-prev:hover, .carousel-control-prev:focus, .carousel-control-next:hover, .carousel-control-next:focus {
+    color: #17a2b8;
+}
+
+#disp-keri-tracking {
+    float: right;
+    margin-right: 10px;
+}
+
+#disp-biz-bin {
+    float: right;
+}
+
+
+// accordion ==========================
+.accordion .btn-link::after, .accordion .btn-link.collapsed::after {
+    color: #6c757d;
+    right: 27px;
+    position: absolute;
+    font-family: "Font Awesome\ 5 Free";
+    font-weight: 900;
+    font-size: 1.25rem;
+}
+.accordion .btn-link::after {
+    content: "\f0d7";
+}
+
+.accordion .btn-link.collapsed::after {
+    content: "\f0d9";
+}
+// accordion end ======================
+
+// payment ===========================
+.payment-type-select-img {
+    height:25px;
+    margin-right: 20px;
+}
+#select-mobile-payment #dropdownPayment {
+    width: 100%;
+    padding: 10px 0;
+}
+// payment end =======================
+
+
+@include media-breakpoint-only(xs) {
+
+    .btn-holder {
+        .btn {
+            display: block;
+            width: 100%;
+            margin-bottom: 10px;
+        }
+    }
+
+    #gmap_canvas {
+        height: 460px !important;
+    }
+
+    #disp-keri-tracking, #disp-biz-bin {
+        float: none;
+        display: inline-block;
+    }
+
+    #online-payment-div::before {
+        content: none;
+    }
+
+    #online-payment-div {
+        border-left: 1px solid #ddd;
+    }
+}
+
+@include media-breakpoint-only(sm) {
+
+    #gmap_canvas {
+        height: 460px !important;
+    }
+}

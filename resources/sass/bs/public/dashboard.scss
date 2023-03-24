@@ -1,0 +1,59 @@
+// @import '../commons/animatecss_customize';
+@import '../commons/customs';
+@import '~bootstrap/scss/bootstrap';
+@import '../commons/custom_forms';
+@import '../main/sidenav';
+// @import "~bootstrap/scss/carousel";
+
+.carousel-control-prev, .carousel-control-next {
+    color: #97e7e0 !important;
+}
+
+.carousel-control-prev:hover, .carousel-control-prev:focus, .carousel-control-next:hover, .carousel-control-next:focus {
+    color: #17a2b8 !important;
+}
+
+#right-sidenav-holder.active {
+    -webkit-overflow-scrolling: touch;
+    overflow-x:hidden;
+}
+// sign up overlay ===========================
+.sign-up-group {
+    position: relative;
+
+    .sign-up-overlay {
+        position: absolute;
+        background-color: #fff;
+        width: 100%;
+        height: 100%;
+        z-index: 10;
+
+        .sign-up-overlay-content {
+            margin-top: 55%;
+
+            .btn-outline-success:not(:hover) {
+                background-color: white;
+            }
+
+            .btn-outline-success {
+                margin: 0 auto 10px auto;
+            }
+
+        }
+    }
+}
+
+@include media-breakpoint-down(sm) {
+    .sign-up-overlay-content {
+        margin-top: 20% !important;
+    }
+}
+
+@include media-breakpoint-only(xs) { 
+
+    #business-type-select {
+        display: inline-block !important;
+        width: auto !important;
+    }
+}
+// sign up overlay end =======================

@@ -1,0 +1,22 @@
+@import "~datatables.net-bs4/css/dataTables.bootstrap4.min";
+@import '../commons/colors';
+
+// Required
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+@import "~bootstrap/scss/mixins";
+
+@import "~bootstrap/scss/tables";
+@import "~bootstrap/scss/pagination";
+
+.page-item.active .page-link {
+    background-color: $bg-green1 !important;
+}
+
+.dataTables_wrapper {
+    padding-top: 5px;
+}
+
+th {
+    white-space: nowrap;
+}

@@ -1,0 +1,23 @@
+<template>
+   <div class="logo">
+     <img src="https://nabploph.org/public/assets/nabplologo.png"  alt="nabplo" /> <span class="tracking-wider text-white">NABPLO</span>
+   </div>
+</template>
+<style>
+
+.logo {
+  text-decoration: underline;
+    max-width: 100%;
+    display: flex;
+    align-items: center;
+    font-size: 1.3em;
+    font-weight: 600;
+    color:white;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+        Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+.logo img {
+    margin-right: 0.5em;
+    height: 4vh;
+}
+</style>

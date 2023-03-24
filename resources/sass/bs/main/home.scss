@@ -1,0 +1,123 @@
+@import '../main/app.scss';
+@import "~bootstrap/scss/tables";
+
+$muted_color: #b7b7b7;
+
+// Application Steps =============================================
+.app-milestone-block {
+    i {
+        font-size: 6rem;    
+        background-color: #43A047;
+        color: white;
+        text-shadow: 5px 8px #51515178;
+    }
+
+    i.icon-forms {
+        padding: 35px 41px;
+    }
+
+    img {
+        height: 150px;
+    }
+}
+
+.app-step-first::before, .app-step-mid::before, .app-step-last::before{
+    content: "";
+    height: 1px;
+    position: absolute;
+    border-bottom: 1px solid $muted_color;
+    // margin-left: 7px;
+    z-index: -1;
+    top: 50%;
+}
+
+.app-step-first::before {
+    right: 0;
+    width: 50%;
+}
+
+.app-step-mid::before {
+    width: 100%;
+    right: 0;
+    left: 0;
+}
+
+.app-step-last::before {
+    left: 0;
+    width: 50%;
+}
+
+.app-inactive {
+    filter: grayscale(100%);
+}
+
+// Application Steps End =========================================
+
+
+// Application Logs ==============================================
+.app-logs {
+    position: relative;
+    max-height: 250px;
+    overflow: auto;
+    
+    // li:first-child {
+    //     padding-top: 0;
+    // }
+
+    // li {
+    //     padding: 8px 0;
+    //     font-weight: 500;
+
+    //     i {
+    //         vertical-align: middle;
+    //         margin-right: 10px;
+    //         background-color: #fafafa;
+    //         padding: 10px 0;
+    //         font-size: 20px;
+    //     }
+
+    //     small {
+    //         margin-top: 8px;
+    //     }
+    // }
+}
+
+// .app-logs::before {
+//     content: "";
+//     width:1px;
+//     height: 100%;
+//     position: absolute;
+//     border-left: 1px solid $muted_color;
+//     margin-left: 7px;
+//     z-index: -1;
+// }
+// Application Logs End ==========================================
+
+@include media-breakpoint-only(xs) {
+
+    .app-milestone-block {
+        img {
+            height: 100% !important;
+        }
+    }
+
+    // .app-step-first::before, .app-step-mid::before, .app-step-last::before{
+    //     display: none;
+    // }
+    
+    // .app-step-first::before {
+    //     right: 0;
+    //     width: 50%;
+    // }
+    
+    // .app-step-mid::before {
+    //     width: 100%;
+    //     right: 0;
+    //     left: 0;
+    // }
+    
+    // .app-step-last::before {
+    //     left: 0;
+    //     width: 50%;
+    // }
+}
