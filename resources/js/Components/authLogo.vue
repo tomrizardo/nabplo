@@ -1,6 +1,6 @@
 <template>
    <div class="logo">
-     <img src="https://nabploph.org/public/assets/nabplologo.png"  alt="nabplo" /> <span class="tracking-widest text-white">NABPLO</span>
+     <img src="https://nabploph.org/public/assets/nabplologo.png"  alt="nabplo" /> <span class="tracking-wider text-blues">NABPLO</span>
    </div>
 </template>
 <style>
@@ -12,7 +12,7 @@
     align-items: center;
     font-size: 1.3em;
     font-weight: 600;
-    color:white;
+    color:rgb(5 119 226);
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
         Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }

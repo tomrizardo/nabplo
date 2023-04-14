@@ -27,14 +27,18 @@ class RedirectIfAuthenticated
         //     }
         // }
 
-        if ($guards[0] == "staff" && Auth::guard($guards[0])->check()) {
-            return redirect()->route('staff.dashboard');
-        }
-        
-        if (Auth::guard($guards[0])->check()) {
-            return redirect('/dashboard');
-        }
+        // if ($guards[0] == "staff" && Auth::guard($guards[0])->check()) {
+        //     return redirect()->route('staff.dashboard');
+        // }
+     
 
+        if (Auth::guard($guards[0])->check()) {
+            
+     
+            return redirect(RouteServiceProvider::AUTH_HOME);
+        }
+  
+   
         return $next($request);
     }
 }

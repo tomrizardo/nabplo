@@ -1,7 +1,7 @@
 
 
 <template>
-<div class="overflow-hidden tablet:overflow-y-scroll laptop:overflow-hidden tablet:h-screen laptop:max-h-screen">
+<div class="overflow-auto tablet:overflow-y-scroll  tablet:h-screen ">
 
   <div class="fixed z-10 flex items-center justify-between w-screen p-4 border-none sm:p-0 sm:justify-evenly bg">
           
@@ -39,10 +39,13 @@
                   <NavLink :href="route('aboutus')" :active="route().current('aboutus')">
                About Us
                 </NavLink>
+                  <NavLink :href="route('logout')" :active="route().current('logout')">
+               Loug Us
+                </NavLink>
                      
-			<NavLink :href="route('checkstatus')" :active="route().current('checkstatus')">
+			<!-- <NavLink :href="route('checkstatus')" :active="route().current('checkstatus')">
               Track Status
-                </NavLink> 
+                </NavLink>  -->
 
                     
    </div>  
@@ -85,7 +88,7 @@
                             </BreezeResponsiveNavLink>
                         </div>
                             <div class="mt-3 space-y-1">
-                            <BreezeResponsiveNavLink  class="text"  :href="route('checkstatus')">
+                            <BreezeResponsiveNavLink  class="text"  :href="route('logout')">
                               Track Status
                             </BreezeResponsiveNavLink>
                         </div> 
@@ -95,7 +98,7 @@
                     </div>
   </div>
       
-        <div class="bg-white laptop:overflow-y-hidden sm:max-h-screen ">
+        <div class="bg-white laptop:overflow-hidden   ">
             <slot />
         </div>
 

@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 use Inertia\Middleware;
 use Illuminate\Support\Facades\Auth;
 
-use App\Models\Settings\BeneGroup as Pages;
+use App\Models\Settings\Pages;
 
 class HandleInertiaRequests extends Middleware
 {
@@ -36,7 +36,6 @@ class HandleInertiaRequests extends Middleware
      */
     public function share(Request $request)
     {
-
         $shared_data = [
             'app' => [
                 'name' => config('app.name'),
@@ -50,27 +49,20 @@ class HandleInertiaRequests extends Middleware
         ];
 
         if (Auth::check()) {
-            $bene_profile = Auth::user()->profile;
+            // $staff_profile = Auth::user()->profile;
             
             $shared_data['auth'] = [
-                'user' => $request->user()->only('mobile', 'email'),
+                'user' => $request->user()->only( 'email','last_name','first_name','roles','verification'),
             ];
 
-            if (Auth::guard('staff')->check()) {
-                
-                $shared_data['staff'] = [
-                    'fullname' => ucwords(strtolower(Auth::user()->fullname)),
-                ];
+            // if (Auth::guard('staff')->check()) {
+            //     $shared_data['staff'] = [
+            //         'fullname' => ucwords(strtolower(Auth::user()->fullname)), 
+            //     ];
 
-                $shared_data['allowed_pages'] = Pages::orderBy('sorting', 'asc')->get();
-
-            } else {
-                $shared_data['bene_profile'] = [
-                    'fullname' => ucwords(strtolower($bene_profile->first_name.' '.$bene_profile->last_name)), 
-                ];
-
-
-            }
+            //     $shared_data['allowed_pages'] = Pages::where('inactive', 0)->orderBy('sorting')->get()->toArray();
+            //     // dd($shared_data);
+            // }
 
             
         } else {

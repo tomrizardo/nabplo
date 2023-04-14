@@ -2,7 +2,7 @@
 
 <template>
 <div class="overflow-hidden">
-  <div class="z-10 flex items-center justify-between w-screen p-4 border-none sm:fixed sm:p-0 sm:justify-evenly bg">
+  <div class="z-10 flex items-center justify-between w-screen p-4 border-none sm:fixed sm:p-0 sm:justify-evenly bg-blues">
           
                       
                             <!-- Logo -->
@@ -26,14 +26,14 @@
                 
                     </div>
                       
-                                      <div class="items-center hidden mr-12 space-x-20 sm:ml-2 sm:flex lg:mt-0 md:mt-2 justify-evenly">
+                                      <div class="items-center hidden  space-x-20 sm:ml-2 sm:flex lg:mt-0 md:mt-2 justify-evenly">
                 <NavLink :href="route('guest_home')" :active="route().current('guest_home')">
                     Home
                 </NavLink>
                 <BreezeDropdown align="left" width="56">
                                     <template #trigger>
-                                        <span class="inline-flex rounded-md">
-                                            <button type="button" class="inline-flex items-center text-sm font-medium text-white transition duration-150 ease-in-out border-b-2 border-transparent leading-2 text hover:text-gray-700 hover:border-white focus:outline-none focus:text-white focus:border-gray-300">
+                                        <span class="inline-flex rounded-md mb-1">
+                                            <button type="button" class="inline-flex items-center text-sm font-medium text-white transition duration-150 ease-in-out border-b-2 border-transparent leading-3 text hover:text-gray-700 hover:border-white focus:outline-none focus:text-white focus:border-gray-300">
                                                Resources
 
                                                 <svg class="ml-2 -mr-0.5 h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
@@ -89,29 +89,39 @@
                   <NavLink :href="route('aboutus')" :active="route().current('aboutus')">
                About Us
                 </NavLink>
+                        <NavLink :href="route('dashboard')" :active="route().current('dashboard')">
+              Nabplo Directory
+                </NavLink>
                      
-                   
+                     
+<!--                    
      <NavLink :href="route('checkstatus')" :active="route().current('checkstatus')">
               Track Status
-                </NavLink>
+                </NavLink> -->
 
                     
    </div>  
   
-    <!-- <div class="hidden sm:flex ">         
+    <div class="hidden sm:flex sm:items-center  sm:justify-evenly bg-blac w-[20rem]">         
       
                 <Link :href="route('register')" > 
-                        <PrimaryButton class="ml-4 border-white rounded-2xl" >
+                        <PrimaryButton class="ml-4 border-white bg-white text-blue-500 rounded-full hover:bg-blue-500 hover:text-white" >
                  Register
                 </PrimaryButton> 
                </Link>
+                          <Link :href="route('login')" > 
+                    <div class="text-white inline-flex text-xs font-semibold tracking-widest">
+                 LOGIN
+                        </div> 
+          
+               </Link>
                
-                     </div> -->
+                     </div> 
    
    </div>
     
       <div :class="{'block': showingNavigationDropdown, 'hidden': ! showingNavigationDropdown}" class=" sm:hidden">
-          <div class="z-10 flex flex-col items-end pt-3 pb-1 text-white bg">
+          <div class="z-10 flex flex-col items-end pt-3 pb-1 text-white bg-blues">
                       
                         <div class="mt-3 space-y-1">
                             <BreezeResponsiveNavLink class="text" :href="route('guest_home')">
@@ -186,16 +196,29 @@
                               About Us
                             </BreezeResponsiveNavLink>
                         </div>
-                              <div class="mt-3 space-y-1">
+
+                             <div class="mt-3 space-y-1">
+                            <BreezeResponsiveNavLink  class="text"  :href="route('register')">
+                              Register
+                            </BreezeResponsiveNavLink>
+                        </div>
+                             <div class="mt-3 space-y-1">
+                            <BreezeResponsiveNavLink  class="text"  :href="route('login')">
+                           Login
+                            </BreezeResponsiveNavLink>
+                        </div>
+
+                              <!-- <div class="mt-3 space-y-1">
                             <BreezeResponsiveNavLink  class="text"  :href="route('checkstatus')">
                               Track Status
                             </BreezeResponsiveNavLink>
-                        </div>
+                        </div> -->
 
 
 
          
                     </div>
+                    
   </div>
         <div class="container w-screen bg-white">
             <slot />
@@ -211,7 +234,7 @@
     <div class="md:flex md:justify-between">
         <div class="mb-6 md:mb-0">
             <a href="https://nabploph.org/" class="flex items-center">
-                <img src="https://nabploph.org/home/public/assets/nabplologo.png" class="h-8 mr-3" alt="NABPLO Logo">
+                <img src="https://nabploph.org/public/assets/nabplologo.png" class="h-8 mr-3" alt="NABPLO Logo">
                 <span class="self-center mt-1 text-xl font-semibold underline whitespace-nowrap fontblue">NABPLO </span>
             </a>
         </div>
@@ -263,7 +286,7 @@
     </div>
     <!-- <hr class="my-6 fontblue sm:mx-auto dark:border-gray-400 lg:my-8"> -->
     <div class="sm:flex sm:items-center sm:justify-between">
-        <span class="text-sm fontblue sm:text-center dark:text-gray-300">© 2022 <a href="https://nabploph.org/" class="hover:underline">Nabplo Philippines</a>. All Rights Reserved.
+        <span class="text-sm fontblue sm:text-center dark:text-gray-300">© 2023 <a href="https://nabploph.org/" class="hover:underline">Nabplo Philippines</a>. All Rights Reserved.
         </span>
         <div class="flex mt-4 space-x-6 sm:justify-center sm:mt-0">
             <a href="https://www.facebook.com/NABPLO/" class="fontblue hover:text-gray-900 dark:hover:text-white" target="_blank">
@@ -310,11 +333,13 @@ export default {
 color:#0065C3;
 border-color: #0065C3;
 }
-.bg{
+.bgsssd{
     background:#0577e2;
 }
 
-
+.dg{
+background: #03112b;
+}
 
 @media (-webkit-device-pixel-ratio: 1.5) {
 :root {

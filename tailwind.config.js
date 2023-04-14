@@ -11,6 +11,16 @@ module.exports = {
 
     theme: {
         extend: {
+
+            colors: {
+                    'blues':'#0577e2',
+                'darkgreens': '#03214B',
+                'greens': '#51c55c',
+                'aqua':'#BDD99E',
+                'dark':'#395144',
+                'light':'#d5e2e6'
+            
+              },
             fontFamily: {
                 sans: ['Graphik', ...defaultTheme.fontFamily.sans],
             },

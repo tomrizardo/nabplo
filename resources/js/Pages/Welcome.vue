@@ -14,9 +14,9 @@ National Association of Business Permits And Licensing Officers
 
  <!-- <img :src="$page.props.base_url + 'assets/ssd.png'" alt="" class="hidden object-contain w-full sm:block"> -->
 
-      <!-- <PrimaryButton class="   text-white font-bold text-[1.3rem] border-white border-2 rounded-3xl min-h-[3rem] min-w-[12rem] mt-6"  @click="register">
+      <PrimaryButton class="   text-white font-bold text-[1.3rem] border-white border-2 rounded-3xl min-h-[3rem] min-w-[12rem] mt-6"  @click="register">
                  Register Now
-                </PrimaryButton> -->
+                </PrimaryButton>
                 
                 </div>
 <div class="min-h-[50rem] bg-white relative w-screen">
@@ -25,6 +25,39 @@ National Association of Business Permits And Licensing Officers
     ANNOUNCEMENTS
  </div>
 <div class="max-w-[50rem] sm:max-w-[66rem] mt-10 mx-auto mb-10 sm:min-h-[36rem]">
+        <div class="flex flex-col items-center justify-center mb-6">
+            <div class="mb-6 text-2xl font-semibold text-center text-gray-600 sm:text-3xl">
+                 NABPLO EXECUTIVE COMMITEE OFFICERS SY 2022-2025
+            </div>
+       
+
+     <Splide  aria-label="My Favorite Images"   
+      :options="options"
+      @splide:mounted="onSplideMounted"
+      @splide:move="onSplideMove" class="w-screen px-3 sm:px-10">
+     
+
+
+      
+
+          
+        <SplideSlide  v-for="ofc in offc" :key="ofc"  class="flex flex-col items-center justify-center mr-6 min-w-fit">
+
+ 
+      <div class="w-20 h-20 sm:w-24 sm:h-24">
+        <img :src="$page.props.base_url + ofc.pic" alt="" class="object-cover w-full h-full rounded-full">
+      </div>
+      <div class="text-xs font-semibold tracking-wider underline sm:text-md">{{ofc.name}}</div>
+      <div class="text-xs font-semibold text-gray-700 sm:text-sm">{{ofc.pos}}</div>
+      <div class="text-xs italic text-gray-600">{{ofc.muni}}</div>
+        </SplideSlide>
+    
+ 
+ 
+  </Splide>
+        </div>
+    <img :src="$page.props.base_url + 'img/logo/officers.jpg'" alt="" class="object-contain w-full mb-3 sm:block">
+
     <img :src="$page.props.base_url + 'assets/new3.jpg'" alt="" class="object-contain w-full mb-3 sm:block">
     <img :src="$page.props.base_url + 'assets/new1.jpg'" alt="" class="object-contain w-full mb-3 sm:block">
     <img :src="$page.props.base_url + 'assets/new2.jpg'" alt="" class="object-contain w-full mb-3 sm:block">
@@ -38,7 +71,7 @@ National Association of Business Permits And Licensing Officers
    <hr class="mx-auto mt-6 border-gray-300 border-1 max-w-[90vw]" >
 <div class="min-h-[20rem] bg-white mt-[10rem]">
   <div class="w-screen grid grid-cols-2 min-h-[15rem]  ">
-                    <div class="max-w-xl col-span-2 mx-10 sm:mb-0 mb-3 sm:mx-auto text-2xl font-bold text-gray-500 sm:col-span-1 sm:max-w-2xl sm:text-5xl sm:text-start" >
+                    <div class="max-w-xl col-span-2 mx-10 mb-3 text-2xl font-bold text-gray-500 sm:mb-0 sm:mx-auto sm:col-span-1 sm:max-w-2xl sm:text-5xl sm:text-start" >
  <span class="text-blue-500"> SOAR HIGH!</span> EXPANDING HORIZONS TOWARDS <p class="text-blue-500">EASE OF DOING BUSINESS </p>
                     </div>
                     <div class="max-w-xl col-span-2 mx-auto sm:col-span-1 sm:text-xl text-start">
@@ -64,22 +97,78 @@ Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum rerum non volup
 </template>
 
 <script>
+import { defineComponent, ref } from 'vue';
+import { Splide as Core } from '@splidejs/splide';
 import PrimaryButton from '@/Components/PrimaryButton.vue';
 import GuestLayout from "@/Layouts/Guest.vue"
 import {Link,Head } from '@inertiajs/inertia-vue3'
+import { Splide, SplideSlide, SplideTrack  } from '@splidejs/vue-splide';
+import '@splidejs/vue-splide/css';
 
+const offc =  [{name:"Ms. Catherine D. Arce",pos:'Chairperson',muni:'Mandaluyong City',pic:'img/logo/se1.jpg'},{name:"Atty. Melanie T. Soriano-Malaya",pos:'President',muni:"Parañaque City",pic:'img/logo/atty.png'}
+,{name:"Atty. Maribert Pagente",pos:'Executive Vice President',muni:"Makati City",pic:'img/logo/te1.jpg'},{name:"Atty. Maribert Pagente",pos:'Executive Vice President',muni:"Makati City",pic:'img/logo/dsh.png'},{name:"Atty. Maribert Pagente",pos:'Executive Vice President',muni:"Makati City",pic:'img/logo/dsh.png'},{name:"Atty. Maribert Pagente",pos:'Executive Vice President',muni:"Makati City",pic:'img/logo/dsh.png'},{name:"Atty. Maribert Pagente",pos:'Executive Vice President',muni:"Makati City",pic:'img/logo/dsh.png'},
+{name:"Atty. Maribert Pagente",pos:'Executive Vice President',muni:"Makati City",pic:'img/logo/dsh.png'},{name:"Atty. Maribert Pagente",pos:'Executive Vice President',muni:"Makati City",pic:'img/logo/dsh.png'},{name:"Atty. Maribert Pagente",pos:'Executive Vice President',muni:"Makati City",pic:'img/logo/dsh.png'},{name:"Atty. Maribert Pagente",pos:'Executive Vice President',muni:"Makati City",pic:'img/logo/dsh.png'},{name:"Atty. Maribert Pagente",pos:'Executive Vice President',muni:"Makati City",pic:'img/logo/dsh.png'}]
 export default {   
 layout:GuestLayout,
 components:{
     PrimaryButton,
-Head
+Head,
+Splide,SplideSlide,SplideTrack,
+
 },
 
+data(){
+    return{
+        currentSlide: 0,
+      slideCount: 0,
+
+        offc,
+         
+    }
+     },
 methods:{
 	 register(){
          this.$inertia.visit(route('register'), {'method': 'get'});
      },
-}
+
+       updateSlideInfo(currentSlide, nextSlide) {
+    this.currentSlide = currentSlide;
+    this.slideCount = nextSlide;
+  },
+     
+},
+
+  setup() {
+ 
+    const options = {
+      rewind : true,
+      perPage: 5,
+      gap    : '.5rem',
+      height : '15rem',
+      breakpoints: {
+        1000: {
+          perPage: 2,
+            gap    : '.1rem',
+            height : '15rem',
+        },
+      },
+    };
+    const enabled = ref(true);
+    const onSplideMounted = function(splide) {
+      console.log(splide.length);
+    };
+    const onSplideMove = function(splide, index) {
+      console.log('move to', index);
+    };
+    return {
+     
+      options: options,
+      onSplideMounted: onSplideMounted,
+      onSplideMove: onSplideMove,
+      enabled: enabled,
+    };
+  },
+
 
 }
 </script>
@@ -91,4 +180,14 @@ background-image: url('https://nabploph.org/public/assets/ssd.png');
 
 
 }
+
+  /* hide scrollbar for the container */
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+  
+  /* style for each profile picture item */
+  .flex > .min-w-fit {
+    flex-shrink: 0;
+  }
 </style>

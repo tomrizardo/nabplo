@@ -52,9 +52,12 @@ Route::middleware('auth')->group(function () {
                 ->name('password.confirm');
 
     Route::post('confirm-password', [ConfirmablePasswordController::class, 'store']);
+Route::post('search', [DashboardController::class, 'getRecords'])->name('search');
 
-    Route::get('/dashboard', [Dashboard::class, 'usrDashboard'])->name('dashboard');
+    Route::get('home', [DashboardController::class, 'create'])->name('home');
+    Route::get('dashboard', [DashboardController::class, 'dashboard'])->name('dashboard');
 
+    Route::get('settings', [DashboardController::class, 'settings'])->name('settings');
 
     Route::post('logout', [AuthenticatedSessionController::class, 'destroy'])
                 ->name('logout');

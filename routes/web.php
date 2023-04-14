@@ -4,6 +4,7 @@ use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 use App\Http\Controllers\Auth\RegisteredUserController;
+use App\Http\Controllers\Home\DashboardController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -83,8 +84,9 @@ Route::get('/checkstatus', function () {
 })->name('checkstatus');
 
 Route::post('request-app-status', [RegisteredUserController::class, 'checkRequestStatus'])->name('check_request_status');
-
-
+Route::post('settings', [DashboardController::class, 'RoleChange'])->name('rolechange');
+Route::post('search', [DashboardController::class, 'getRecords'])->name('search');
+Route::post('provinces', [DashboardController::class, 'provinces'])->name('province');
 Route::post('checkstatus', [RegisteredUserController::class, 'verificationChangeStatus'])->name('update');
 
 require __DIR__.'/auth.php';

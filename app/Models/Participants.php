@@ -8,44 +8,45 @@ use Illuminate\Database\Eloquent\Model;
 use DB;
 use Str;
 class Participants extends Model
-{
+{    protected $connection = 'mysql';
+    protected $table = 'directory';
     use HasFactory;
 
-    protected $fillable = [
-        'ref_no',
-        'last_name',
-        'first_name',
-        'mid_name',
-        'membr_filename',
-        'ext_name',
-		'membr_fee',
-        'reciept_filename',
-        'membr_since',
-        'validation_status',
-        'validation_remarks',
-        'uploaded_datetime',
-        'contact_no',
-        'contact_no_date_active',
-        'email',
-        'addr_municipality',
-        'lgu_class',
-        'addr_type',
-        'exec_name',
-        'others_org',
-        'position',
-        'department',
-        'membr_type',
-        'nat_employment',
-        'org_setup',
-        'bplo_func',
-        'full_addr',
-        'paid',
-		'eboss',
-		'topics',
-		'mempaid',
+    // protected $fillable = [
+    //     'ref_no',
+    //     'last_name',
+    //     'first_name',
+    //     'mid_name',
+    //     'membr_filename',
+    //     'ext_name',
+	// 	'membr_fee',
+    //     'reciept_filename',
+    //     'membr_since',
+    //     'validation_status',
+    //     'validation_remarks',
+    //     'uploaded_datetime',
+    //     'contact_no',
+    //     'contact_no_date_active',
+    //     'email',
+    //     'addr_municipality',
+    //     'lgu_class',
+    //     'addr_type',
+    //     'exec_name',
+    //     'others_org',
+    //     'position',
+    //     'department',
+    //     'membr_type',
+    //     'nat_employment',
+    //     'org_setup',
+    //     'bplo_func',
+    //     'full_addr',
+    //     'paid',
+	// 	'eboss',
+	// 	'topics',
+	// 	'mempaid',
 
 
-    ];
+    // ];
     protected $appends = [
        
         'created_date_formatted',

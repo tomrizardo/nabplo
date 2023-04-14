@@ -1,110 +1,296 @@
-<script setup>
-import { ref } from 'vue';
-import ApplicationLogo from '@/Components/ApplicationLogo.vue';
-import Dropdown from '@/Components/Dropdown.vue';
-import DropdownLink from '@/Components/DropdownLink.vue';
-import NavLink from '@/Components/NavLink.vue';
-import ResponsiveNavLink from '@/Components/ResponsiveNavLink.vue';
-import { Link } from '@inertiajs/inertia-vue3';
 
-const showingNavigationDropdown = ref(false);
-</script>
 
 <template>
-    <div>
-        <div class="min-h-screen bg-gray-100">
-            <nav class="bg-white border-b border-gray-100">
-                <!-- Primary Navigation Menu -->
-                <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
-                    <div class="flex justify-between h-16">
-                        <div class="flex">
-                            <!-- Logo -->
-                            <div class="flex items-center shrink-0">
+<div class="overflow-auto tablet:overflow-y-scroll  tablet:h-screen ">
+
+  <div class=" z-10 flex items-center justify-between w-screen p-4 border-none sm:p-0 sm:justify-between  sm:hidden">
+          
+                      
+                           
+                            <div class="flex items-center justify-center ml-6">
                                 <Link :href="route('dashboard')">
-                                    <ApplicationLogo class="block w-auto h-9" />
+                                    <ApplicationLogo class="block w-auto h-12 text-white" />
                                 </Link>
-                            </div>
 
-                            <!-- Navigation Links -->
-                            <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                                <NavLink :href="route('dashboard')" :active="route().current('dashboard')">
-                                    Dashboard
-                                </NavLink>
-                            </div>
-                        </div>
+                            
+        </div> 
 
-                        <div class="hidden sm:flex sm:items-center sm:ml-6">
-                            <!-- Settings Dropdown -->
-                            <div class="relative ml-3">
-                                <Dropdown align="right" width="48">
-                                    <template #trigger>
-                                        <span class="inline-flex rounded-md">
-                                            <button type="button" class="inline-flex items-center px-3 py-2 text-sm font-medium leading-4 text-gray-500 transition duration-150 ease-in-out bg-white border border-transparent rounded-md hover:text-gray-700 focus:outline-none">
-                                                {{ $page.props.auth.user.name }}
+   <div class="flex items-end sm:hidden ml-[10rem]">
+  <button id="buttonreg" aria-label="Dropdown button" @click="showingNavigationDropdown = !showingNavigationDropdown" class="inline-flex items-center justify-center p-2 text-white transition duration-150 ease-in-out rounded-md bg-blues  hover:text-white hover:bg-blue-500 focus:outline-none focus:bg-blues focus:text-white">
+    <svg class="w-6 h-6" stroke="currentColor" fill="none" viewBox="0 0 24 24">
+      <path :class="{'hidden': showingNavigationDropdown, 'inline-flex': !showingNavigationDropdown }" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+      <path :class="{'hidden': !showingNavigationDropdown, 'inline-flex': showingNavigationDropdown }" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+    </svg>
+  </button>
+</div>
 
-                                                <svg class="ml-2 -mr-0.5 h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                                                    <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
-                                                </svg>
-                                            </button>
-                                        </span>
-                                    </template>
+<div class="flex items-center justify-between sm:flex-col sm:w-1/2 lg:mt-0 md:mt-2">
+ 
 
-                                    <template #content>
-                                        <DropdownLink :href="route('logout')" method="post" as="button">
-                                            Log Out
-                                        </DropdownLink>
-                                    </template>
-                                </Dropdown>
-                            </div>
-                        </div>
+  <div :class="{'block': showingNavigationDropdown, 'hidden': !showingNavigationDropdown}" class="sm:hidden absolute z-50 top-0 left-0 w-full  mt-20 bg-white" >
+<div class="flex flex-col items-start p-5  justify-start laptop:min-h-[32rem] desktop:min-h-[45rem]">
 
-                        <!-- Hamburger -->
-                        <div class="flex items-center -mr-2 sm:hidden">
-                            <button @click="showingNavigationDropdown = ! showingNavigationDropdown" class="inline-flex items-center justify-center p-2 text-gray-400 transition duration-150 ease-in-out rounded-md hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 focus:text-gray-500">
-                                <svg class="w-6 h-6" stroke="currentColor" fill="none" viewBox="0 0 24 24">
-                                    <path :class="{'hidden': showingNavigationDropdown, 'inline-flex': ! showingNavigationDropdown }" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-                                    <path :class="{'hidden': ! showingNavigationDropdown, 'inline-flex': showingNavigationDropdown }" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-                                </svg>
-                            </button>
-                        </div>
-                    </div>
-                </div>
+      <!-- <div class="flex items-center p-3 text-[0.9em] font-semibold text-gray-500 text-center justify-start bgss w-full" :class="{ 'rounded-md bg-blues text-white': route().current('dashboard') }" ><div>
+<svg  width="30px" height="22px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" id="dashboard" class="icon glyph" stroke="currentColor" fill="currentColor" > 
 
-                <!-- Responsive Navigation Menu -->
-                <div :class="{'block': showingNavigationDropdown, 'hidden': ! showingNavigationDropdown}" class="sm:hidden">
-                    <div class="pt-2 pb-3 space-y-1">
-                        <ResponsiveNavLink :href="route('dashboard')" :active="route().current('dashboard')">
-                            Dashboard
-                        </ResponsiveNavLink>
-                    </div>
+<g id="SVGRepo_bgCarrier" stroke-width="0"/>
 
-                    <!-- Responsive Settings Options -->
-                    <div class="pt-4 pb-1 border-t border-gray-200">
-                        <div class="px-4">
-                            <div class="text-base font-medium text-gray-800">{{ $page.props.auth.user.name }}</div>
-                            <div class="text-sm font-medium text-gray-500">{{ $page.props.auth.user.email }}</div>
-                        </div>
+<g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"/>
 
-                        <div class="mt-3 space-y-1">
-                            <ResponsiveNavLink :href="route('logout')" method="post" as="button">
-                                Log Out
-                            </ResponsiveNavLink>
-                        </div>
-                    </div>
-                </div>
-            </nav>
+<g id="SVGRepo_iconCarrier">
 
-            <!-- Page Heading -->
-            <header class="bg-white shadow" v-if="$slots.header">
-                <div class="px-4 py-6 mx-auto max-w-7xl sm:px-6 lg:px-8">
-                    <slot name="header" />
-                </div>
-            </header>
+<rect x="2" y="2" width="9" height="11" rx="2"/>
 
-            <!-- Page Content -->
-            <main>
-                <slot />
-            </main>
+<rect x="13" y="2" width="9" height="7" rx="2"/>
+
+<rect x="2" y="15" width="9" height="7" rx="2"/>
+
+<rect x="13" y="11" width="9" height="11" rx="2"/>
+
+</g>
+
+</svg>
+    </div> <Link :href="route('dashboard')" class="ml-1.5"  :active="route().current('dasboard')" >
+                               Dashboard
+                                </Link>
+</div> -->
+    <div class="flex items-center p-3 text-[0.9em] font-semibold text-gray-500 text-center justify-start bgss w-full" :class="{ 'rounded-md bg-blues text-white': route().current('home') }" ><div>
+            <svg aria-hidden="true"  width="30px" height="22px" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+    </div> <Link :href="route('home')" class="ml-1"  :active="route().current('home')" >
+                               Nablo Directory
+                                </Link>
+</div>
+
+<div class="flex items-center p-3 text-[0.9em] font-semibold text-gray-500 text-center justify-start bgss w-full " v-if="$page.props.auth.user.roles == '1'"  :class="{ 'rounded-md bg-blues text-white max-w-full': route().current('settings') }"><div>
+<svg width="30px" height="22px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"  fill="none" stroke="currentColor">
+<path class="a" d="M3,21.016l.78984-2.87249C5.0964,13.3918,8.5482,11.016,12,11.016" /><circle class="b" cx="12" cy="5.98404" r="5"/><circle class="a" cx="17" cy="18" r="5"/><polyline class="a" points="14.872 18.149 16.32 20.082 19.533 16.572"/></svg> 
+   </div> <Link :href="route('settings')" class="ml-1"  :active="route().current('settings')" >
+                                 User Verificaton
+                                </Link>
+</div>
+
+    <div class="flex items-center p-3 text-[0.9em] font-semibold text-gray-500 text-center justify-start bgss w-full" :class="{ 'rounded-md bg-blues text-white': route().current('logout') }" ><div>
+<svg width="23px" height="23px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M14 20H6C4.89543 20 4 19.1046 4 18L4 6C4 4.89543 4.89543 4 6 4H14M10 12H21M21 12L18 15M21 12L18 9" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+      
+    </div> <Link :href="route('logout')" class="ml-1"   method="post" as="button">
+                               Logout
+                                </Link>
+</div>
+
+            </div>
+  </div>
+</div>
+</div>
+    <div class="block gap-10 sm:grid tablet:grid-cols-5 laptop:grid-cols-5 desktop:grid-cols-5 bg-white">
+
+
+            <div class=" text-center text-black  min-w-[15rem] laptop:flex flex-col justify-beween fixed z-5 sm:col-span-1 min-h-screen hidden  tablet:hidden   ">
+                    <div class="flex items-center justify-start ml-6">
+                                <Link :href="route('dashboard')">
+                                    <ApplicationLogo class="block w-auto h-12" />
+                                </Link>
+ </div>
+<div class="flex flex-col items-start p-5  mt-16 justify-start laptop:min-h-[32rem] desktop:min-h-[45rem]">
+
+      <!-- <div class="flex items-center p-3 text-[0.9em] font-semibold text-gray-500 text-center justify-start bgss w-full" :class="{ 'rounded-md bg-blues text-white': route().current('dashboard') }" ><div>
+<svg  width="30px" height="22px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" id="dashboard" class="icon glyph" stroke="currentColor" fill="currentColor" > 
+
+<g id="SVGRepo_bgCarrier" stroke-width="0"/>
+
+<g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"/>
+
+<g id="SVGRepo_iconCarrier">
+
+<rect x="2" y="2" width="9" height="11" rx="2"/>
+
+<rect x="13" y="2" width="9" height="7" rx="2"/>
+
+<rect x="2" y="15" width="9" height="7" rx="2"/>
+
+<rect x="13" y="11" width="9" height="11" rx="2"/>
+
+</g>
+
+</svg>
+    </div> <Link :href="route('dashboard')" class="ml-1.5"  :active="route().current('dasboard')" >
+                               Dashboard
+                                </Link>
+</div> -->
+    <div class="flex items-center p-3 text-[0.9em] font-semibold text-gray-500 text-center justify-start bgss w-full" :class="{ 'rounded-md bg-blues text-white': route().current('home') }" ><div>
+            <svg aria-hidden="true"  width="30px" height="22px" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+    </div> <Link :href="route('home')" class="ml-1"  :active="route().current('home')" >
+                               Nablo Directory
+                                </Link>
+</div>
+
+<div class="flex items-center p-3 text-[0.9em] font-semibold text-gray-500 text-center justify-start bgss w-full " v-if="$page.props.auth.user.roles == '1'"  :class="{ 'rounded-md bg-blues text-white max-w-full': route().current('settings') }"><div>
+<svg width="30px" height="22px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"  fill="none" stroke="currentColor">
+<path class="a" d="M3,21.016l.78984-2.87249C5.0964,13.3918,8.5482,11.016,12,11.016" /><circle class="b" cx="12" cy="5.98404" r="5"/><circle class="a" cx="17" cy="18" r="5"/><polyline class="a" points="14.872 18.149 16.32 20.082 19.533 16.572"/></svg> 
+   </div> <Link :href="route('settings')" class="ml-1"  >
+                                 User Verificaton
+                                </Link>
+</div>
+
+
+
+            </div>
+            <div class="px-3 ml-3 text-start">
+    
+     <!-- <div class="flex items-center justify-center w-8 h-8 rounded-full bg-greens">
+
+                
+        <div class="uppercase">
+            {{($page.props.auth.user.first_name).slice(0,1)}}
         </div>
-    </div>
+
+        <div class="uppercase">
+            {{($page.props.auth.user.last_name).slice(0,1)}}
+        </div>
+
+      
+          </div> -->
+
+                <div class="capitalize ">
+            <!-- {{$page.props.auth.user.first_name + " "+    $page.props.auth.user.last_name}} -->
+        </div>
+
+        <div class="flex items-center p-3 text-[0.9em] font-semibold text-gray-500 text-center justify-start bgss">
+<svg width="23px" height="23px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M14 20H6C4.89543 20 4 19.1046 4 18L4 6C4 4.89543 4.89543 4 6 4H14M10 12H21M21 12L18 15M21 12L18 9" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+      
+     <Link :href="route('logout')" method="post" as="button" class="text-blues ml-1 text-sm" >
+                                    Log out
+                                        </Link>
+  </div>
+            </div>
+</div>
+    
+
+            
+             <div class=" col-span-4 p-3 laptop:col-span-5 desktop:col-span-5 laptop:p-0 desktop:p-0 desktop:ml-[15rem] laptop:ml-[18rem] bg tablet:col-span-5 tablet:p-3 bg " >  
+              <div class="w-full bg p-3 hidden sm:block">
+              <div class="flex items-center justify-between">
+                  <div>
+                    
+                  </div>
+
+                  <div class="flex items-center mr-1">
+                    <div>
+                          {{ $page.props.auth.user.email}}
+                    </div>
+                           <div class=" h-8 w-8 rounded-full  ml-2 text-center flex items-center justify-center mr-3" :style="{ backgroundColor: randomColor  }" >
+                       <span class="text-md font-medium uppercase " > 
+                            {{ $page.props.auth.user.first_name.split(' ')[0][0] }}{{ $page.props.auth.user.last_name.split(' ')[0][0] }}
+                       </span>
+
+                       
+                  </div>
+<!-- 
+                                    <div v-else class=" h-10 w-10 rounded-full  ml-2 text-center flex items-center justify-center" >
+               <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRna0Yn_AMMEcnVGFuHNG0-UENJAFjsGKO8RQ&usqp=CAU" alt="" class="h-full w-full rounded-full object-cover">
+
+                       
+                  </div> -->
+
+                      <div>
+                          
+                      </div>
+                
+                  </div>
+                </div>  </div><slot /></div>
+        </div>
+
+
+      
+    
+        </div>
 </template>
+<script>
+import ApplicationLogo from '@/Components/authLogo.vue';
+import PrimaryButton from '@/Components/PrimaryButton.vue';
+import NavLink from '@/Components/NavLink.vue';
+import BreezeResponsiveNavLink from '@/Components/ResponsiveNavLink.vue';
+import {Head ,Link} from '@inertiajs/inertia-vue3';
+export default {
+    components: {
+        ApplicationLogo,
+        PrimaryButton,
+        NavLink,Head,Link,BreezeResponsiveNavLink
+     
+    },
+
+    data(){
+        return{
+           randomColor: '#FFC947',
+            showingNavigationDropdown:false,
+        }
+    },
+   methods: {
+    closeDropdown() {
+      this.showingNavigationDropdown = false;
+    },
+  },
+
+  created() {
+  const colors = ['#FFC947', '#FFB4A2', '#C2E7D9', '#A2D2FF', '#E4B4C2'];
+  this.randomColor = colors[Math.floor(Math.random() * colors.length)];
+},
+
+}
+
+
+</script>
+<style>
+.bgsss{
+    background:#0577e2;
+}
+.bg{
+    background:#f7f8f9
+}
+.bgs{
+    background: #fdfdfd;
+}
+/* 
+@media (-webkit-device-pixel-ratio: 1.25) {
+:root {
+zoom: 1;
+}
+} */
+.fadeInDown {
+    animation-duration: 0.5s;
+    animation-name: fadeInDown;
+  }
+
+  .fadeOutUp {
+    animation-duration: 0.5s;
+    animation-name: fadeOutUp;
+  }
+
+  @keyframes fadeInDown {
+    from {
+      transform: translate3d(0, -100%, 0);
+      opacity: 0;
+    }
+
+    to {
+      transform: none;
+      opacity: 1;
+    }
+  }
+
+  @keyframes fadeOutUp {
+    from {
+      transform: none;
+      opacity: 1;
+    }
+
+    to {
+      transform: translate3d(0, -100%, 0);
+      opacity: 0
+    }
+  }
+
+</style>
