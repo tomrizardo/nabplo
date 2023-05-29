@@ -13,6 +13,9 @@ use App\Models\User;
 use App\Models\Participants;
 use App\Models\Municipality;
 use App\Models\Attachments;
+use App\Models\Articles;
+use App\Models\Executive;
+use App\Models\Advisory;
 
 
 
@@ -29,7 +32,7 @@ class DashboardController extends Controller
     public function create()
     {
 
-        $info = Municipality::select('region')->groupBy('region')->get();
+        $info = Participants::select('region')->groupBy('region')->get();
      
         // $recent_app_listing = Municipality::select('name')->get()->pluck('name');
         return Inertia::render('Auth/Home',[
@@ -74,68 +77,28 @@ class DashboardController extends Controller
     
     }
 
-//     public function getRecords(Request $req)
-// {
-//     $paramOne = $req->input('keyword');
 
-//     // $attachments = Attachments::all()->map(function($attachment) {
-//     //     return array_map('trim', (array) $attachment);
-//     // });
+    
 
-//     $participants = Participants::select('participants.*', 'muncipalities.region', 'muncipalities.province')
-//         ->join('muncipalities', 'participants.addr_municipality', '=', 'muncipalities.name')
-//         ->where(function($query) use ($paramOne) {
-//             $query->where('last_name', 'LIKE', '%' . $paramOne . '%')
-//                   ->orWhere('first_name', 'LIKE', '%' . $paramOne . '%')
-//                   ->orWhere('addr_municipality', 'LIKE', '%' . $paramOne . '%')
-//                   ->orWhere('muncipalities.region', 'LIKE', '%' . $paramOne . '%')
-//                   ->orWhere('muncipalities.province', 'LIKE', '%' . $paramOne . '%');
-//         })
-//         ->orderBy('last_name', 'ASC')
-//         ->get();
 
-//     if ($participants->isEmpty()) {
-//         $alert_type = 'error';
-//         $alert_message = "Unable to find reference number or it doesn't exist.";
-//         $ser = [];
-//     } else {
-//         $ser = $participants->map(function ($participant) {
-//             $participant['full_name'] = $participant['last_name'] . ', ' . $participant['first_name'] . ' ' . $participant['mid_name'];
-//             return $participant;
-//         });
-//     }
-
-//     return response()->json([
-//         'info' => $ser,
-//         'test' => $attachments
-//     ]);
-// }
 
     public function getRecords(Request $req)
     {
    
         
         $paramOne=$req['keyword'];
-        $paramTwo=$req['region'];
+        $paramTwo = $req['region'];
         $paramThree=$req['province'];
-        // $info = Participants::select('participants.*', 'muncipalities.region','muncipalities.province')
-        // ->join('muncipalities', 'participants.addr_municipality', '=', 'muncipalities.name')
-        // ->where('last_name','LIKE','%'.$paramOne.'%'  )
-        //  ->orWhere('first_name', 'LIKE','%'.$paramOne.'%'  )
-        //  ->orWhere('addr_municipality', 'LIKE','%'.$paramOne.'%'  )
-        //  ->orWhere('muncipalities.region', 'LIKE','%'.$paramOne.'%'  )
-        //  ->orWhere('muncipalities.province', 'LIKE','%'.$paramOne.'%'  )
-        //  ->orderBy('last_name','ASC')
-        // ->get();
-
+    
         $info = Participants::select()
             ->where ([   ['municipality', 'LIKE', '%'.$paramOne.'%'],
             ['region', 'LIKE', '%'.$paramTwo.'%'],
             ['province', 'LIKE', '%'.$paramThree.'%']])
+            ->orderBy('bplo_chief','ASC')
             ->orWhere ([   ['bplo_chief', 'LIKE', '%'.$paramOne.'%'],
             ['region', 'LIKE', '%'.$paramTwo.'%'],
             ['province', 'LIKE', '%'.$paramThree.'%']])
-          
+            ->orderBy('bplo_chief','ASC')
          ->get();
 
         if (empty($info)) {
@@ -148,11 +111,18 @@ class DashboardController extends Controller
         else {
             $ser = $info->map(function ($participant) {
                 $participant['bplo_chief'] = utf8_decode($participant['bplo_chief']);
-                $participant['municipality'] = utf8_decode($participant['municipality']);
-                $participant['mayor'] = utf8_decode($participant['mayor']);
-                $participant['province'] = utf8_decode($participant['province']);
                 $participant['email'] = utf8_decode($participant['email']);
-                $participant['office_number'] = utf8_decode($participant['office_number']);
+            
+                    // $participant['municipality'] = utf8_decode($participant['municipality']);
+              
+            
+            
+                // $participant['mayor'] = utf8_decode($participant['mayor']);
+                // $participant['province'] = utf8_decode($participant['province']);
+             
+                // $participant['region'] = utf8_decode($participant['region']);
+                
+                // $participant['office_number'] = utf8_decode($participant['office_number']);
                 return $participant;
             });
             // $ser = $info->map(function ($employee) {
@@ -193,6 +163,130 @@ class DashboardController extends Controller
       
     }
 
+           /**
+     * Display the registration view.
+     *
+     * @return \Inertia\Response
+     */
+    public function articles()
+    {
+        $art = Articles::select('*')->where('isActive','1')->orderBy('sort','ASC')->get();
+        // $recent_app_listing = Municipality::select('name')->get()->pluck('name');
+
+
+        
+        foreach ($art as $arts) {
+            $filePath = storage_path('app/app/public/articles/' . $arts->picture_filename);
+    
+            if (file_exists($filePath)) {
+                $fileContent = file_get_contents($filePath);
+                $arts->signature_data_uri = $fileContent;
+            } else {
+                $arts->signature_data_uri = null; // or provide a default image URL
+            }
+        }
+        return Inertia::render('Articles',[
+        
+            'articles'=>    $art
+               
+        ]);
+    
+    }
+    
+
+    
+           /**
+     * Display the registration view.
+     *
+     * @return \Inertia\Response
+     */
+    public function advisorys()
+    {
+        $art = Advisory::select('*')->orderBy('sort','ASC')->get();
+
+
+        foreach ($art as $execss) {
+            $filePath = storage_path('app/app/public/advisory/' . $execss->picture_filename);
+    
+            if (file_exists($filePath)) {
+                $fileContent = file_get_contents($filePath);
+                $execss->signature_data_uri = $fileContent;
+            } else {
+                $execss->signature_data_uri = null; // or provide a default image URL
+            }
+        }
+ 
+        // $recent_app_listing = Municipality::select('name')->get()->pluck('name');
+        return response()->json([
+          
+            
+            'advisory'=>$art
+        ]);
+      
+    
+    }
+    
+           /**
+     * Display the registration view.
+     *
+     * @return \Inertia\Response
+     */
+    public function exec()
+    {
+        $exec = Executive::select('*')->orderBy('sort','ASC')->get();
+
+        foreach ($exec as $execss) {
+           $filePath = storage_path('app/app/public/profile/' . $execss->picture_filename);
+   
+           if (file_exists($filePath)) {
+               $fileContent = file_get_contents($filePath);
+               $execss->signature_data_uri = $fileContent;
+           } else {
+               $execss->signature_data_uri = null; // or provide a default image URL
+           }
+
+           $execss->name = $execss->first_name . ' ' . $execss->mid_name . ' ' . $execss->last_name;
+       }
+        return Inertia::render('Executive',[
+        
+            'executives'=>    $exec
+               
+        ]);
+    
+    }
+    
+      
+           /**
+     * Display the registration view.
+     *
+     * @return \Inertia\Response
+     */
+    public function articless()
+    {
+        $art = Articles::select('*')->orderBy('sort','ASC')->take(3)->get();
+
+
+        foreach ($art as $execss) {
+            $filePath = storage_path('app/app/public/articles/' . $execss->picture_filename);
+    
+            if (file_exists($filePath)) {
+                $fileContent = file_get_contents($filePath);
+                $execss->signature_data_uri = $fileContent;
+            } else {
+                $execss->signature_data_uri = null; // or provide a default image URL
+            }
+        }
+ 
+        // $recent_app_listing = Municipality::select('name')->get()->pluck('name');
+        return response()->json([
+          
+            
+            'articles'=>$art
+        ]);
+      
+    
+    }
+
     public function provinces(Request $req)
     {
 
@@ -200,7 +294,7 @@ class DashboardController extends Controller
         $paramOne=$req['province'];
 
      
-        $province = Municipality::select('province')
+        $province = Participants::select('province')
         ->where('region','LIKE','%'.$paramOne.'%'  )
         ->groupBy('province')
         ->get();

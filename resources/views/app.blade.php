@@ -10,7 +10,7 @@
         <title inertia>{{ config('app.name', 'Parañaque SAP') }}</title>
 
         <link rel="shortcut icon" href="{{ asset('favicon.png') }}">
-       
+   
 
         <!-- Fonts -->
         {{-- <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap"> --}}

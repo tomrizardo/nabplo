@@ -129,11 +129,7 @@ I hereby consent the National Association of the Business Permits and Licensing 
                 <TextInput id="email" type="email" class="block w-full mt-1" v-model="form.email"/>
                 <InputError class="mt-2" :message="form.errors.email" />
             </div>
-              <div class="mt-4">
-                <InputLabel for="contact_no" value="Mobile No." />
-                <TextInput id="contact_no" type="number" class="block w-full mt-1" v-model="form.contact_no" :class="{'border-red-500': form.errors.contact_no } " @blur="form.errors.contact_no = false"/>
-                <InputError class="mt-2" :message="form.errors.contact_no" />
-            </div>
+            
                
 
         
@@ -181,7 +177,7 @@ I hereby consent the National Association of the Business Permits and Licensing 
 </template>
 <script>
 import lottie from 'lottie-web';
-import GuestLayout from '@/Layouts/Guest.vue';
+import GuestLayout from '@/Layouts/StaffAuth.vue';
 import InputError from '@/Components/InputError.vue';
 import InputLabel from '@/Components/InputLabel.vue';
 import PrimaryButton from '@/Components/PrimaryButton.vue';
@@ -209,8 +205,7 @@ return{
                 first_name: "",
                  last_name: "",
                   mid_name: "",
-       
-                      contact_no:"",                      
+                          
                 email: "",
                 password: "",
                 password_confirmation: "",
@@ -241,7 +236,7 @@ methods:{
 
             this.error_fullname = '';
 
-            this.form.post(this.route("register"), {
+            this.form.post(this.route("staff.register"), {
                 onFinish: () => {},
                 onSuccess: (resp_data) => {
                     // const { ref_id, message, sent_otp } = resp_data.props;
@@ -278,7 +273,7 @@ mounted() {
     renderer: 'svg',
     loop: true,
     autoplay: true,
-   path: `${this.$page.props.base_url}img/logo/lot.json`
+    path: `http://localhost/nabplo/img/logo/lot.json`
   });
 }
 

@@ -4,7 +4,7 @@
     <GuestLayout>
       <div class="min-h-[100rem] w-screen bg-white sm:mt-[8rem] ">
          <div class="w-screen grid grid-cols-2 min-h-[15rem]  ">
-                    <div class="max-w-xl col-span-2 mx-10 sm:mb-0 mb-3 sm:mx-auto text-2xl font-bold text-gray-500 sm:col-span-1 sm:max-w-2xl sm:text-5xl sm:text-start" >
+                    <div class="max-w-xl col-span-2 mx-10 mb-3 text-2xl font-bold text-gray-500 sm:mb-0 sm:mx-auto sm:col-span-1 sm:max-w-2xl sm:text-5xl sm:text-start" >
  <span class="text-blue-500"> SOAR HIGH!</span> EXPANDING HORIZONS TOWARDS <p class="text-blue-500">EASE OF DOING BUSINESS </p>
                     </div>
                     <div class="max-w-xl col-span-2 mx-auto sm:col-span-1 sm:text-xl text-start">
@@ -176,7 +176,7 @@ We envision an active, strong, efficient, professional and well organized nation
 <blockquote class=" text-lg italic font-semibold text-justify text-gray-900  dark:text-white min-h-[10rem]">
     <svg aria-hidden="true" class="w-8 h-8 text-gray-400 dark:text-gray-600" viewBox="0 0 24 27" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M14.017 18L14.017 10.609C14.017 4.905 17.748 1.039 23 0L23.995 2.151C21.563 3.068 20 5.789 20 8H24V18H14.017ZM0 18V10.609C0 4.905 3.748 1.038 9 0L9.996 2.151C7.563 3.068 6 5.789 6 8H9.983L9.983 18L0 18Z" fill="currentColor"/></svg>
     <p class="p-4 text-gray-400">“My vision for NABPLO is to make NABPLO more active nationwide, more dynamic, and more relevant to our work as local government officials.”</p> 
-    <p class="p-4 text-gray-400 itallic"> Atty. Melanie T. Soriano-Malaya  <p class=" text-sm text-gray-400 itallic">
+    <p class="p-4 text-gray-400 itallic"> Atty. Melanie T. Soriano-Malaya  <p class="text-sm text-gray-400 itallic">
         NABPLO President 
         </p> </p> 
             

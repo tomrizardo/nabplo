@@ -2,7 +2,8 @@
 
 <template>
 <div class="overflow-hidden">
-  <div class="z-10 flex items-center justify-between w-screen p-4 border-none sm:fixed sm:p-0 sm:justify-evenly bg-blues">
+
+  <div class="z-10 flex items-center justify-between w-screen p-4 border-none sm:fixed sm:p-0 sm:justify-evenly bg-blues" >
           
                       
                             <!-- Logo -->
@@ -26,15 +27,17 @@
                 
                     </div>
                       
-                                      <div class="items-center hidden  space-x-20 sm:ml-2 sm:flex lg:mt-0 md:mt-2 justify-evenly">
+                                      <div class="items-center hidden space-x-20 sm:ml-2 sm:flex lg:mt-0 md:mt-2 justify-evenly">
                 <NavLink :href="route('guest_home')" :active="route().current('guest_home')">
                     Home
                 </NavLink>
-                <BreezeDropdown align="left" width="56">
+
+          
+   <BreezeDropdown align="left"  class="">
                                     <template #trigger>
-                                        <span class="inline-flex rounded-md mb-1">
-                                            <button type="button" class="inline-flex items-center text-sm font-medium text-white transition duration-150 ease-in-out border-b-2 border-transparent leading-3 text hover:text-gray-700 hover:border-white focus:outline-none focus:text-white focus:border-gray-300">
-                                               Resources
+                                        <span class="inline-flex mb-1 rounded-md">
+                                            <button type="button" class="inline-flex items-center text-sm font-medium leading-3 text-white transition duration-150 ease-in-out border-b-2 border-transparent text hover:text-gray-700 hover:border-white focus:outline-none focus:text-white focus:border-gray-300">
+                                                  About NABPLO
 
                                                 <svg class="ml-2 -mr-0.5 h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
                                                     <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
@@ -46,12 +49,60 @@
                                     
                                       
                                         
-                                        <div>
-                                            <div class="text-sm font-medium text-center text-white bg-blue-500">
-                                                5th NABPLO 
+                                        <div class="w-full p-1">
+                                        
+                                        
+                                        <BreezeDropdownLink :href="route('exec')"  as="button"  :active="route().current('exec')" class="w-full">
+                                     NABPLO Executive Committee
+                                        </BreezeDropdownLink>
+    <BreezeDropdownLink :href="route('president')"  as="button"  :active="route().current('president')">
+                                       The NABPLO President
+                                 
+                                        </BreezeDropdownLink>
+                                            <BreezeDropdownLink :href="route('aboutus')"  as="button"  :active="route().current('aboutus')">
+                                         About us
+                                 
+                                        </BreezeDropdownLink>
+                                           
+                                 
+                                        </div>
+                                    </template>
+                                </BreezeDropdown>
+
+
+                <BreezeDropdown align="left"  class="">
+                                    <template #trigger>
+                                        <span class="inline-flex mb-1 rounded-md">
+                                            <button type="button" class="inline-flex items-center text-sm font-medium leading-3 text-white transition duration-150 ease-in-out border-b-2 border-transparent text hover:text-gray-700 hover:border-white focus:outline-none focus:text-white focus:border-gray-300">
+                                               Resources
+
+                                                <svg class="ml-2 -mr-0.5 h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                                    <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+                                                </svg>
+                                            </button>
+                                        </span>
+                                    </template>
+                                    <template #content>
+                                    
+                                       
+                                        <div class="p-4 ">
+
+                                                <div>
+                                       <div class="mt-4 text-sm font-medium text-center text-white bg-blue-500">
+                                               Presentations
+                                                </div>   
+                                         <BreezeDropdownLink :href="route('pdf')"  :active="route().current('pdf')" as="button" >
+                                            5TH NABPLO Convention
+                                        </BreezeDropdownLink>
+
+                                     
+</div>
+                                        
+                                            <div class="text-sm font-medium text-center text-white bg-blue-500 ">
+                                              Photos/Videos
                                                 </div>     
                                         
-                                        <BreezeDropdownLink :href="route('first')"  as="button"  :active="route().current('first')">
+                                        <BreezeDropdownLink :href="route('first')"  as="button"  :active="route().current('first')" class="">
                                          Day 1 Gallery
                                  
                                         </BreezeDropdownLink>
@@ -67,32 +118,45 @@
                                        Videos
                                  
                                         </BreezeDropdownLink>
-
-                                           <BreezeDropdownLink :href="route('pdf')"  as="button"  :active="route().current('pdf')">
-                                      Downloadable PDF
-                                 
-                                        </BreezeDropdownLink>
-                                        </div>
-                                        <div>
-                                       <div class="text-sm font-medium text-center text-white bg-blue-500">
-                                                3rd NABPLO 
-                                                </div>   
-                                         <BreezeDropdownLink :href="route('faq')"  :active="route().current('faq')" as="button" >
+   <BreezeDropdownLink :href="route('faq')"  :active="route().current('faq')" as="button" >
                                         3rd Nabplo Convention
                                         </BreezeDropdownLink>
                                      
+                                        <div>
+                                       <div class="mt-4 text-sm font-medium text-center text-white bg-blue-500">
+                                               Press Release
+                                                </div>   
+                                         <BreezeDropdownLink :href="route('article')"  :active="route().current('article')" as="button" >
+                                            Articles
+                                        </BreezeDropdownLink>
+
+                                     
 </div>
+
+  <!-- <div>
+                                       <div class="mt-4 text-sm font-medium text-center text-white bg-blue-500">
+                                               Advisory
+                                                </div>   
+                                         <BreezeDropdownLink :href="route('faq')"  :active="route().current('faq')" as="button" >
+                                            Photo
+                                        </BreezeDropdownLink>
+                                     
+</div> -->
                                          
+                                        </div>
                                     </template>
                                 </BreezeDropdown>
                          
-                  <NavLink :href="route('aboutus')" :active="route().current('aboutus')">
-               About Us
+                  <NavLink :href="route('contact')" :active="route().current('contact')">
+               Contact Us
                 </NavLink>
-                        <NavLink :href="route('dashboard')" :active="route().current('dashboard')">
+                  <NavLink :href="route('home')" :active="route().current('home')" v-if="$page.props.auth.user">
+               NABPLO Directory
+                </NavLink>
+                        <!-- <NavLink :href="route('dashboard')" :active="route().current('dashboard')">
               Nabplo Directory
                 </NavLink>
-                     
+                      -->
                      
 <!--                    
      <NavLink :href="route('checkstatus')" :active="route().current('checkstatus')">
@@ -102,15 +166,15 @@
                     
    </div>  
   
-    <div class="hidden sm:flex sm:items-center  sm:justify-evenly bg-blac w-[20rem]">         
+    <div class="hidden sm:flex sm:items-center  sm:justify-evenly bg-blac w-[20rem]" v-if="!$page.props.auth.user">         
       
                 <Link :href="route('register')" > 
-                        <PrimaryButton class="ml-4 border-white bg-white text-blue-500 rounded-full hover:bg-blue-500 hover:text-white" >
+                        <PrimaryButton class="ml-4 text-blue-500 bg-white border-white rounded-full hover:bg-blue-500 hover:text-white" >
                  Register
                 </PrimaryButton> 
                </Link>
                           <Link :href="route('login')" > 
-                    <div class="text-white inline-flex text-xs font-semibold tracking-widest">
+                    <div class="inline-flex text-xs font-semibold tracking-widest text-white">
                  LOGIN
                         </div> 
           
@@ -134,7 +198,60 @@
                               Register
                             </BreezeResponsiveNavLink>
                         </div> -->
-                      
+                              <!-- <div class="mt-3 space-y-1">
+                            <BreezeResponsiveNavLink  class="text"  :href="route('aboutus')">
+                              About NABPLO
+                            </BreezeResponsiveNavLink>
+                        </div> -->
+
+                         
+   <div class="mt-3 space-y-1">
+                                 
+                                  
+                                 <span class="rounded-md ">
+                                     <button @click="isHiddens = !isHiddens" type="button" class="inline-flex items-center font-medium text-white transition duration-150 ease-in-out border-b-2 border-transparent text-md leading-2 text hover:text-gray-700 hover:border-white focus:outline-none focus:text-white focus:border-gray-300">
+                                      About NABPLO
+
+                                         <svg class="ml-2 -mr-0.5 h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                             <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+                                         </svg>
+                                     </button>
+                                 </span>
+                          
+                        
+                 <div class="mt-6 text-right " v-if="!isHiddens">
+                                     <BreezeDropdownLink :href="route('exec')"  as="button"  :active="route().current('exec')" class="text-white">
+                                 NABPLO Executive Committee
+                          
+                                 </BreezeDropdownLink>
+                                  <BreezeDropdownLink :href="route('president')"  as="button"  :active="route().current('president')" class="text-white">
+                                NABPLO President
+                          
+                                 </BreezeDropdownLink>
+                                  <BreezeDropdownLink :href="route('aboutus')"  as="button"  :active="route().current('aboutus')" class="text-white">
+                                  About NABPLO
+                                 </BreezeDropdownLink>
+                              
+       </div>
+                                 
+                                     <!-- <div  class="mt-3 mr-20 font-semibold underline ">
+                                    Advisory
+                                 </div>
+
+                                          <BreezeDropdownLink :href="route('faq')"  as="button"  :active="route().current('faq')" class="text-white">
+                              3rd NABPLO Convention
+                          
+                                 </BreezeDropdownLink> -->
+                           
+                               
+                               
+  
+                           
+                                  
+                    
+                    
+                 </div>
+
                         <div class="mt-3 space-y-1">
                                  
                                   
@@ -150,8 +267,17 @@
                           
                         
                              <div class="mt-6 text-right " v-if="!isHidden">
+
+                                       <div  class="mt-3 mr-20 font-semibold underline ">
+                                   Presentations
+                                 </div>
+
+                                          <BreezeDropdownLink :href="route('faq')"  as="button"  :active="route().current('faq')" class="text-white">
+                              5th NABPLO Convention
+                          
+                                 </BreezeDropdownLink>
                                  <div  class="mt-4 mr-20 font-semibold underline ">
-                                     5th NABPLO
+                                     Photos/Videos
                                  </div>
                                      <BreezeDropdownLink :href="route('first')"  as="button"  :active="route().current('first')" class="text-white">
                                   Day 1 Gallery
@@ -169,34 +295,45 @@
                                  Videos
                           
                                  </BreezeDropdownLink>
-                                      <BreezeDropdownLink :href="route('pdf')"  as="button"  :active="route().current('pdf')" class="text-white">
-                               PDF
+                                
+                                          <BreezeDropdownLink :href="route('faq')"  as="button"  :active="route().current('faq')" class="text-white">
+                              3rd NABPLO Convention
                           
                                  </BreezeDropdownLink>
 
                                      <div  class="mt-3 mr-20 font-semibold underline ">
-                                     3rd NABPLO 
+                                     Press Release
+                                 </div>
+
+                                          <BreezeDropdownLink :href="route('article')"  as="button"  :active="route().current('article')" class="text-white">
+                              Articles
+                          
+                                 </BreezeDropdownLink>
+
+                                 
+                                     <!-- <div  class="mt-3 mr-20 font-semibold underline ">
+                                    Advisory
                                  </div>
 
                                           <BreezeDropdownLink :href="route('faq')"  as="button"  :active="route().current('faq')" class="text-white">
                               3rd NABPLO Convention
                           
-                                 </BreezeDropdownLink>
+                                 </BreezeDropdownLink> -->
                              </div>
                                
-                                 
+                                   <div class="mt-3 space-y-1">
+                            <BreezeResponsiveNavLink  class="text"  :href="route('contact')">
+                            Contact Us
+                            </BreezeResponsiveNavLink>
+                        </div>
+  
                            
                                   
                     
                     
                  </div>
                      
-                          <div class="mt-3 space-y-1">
-                            <BreezeResponsiveNavLink  class="text"  :href="route('aboutus')">
-                              About Us
-                            </BreezeResponsiveNavLink>
-                        </div>
-
+                  
                              <div class="mt-3 space-y-1">
                             <BreezeResponsiveNavLink  class="text"  :href="route('register')">
                               Register
@@ -229,7 +366,7 @@
     
 
 
-<footer class="p-4 bg-white shadow-md sm:p-6 ">
+<footer class="p-4 bg-white shadow-md sm:p-6 "  v-if="$page.props.route.name !== 'president'">
     <hr class="my-6 fontblue sm:mx-auto dark:border-gray-400 lg:my-8">
     <div class="md:flex md:justify-between">
         <div class="mb-6 md:mb-0">
@@ -290,7 +427,7 @@
         </span>
         <div class="flex mt-4 space-x-6 sm:justify-center sm:mt-0">
             <a href="https://www.facebook.com/NABPLO/" class="fontblue hover:text-gray-900 dark:hover:text-white" target="_blank">
-                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" clip-rule="evenodd"></path></svg>
+                <!-- <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" clip-rule="evenodd"></path></svg> -->
                 <span class="sr-only">Facebook page</span>
             </a>
       
@@ -318,17 +455,23 @@ export default {
     },
     data(){
         return{
+           
             isHidden: true,
+            isHiddens: true,
               date: new Date().getFullYear(),
                showingNavigationDropdown: false,
                BreezeResponsiveNavLink
         }
-    }
+    },
+
 }
 
 
 </script>
 <style>
+.hide-header-bg {
+  background-color: transparent;
+}
 .fontblue{
 color:#0065C3;
 border-color: #0065C3;

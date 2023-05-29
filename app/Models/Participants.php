@@ -9,7 +9,7 @@ use DB;
 use Str;
 class Participants extends Model
 {    protected $connection = 'mysql';
-    protected $table = 'directory';
+    protected $table = 'test';
     use HasFactory;
 
     // protected $fillable = [

@@ -47,31 +47,28 @@ class HandleInertiaRequests extends Middleware
                 'data' => $request->session()->get('prompt_data'),
             ]
         ];
-
+    
         if (Auth::check()) {
-            // $staff_profile = Auth::user()->profile;
-            
-            $shared_data['auth'] = [
-                'user' => $request->user()->only( 'email','last_name','first_name','roles','verification'),
-            ];
-
-            // if (Auth::guard('staff')->check()) {
-            //     $shared_data['staff'] = [
-            //         'fullname' => ucwords(strtolower(Auth::user()->fullname)), 
-            //     ];
-
-            //     $shared_data['allowed_pages'] = Pages::where('inactive', 0)->orderBy('sorting')->get()->toArray();
-            //     // dd($shared_data);
-            // }
-
-            
+            if (Auth::guard('staff')->check()) {
+                $shared_data['staff'] = [
+                    'staff_info' =>  $request->user()->only('email', 'last_name', 'first_name', 'roles'), 
+                ];
+            } else {
+                $shared_data['auth'] = [
+                    'user' => $request->user()->only('email', 'last_name', 'first_name', 'roles', 'verification'),
+                ];
+            }
         } else {
             $shared_data['auth'] = [
-                'user' => $request->user(),
+                'user' => null,
             ];
         }
-
-
+    
+        $shared_data['route'] = [
+            'name' => $request->route()->getName(),
+        ];
+    
         return array_merge(parent::share($request), $shared_data);
     }
+    
 }

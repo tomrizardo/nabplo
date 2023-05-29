@@ -40,6 +40,11 @@ return [
             'driver' => 'session',
             'provider' => 'users',
         ],
+        'staff' => [
+            'driver' => 'session',
+            'provider' => 'staffs',
+        ],
+    
     ],
 
     /*
@@ -65,12 +70,18 @@ return [
             'model' => App\Models\User::class,
         ],
 
+        'staffs' => [
+            'driver' => 'eloquent',
+            'model' => App\Models\Admin\StaffAuth::class,    
+        ],
+
         // 'users' => [
         //     'driver' => 'database',
         //     'table' => 'users',
         // ],
     ],
 
+    
     /*
     |--------------------------------------------------------------------------
     | Resetting Passwords

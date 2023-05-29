@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 use App\Http\Controllers\Auth\RegisteredUserController;
 use App\Http\Controllers\Home\DashboardController;
+use App\Http\Controllers\Staff\StaffDashboard;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -45,6 +46,19 @@ Route::get('/Resources', function () {
    
     ]);
 }) ->name('faq');
+Route::get('/President', function () {
+    return Inertia::render('President', [
+        'canRegister' => Route::has('register'),
+   
+    ]);
+}) ->name('president');
+
+// Route::get('/Executive', function () {
+//     return Inertia::render('Executive', [
+//         'canRegister' => Route::has('register'),
+   
+//     ]);
+// }) ->name('exec');
 
 Route::get('/Pdf', function () {
     return Inertia::render('5th/Pdf', [
@@ -78,15 +92,33 @@ Route::get('/Third', function () {
    
     ]);
 }) ->name('third');
-
+Route::get('/staff', function () {
+    return Inertia::render('Admin/AdminLogin');
+})->name('staff');
 Route::get('/checkstatus', function () {
     return Inertia::render('Checkstatus');
 })->name('checkstatus');
+Route::get('/contact', function () {
+    return Inertia::render('Contact');
+})->name('contact');
+Route::get('/article', function () {
+    return Inertia::render('Articles');
+})->name('article');
+
+
+
 
 Route::post('request-app-status', [RegisteredUserController::class, 'checkRequestStatus'])->name('check_request_status');
 Route::post('settings', [DashboardController::class, 'RoleChange'])->name('rolechange');
 Route::post('search', [DashboardController::class, 'getRecords'])->name('search');
+Route::get('advisorys', [DashboardController::class, 'advisorys'])->name('advisory');
+Route::get('articless', [DashboardController::class, 'articless'])->name('articless');
+
+Route::get('article', [DashboardController::class, 'articles'])->name('article');
+Route::get('executive', [DashboardController::class, 'exec'])->name('exec');
 Route::post('provinces', [DashboardController::class, 'provinces'])->name('province');
 Route::post('checkstatus', [RegisteredUserController::class, 'verificationChangeStatus'])->name('update');
 
+
 require __DIR__.'/auth.php';
+require __DIR__.'/staff.php';

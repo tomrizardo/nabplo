@@ -19,6 +19,7 @@ class RouteServiceProvider extends ServiceProvider
      */
     public const HOME = '/';
     public const AUTH_HOME = 'home';
+    public const STAFF_AUTH_HOME = '/staffhome';
     public const Succ = '/SuccessPage';
 
     /**
