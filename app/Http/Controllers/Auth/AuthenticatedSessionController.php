@@ -34,7 +34,7 @@ class AuthenticatedSessionController extends Controller
     public function store(LoginRequest $request)
     {
         $request->authenticate();
-
+        $request->session()->put('last_activity', time());
         $request->session()->regenerate();
 
         return redirect()->intended(RouteServiceProvider::AUTH_HOME);

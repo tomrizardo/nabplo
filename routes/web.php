@@ -17,7 +17,7 @@ use App\Http\Controllers\Staff\StaffDashboard;
 |
 */
 
-Route::get('/', function () {
+Route::middleware(['guest', 'check.session.timeout'])->get('/', function () {
     return Inertia::render('Welcome', [
         'canLogin' => Route::has('login'),
         'canRegister' => Route::has('register'),
@@ -111,12 +111,14 @@ Route::get('/article', function () {
 Route::post('request-app-status', [RegisteredUserController::class, 'checkRequestStatus'])->name('check_request_status');
 Route::post('settings', [DashboardController::class, 'RoleChange'])->name('rolechange');
 Route::post('search', [DashboardController::class, 'getRecords'])->name('search');
+Route::post('searchs', [DashboardController::class, 'getRecordss'])->name('sear');
 Route::get('advisorys', [DashboardController::class, 'advisorys'])->name('advisory');
 Route::get('articless', [DashboardController::class, 'articless'])->name('articless');
 
 Route::get('article', [DashboardController::class, 'articles'])->name('article');
 Route::get('executive', [DashboardController::class, 'exec'])->name('exec');
 Route::post('provinces', [DashboardController::class, 'provinces'])->name('province');
+Route::post('pprovince', [DashboardController::class, 'pprovince'])->name('pprovince');
 Route::post('checkstatus', [RegisteredUserController::class, 'verificationChangeStatus'])->name('update');
 
 

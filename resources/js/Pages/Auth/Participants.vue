@@ -1,5 +1,5 @@
 <template>
-    <Head title="Nabplo Directory" />
+    <Head title="Participants Directory" />
 
 
  <div class="min-h-screen rounded-md min-w-screen " >
@@ -10,12 +10,12 @@
            
             
             <div class="mb-1 text-3xl font-bold text-blue-600 sm:mb-3">
-              NABPLO Directory
+              NABPLO Participants Directory
             </div>
 
        
             <div class="text-xs text-gray-500">
-               The Organization members can be search here
+               The NABPLO 5th Convention participants can be search here
             </div>
             <div class="flex-col items-center justify-center gap-6 sm:flex-row sm:flex sm:justify-start ">
 
@@ -82,6 +82,15 @@
 <table class="min-w-full divide-y divide-gray-200">
           <thead class="bg-white">
             <tr>
+
+                  <th scope="col"
+                class="px-2 py-3 text-xs font-medium tracking-wider text-left text-gray-500 uppercase cursor-pointer sm:px-6 sm:text-sm"
+                @click="sortBy('last_name')">
+                PARTICIPANTS
+                <span class="ml-2" v-if="sortBy === 'municipality'">
+                  <i :class="sortDirection === 'asc' ? 'fa fa-arrow-up' : 'fa fa-arrow-down'"></i>
+                </span>
+              </th>
               <th scope="col"
                 class="px-2 py-3 text-xs font-medium tracking-wider text-left text-gray-500 uppercase cursor-pointer sm:px-6 sm:text-sm"
                 @click="sortBy('municipality')">
@@ -93,7 +102,7 @@
               <th scope="col"
                 class="px-2 py-3 text-xs font-medium tracking-wider text-left text-gray-500 uppercase cursor-pointer sm:px-4 sm:text-sm"
                 @click="sortBy('bplo_chief')">
-                BPLO CHIEF
+                CHIEF Executive
                 <span class="ml-2" v-if="sortBy === 'category'">
                   <i :class="sortDirection === 'asc' ? 'fa fa-arrow-up' : 'fa fa-arrow-down'"></i>
                 </span>
@@ -107,18 +116,18 @@
                 </span>
               </th>
 
-                <th scope="col"
+                <!-- <th scope="col"
                 class="px-2 py-3 text-xs font-medium tracking-wider text-left text-gray-500 uppercase cursor-pointer sm:px-4 sm:text-sm"
                 @click="sortBy('mayor')">
                 Mayor
                 <span class="ml-2" v-if="sortBy === 'mayor'">
                   <i :class="sortDirection === 'asc' ? 'fa fa-arrow-up' : 'fa fa-arrow-down'"></i>
                 </span>
-              </th>
+              </th> -->
               <th scope="col"
                 class="px-2 py-3 text-xs font-medium tracking-wider text-left text-gray-500 uppercase cursor-pointer sm:px-4 sm:text-sm"
                 @click="sortBy('category')">
-                Category
+                Member Info
                 <span class="ml-2" v-if="sortBy === 'category'">
                   <i :class="sortDirection === 'asc' ? 'fa fa-arrow-up' : 'fa fa-arrow-down'"></i>
                 </span>
@@ -129,38 +138,52 @@
           </thead>
           <tbody class="bg-white divide-y divide-gray-200">
             <tr v-for="(employee, index) in sortedItems" :key="index">
-              <td class="px-2 py-2 sm:px-6 sm:py-4 whitespace-nowrap">
+                <td class="px-2 py-2 sm:px-6 sm:py-4 whitespace-nowrap max-w-[18rem] ">
                 <div class="flex items-center">
                   <div class="">
-                 <div class="text-xs font-bold text-gray-800 sm:text-sm">{{ employee.municipality }}</div>
-                     <div class="text-xs text-gray-800 sm:text-sm">{{ employee.province }}</div>
-                 <div class="text-xs text-gray-500 sm:text-sm">{{ employee.population }} people </div>
+                 <div class="text-xs font-bold text-gray-800 sm:text-sm">{{ employee.first_name }}  {{ employee.mid_name }}  {{ employee.last_name}} {{ employee.ext_name }}</div>
+                     <div class="mt-1 text-xs text-gray-800 sm:text-xs">{{ employee.position }}</div>
+                     <div class="mt-1 text-xs text-gray-800 sm:text-xs">{{ employee.nat_employment }}</div>
+
+                            <div class="mt-1 overflow-hidden text-xs text-gray-800 sm:text-xs">{{ employee.department }}</div>
+
+                  </div>
+                </div>
+              </td>
+              <td class="px-2 py-2 sm:px-6 sm:py-4 whitespace-pre-line  break-all max-w-[15rem]">
+                <div class="flex items-center">
+                  <div class="">
+                 <!-- <div class="text-xs font-bold text-gray-800 sm:text-sm">{{ employee.municipality }}</div> -->
+                     <div class="text-xs font-bold text-gray-800 sm:text-sm">{{ employee.addr_municipality }}</div>
+                        <div class="text-xs text-gray-800 sm:text-xs">{{ employee.full_addr }}</div>
+                        <div class="mt-1 text-xs text-gray-800 sm:text-xs">{{ employee.lgu_class }} CLASS</div>
+                 <div class="mt-1 text-xs text-gray-500 sm:text-sm "> </div>
         <span class="inline-flex px-2 text-xs font-semibold leading-5 text-blue-800 bg-blue-100 rounded-full sm:text-sm">
           {{ employee.region }}
         </span>
                   </div>
                 </div>
               </td>
-   <td class="px-2 py-2 sm:px-4 sm:py-4 whitespace-nowrap">
+   <td class="px-2 py-2 sm:px-4 sm:py-4 whitespace-nowrap max-w-[15rem]">
                 
-                     <div class="text-xs italic font-bold text-gray-600 sm:text-sm" v-if="employee.bplo_chief.length <=0 || employee.bplo_chief == 'FALSE'"> N/A </div>
-                     <div class="text-xs font-bold text-gray-600 capitalize sm:text-sm" v-else>{{ employee.bplo_chief }} </div>
+                     <!-- <div class="text-xs italic font-bold text-gray-600 sm:text-sm" v-if="employee.bplo_chief.length <=0 || employee.bplo_chief == 'FALSE'"> N/A </div> -->
+                     <div class="text-xs font-bold text-gray-600 capitalize sm:text-sm" >{{ employee.exec_name }} </div>
              
       </td>
 
-                   <td class="px-2 py-2 sm:px-4 sm:py-4 whitespace-nowrap">
-                  <div class="text-xs text-gray-500 sm:text-sm">{{ employee.offc_add }}</div>
-            <div class="text-xs text-gray-500 sm:text-sm">{{ employee.email }}</div>
+                   <td class="px-2 py-2 sm:px-4 sm:py-4 whitespace-pre-line break-all max-w-[10rem]">
+                  <div class="text-xs text-gray-500 sm:text-sm">{{ employee.contact_no }}</div>
+            <div class="text-xs text-gray-500 sm:text-sm max-w-[10rem] break-all">{{ employee.email }}</div>
                      <div class="text-xs text-gray-500 sm:text-sm">{{ employee.office_number }} <span v-if="employee.office_number <=0"> {{employee.fax}} </span> </div>
-                        <a class="text-xs underline text-blues sm:text-sm"  :href="formatExternalLink(employee.website)" target="_blank">View website</a>
+                        <!-- <a class="text-xs underline text-blues sm:text-sm"  :href="formatExternalLink(employee.website)" target="_blank">View website</a> -->
                 </td>
-                 <td class="px-2 py-2 sm:px-2 sm:py-4 whitespace-nowrap">
-        <div class="text-xs text-gray-900 sm:text-sm" v-if="employee.mayor.length <=0 || employee.mayor == 'FALSE'">N/A</div>
-        <div class="text-xs text-gray-900 sm:text-sm" v-else>{{employee.mayor}}</div>
-      </td>
+           
          
                  <td class="px-2 py-2 sm:px-4 sm:py-4 whitespace-nowrap">
-                   <div class="text-xs text-gray-500 sm:text-sm">{{ employee.category }}</div>
+
+                    <div class="text-xs text-gray-500 sm:text-sm" v-if="employee.membr_type ==='RENEWAL' "> Since {{ employee.membr_since }}</div>
+                      <div class="text-xs text-gray-500 sm:text-sm" v-else > New Member</div>
+                   <div class="text-xs text-gray-500 sm:text-sm">{{ employee.mempaid }}</div>
              
              
       </td>
@@ -178,24 +201,33 @@
     <tbody class="bg-white divide-y divide-gray-200">
       <tr v-for="(employee, index) in sortedItems" :key="index">
         <td class="px-4 py-4 sm:px-6 sm:py-4">
-          <div class="mb-1 text-sm font-medium text-gray-900">{{ employee.municipality }}</div>
-          <div class="mb-2 text-xs text-gray-500">{{ employee.province }} &#183; {{ employee.region }}</div>
-          <div class="text-xs font-semibold text-gray-900 underline underline-offset-2">{{ employee.bplo_chief }}  <span v-if="employee.bplo_chief.length <= 0" class="italic text-gray-500">N/A</span></div>
-          <div class="mb-1 text-xs text-gray-500">BPLO Chief</div>
-          <div v-if="employee.mayor.length <= 0 || employee.mayor =='FALSE'" class="mb-1 text-xs italic text-gray-500">N/A</div>
-          <div class="mb-1 text-xs text-gray-500" v-else>Mayor. {{ employee.mayor }}  </div>
-          <div class="mb-1 text-xs text-gray-500"> {{ employee.category }} Class &#183; {{ employee.population }} Population</div>
-          <div class="text-xs text-gray-500 mb-2 max-w-[15rem] overflow-hidden" style="text-overflow: ellipsis; white-space: nowrap;">{{ employee.offc_add === 'NDA' ? '' : employee.offc_add }}</div>
+           <div class="mb-1 text-sm font-medium text-gray-900">{{ employee.first_name }}  {{ employee.mid_name }} {{ employee.last_name }}</div>
+            <div class="mb-1 text-xs font-medium text-gray-900">{{ employee.position }}</div>
+          <div class="mb-1 text-sm font-medium text-gray-900">{{ employee.name }}</div>
+            <div class="mb-2 text-xs text-gray-500">{{employee.nat_employment }}</div>
+          <div class="mb-2 text-xs text-gray-500">{{ employee.department }}</div>
+      <div class="mb-2 text-xs font-semibold text-gray-900 underline underline-offset-2">{{ employee.exec_name }}</div> 
+          <!-- <div v-if="employee.mayor.length <= 0 || employee.mayor =='FALSE'" class="mb-1 text-xs italic text-gray-500">N/A</div> -->
+          <!-- <div class="mb-1 text-xs text-gray-500">Mayor. {{ employee.exec_name }}  </div> -->
+          <!-- <div class="mb-1 text-xs text-gray-500"> {{ employee.category }} Class &#183; {{ employee.population }} Population</div> -->
+          <div class="text-xs text-gray-500 mb-2 max-w-[15rem] overflow-hidden break-all" >{{ employee.offc_add === 'NDA' ? '' : employee.full_addr }}</div>
           <div class="mb-2 text-xs text-gray-500">
             <span v-if="employee.email !== 'NDA' && employee.email !== 'N / A'">{{ employee.email }}</span>
           </div>
-          <div class="mb-2 text-xs text-gray-500">
-            <span v-if="employee.office_number !== 'NDA' && employee.fax !== 'NDA' && employee.office_number > 0">{{ employee.office_number }}</span>
+          <div class="mb-1 text-xs text-gray-500">
+            {{ employee.contact_no }}
           </div>
-          <div class="mb-2 text-xs text-gray-500">
+
+          <div class="mb-1 text-xs text-gray-500" v-if="employee.membr_type ==='RENEWAL'">
+           Member Since {{ employee.membr_since }}
+          </div>
+             <div class="mb-1 text-xs text-gray-500">
+              New Member
+              </div>
+          <!-- <div class="mb-2 text-xs text-gray-500">
             <a class="underline text-blues" v-if="employee.website === 'NDA'"></a>
             <a class="underline text-blues" :href="formatExternalLink(employee.website)" target="_blank" v-else>View Website</a>
-          </div>
+          </div> -->
         </td>
       </tr>
     </tbody>
@@ -303,7 +335,7 @@ methods:{
     this.provinceHolder="";
   this.processing= true;
  try {
-    const response = await axios.post(this.route('province'), {
+    const response = await axios.post(this.route('pprovince'), {
       'province': this.regionHolder,
     });
     const {province} = response.data.province;
@@ -343,7 +375,7 @@ methods:{
   this.processing= true;
 
   try {
-    const response = await axios.post(this.route('search'), {
+    const response = await axios.post(this.route('sear'), {
       'keyword': this.keyword,
       'region': this.regionHolder,
       'province': this.provinceHolder,

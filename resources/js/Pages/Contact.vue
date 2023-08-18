@@ -2,10 +2,10 @@
     <Head title="Contact Us" />
 
     <GuestLayout>
-      <div class="flex flex-col items-center w-screen mt-14">
-      <h1 class="text-4xl font-bold text-center text-blue-500">Contact Us</h1>
-
-      <div class="relative w-full max-w-xl mt-12">
+      <!-- <div class="flex flex-col items-center justify-center w-screen mt-14 min-h-[50rem] "> -->
+      <!-- <h1 class="text-4xl font-bold text-center text-blue-500">Contact Us</h1> -->
+        
+      <!-- <div class="relative w-full max-w-xl mt-12">
       
         <form class="relative px-8 pt-6 pb-8 mb-4 bg-white rounded shadow-md" @submit.prevent="submitForm">
           <div class="flex gap-6 justify-items-start">
@@ -28,10 +28,27 @@
             <PrimaryButton  type="submit" class="text-white bg-blues">Submit</PrimaryButton>
           </div>
         </form>
-      </div>
+      </div> -->
+<div class="min-h-[50rem] text-black w-screen mt-20 text-center " >
+  <div class="flex items-start justify-end gap-4">
 
+<div class="w-12 h-12 border border-black ">
+
+</div>
+<div class="w-12 h-12 border border-black ">
+
+</div>
+<div class="w-12 h-12 border border-black ">
+
+</div>
+<div class="w-12 h-12 border border-black ">
+
+</div>
+  </div>
   
 </div>
+  
+<!-- </div> -->
 
     </GuestLayout>
 </template>

@@ -1,7 +1,7 @@
 
 
 <template>
-<div class="overflow-auto tablet:overflow-y-scroll  tablet:h-screen ">
+<div class="overflow-auto tablet:overflow-y-scroll tablet:h-screen ">
 
   <div class="fixed z-10 flex items-center justify-between w-screen p-4 border-none sm:p-0 sm:justify-evenly bg">
           
@@ -98,7 +98,7 @@
                     </div>
   </div>
       
-        <div class="bg-white laptop:overflow-hidden   ">
+        <div class="overflow-hidden bg-white laptop:overflow-hidden ">
             <slot />
         </div>
 

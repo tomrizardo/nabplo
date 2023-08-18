@@ -2,7 +2,7 @@
      <Head title="Search Business" />
         <GuestLayout>
 
- test
+Dashboard
 
         </GuestLayout>
 </template>

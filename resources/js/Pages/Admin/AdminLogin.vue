@@ -59,7 +59,14 @@ const submit = () => {
                 <InputError class="mt-2" :message="form.errors.password" />
             </div>
 
-     
+     <div class="flex items-center justify-start mt-1">
+ 
+      <Checkbox v-model="form.remember ">Remember Me</Checkbox>
+         <div class="ml-1">
+        Remember Me
+    </div>
+</div>
+       
 
             <div class="flex items-center max-w-full mt-6">
              

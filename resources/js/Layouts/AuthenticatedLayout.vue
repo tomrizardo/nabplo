@@ -57,10 +57,15 @@
     <div class="flex items-center p-3 text-[0.9em] font-semibold text-gray-500 text-center justify-start bgss w-full" :class="{ 'rounded-md bg-blues text-white': route().current('home') }" ><div>
             <svg aria-hidden="true"  width="30px" height="22px" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
     </div> <Link :href="route('home')" class="ml-1"  :active="route().current('home')" >
-                               Nablo Directory
+                               NABPLO Directory
                                 </Link>
 </div>
-
+    <div class="flex items-center p-3 text-[0.9em] font-semibold text-gray-500 text-center justify-start bgss w-full" :class="{ 'rounded-md bg-blues text-white': route().current('participants') }" ><div>
+            <svg aria-hidden="true"  width="30px" height="22px" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+    </div> <Link :href="route('participants')" class="ml-1"  :active="route().current('participants')" >
+                              Participants  Directory
+                                </Link>
+</div>
 <!-- <div class="flex items-center p-3 text-[0.9em] font-semibold text-gray-500 text-center justify-start bgss w-full " v-if="$page.props.auth.user.roles == '1'"  :class="{ 'rounded-md bg-blues text-white max-w-full': route().current('settings') }"><div>
 <svg width="30px" height="22px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"  fill="none" stroke="currentColor">
 <path class="a" d="M3,21.016l.78984-2.87249C5.0964,13.3918,8.5482,11.016,12,11.016" /><circle class="b" cx="12" cy="5.98404" r="5"/><circle class="a" cx="17" cy="18" r="5"/><polyline class="a" points="14.872 18.149 16.32 20.082 19.533 16.572"/></svg> 
@@ -121,9 +126,26 @@
     <div class="flex items-center p-3 text-[0.9em] font-semibold text-gray-500 text-center justify-start bgss w-full" :class="{ 'rounded-md bg-blues text-white': route().current('home') }" ><div>
             <svg aria-hidden="true"  width="30px" height="22px" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
     </div> <Link :href="route('home')" class="ml-1"  :active="route().current('home')" >
-                               Nablo Directory
+                               NABPLO Directory
                                 </Link>
 </div>
+
+    <div class="flex items-center p-3 text-[0.9em] mt-3 font-semibold text-gray-500 text-center justify-start bgss w-full" :class="{ 'rounded-md bg-blues text-white': route().current('participants') }" ><div>
+<svg width="30px" height="30px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="none" stroke="currentColor">
+    
+
+    <g id="web-app" >
+        <g id="users">
+            <path d="M8,13 C6.34314575,13 5,11.6568542 5,10 C5,8.34314575 6.34314575,7 8,7 C9.65685425,7 11,8.34314575 11,10 C11,11.6568542 9.65685425,13 8,13 Z M16,13 C14.3431458,13 13,11.6568542 13,10 C13,8.34314575 14.3431458,7 16,7 C17.6568542,7 19,8.34314575 19,10 C19,11.6568542 17.6568542,13 16,13 Z M8,15 C10.3893851,15 12.5341111,16.0475098 14,17.7083512 C14,18.1839232 14,18.6144728 14,19 L2,19 C2,18.6144728 2,18.1839232 2,17.7083512 C3.46588891,16.0475098 5.61061495,15 8,15 Z M16,19 L16,16.9519717 L15.4994784,16.3848843 C15.1151403,15.949432 14.6965808,15.550843 14.2491048,15.1921858 C14.8126186,15.0663701 15.3985585,15 16,15 C18.3893851,15 20.5341111,16.0475098 22,17.7083512 L22,19 L16,19 Z" id="Shape">
+
+</path>
+        </g>
+    </g>
+</svg>    </div> <Link :href="route('participants')" class="ml-1"  :active="route().current('participants')" >
+                               Participants Directory
+                                </Link>
+</div>
+
 
 <!-- <div class="flex items-center p-3 text-[0.9em] font-semibold text-gray-500 text-center justify-start bgss w-full " v-if="$page.props.auth.user.roles == '1'"  :class="{ 'rounded-md bg-blues text-white max-w-full': route().current('settings') }"><div>
 <svg width="30px" height="22px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"  fill="none" stroke="currentColor">

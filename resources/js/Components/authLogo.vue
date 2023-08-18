@@ -1,6 +1,6 @@
 <template>
    <div class="logo">
-     <img src="https://nabploph.org/public/assets/nabplologo.png"  alt="nabplo" /> <span class="tracking-wider text-blues">NABPLO</span>
+     <img :src="$page.props.base_url + 'img/logo/nabplologo.png'"  alt="nabplo" /> <span class="tracking-wider text-blues">NABPLO</span>
    </div>
 </template>
 <style>

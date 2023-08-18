@@ -67,7 +67,7 @@ class StaffLogin extends Controller
         $request->session()->regenerate();
 
       
-        return redirect()->intended('/staff/dashboard');
+        return redirect()->intended('/staff/article');
     }
 
     /**

@@ -55,6 +55,7 @@ Route::middleware('auth')->group(function () {
 Route::post('search', [DashboardController::class, 'getRecords'])->name('search');
 
     Route::get('home', [DashboardController::class, 'create'])->name('home');
+    Route::get('participants', [DashboardController::class, 'participants'])->name('participants');
     Route::get('dashboard', [DashboardController::class, 'dashboard'])->name('dashboard');
 
     Route::get('settings', [DashboardController::class, 'settings'])->name('settings');

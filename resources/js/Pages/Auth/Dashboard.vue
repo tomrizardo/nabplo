@@ -1,8 +1,8 @@
 <template>
   <div class="min-h-screen ">
-    <div class="text-4xl font-bold p-10 text-gray-700 min-h-[23rem]">
+    <div class="text-4xl font-bold p-10 min-h-[23rem] text-blues">
         Welcome, 
-        <span>
+        <span class="capitalize">
           {{$page.props.auth.user.first_name}}  {{$page.props.auth.user.last_name}} 
         </span>
     </div>
@@ -39,122 +39,7 @@
     </table>
   </div> -->
 
-  <div class="flex flex-wrap justify-center">
-  <div class="w-full p-4 lg:w-1/3">
-    <div class="px-6 py-4 bg-white rounded-lg shadow-lg">
-      <div class="mb-4">
-        <h2 class="text-xl font-bold text-gray-800">January</h2>
-        <p class="text-gray-600">Status: Uploaded</p>
-      </div>
-      <div class="flex items-center justify-between">
-        <div class="flex-1">
-          <p class="text-gray-600">File uploaded:</p>
-          <p class="font-bold text-gray-800">file-name.pdf</p>
-        </div>
-        <div>
-          <input type="file" class="w-0 h-0 opacity-0" disabled>
-          <button class="px-4 py-2 text-gray-600 bg-gray-300 rounded-lg cursor-not-allowed" disabled>Uploaded</button>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="w-full p-4 lg:w-1/3">
-    <div class="px-6 py-4 bg-white rounded-lg shadow-lg">
-      <div class="mb-4">
-        <h2 class="text-xl font-bold text-gray-800">February</h2>
-        <p class="text-gray-600">Status: Uploaded</p>
-      </div>
-      <div class="flex items-center justify-between">
-        <div class="flex-1">
-          <p class="text-gray-600">File uploaded:</p>
-          <p class="font-bold text-gray-800">file-name.pdf</p>
-        </div>
-        <div>
-          <input type="file" class="w-0 h-0 opacity-0" disabled>
-          <button class="px-4 py-2 text-gray-600 bg-gray-300 rounded-lg cursor-not-allowed" disabled>Uploaded</button>
-        </div>
-      </div>
-    </div>
-  </div>
-
-
-<div class="w-full p-4 lg:w-1/3">
-    <div class="px-6 py-4 bg-white rounded-lg shadow-lg">
-      <div class="mb-4">
-        <h2 class="text-xl font-bold text-gray-800">March</h2>
-        <p class="text-gray-600">Status: Uploaded</p>
-      </div>
-      <div class="flex items-center justify-between">
-        <div class="flex-1">
-          <p class="text-gray-600">File uploaded:</p>
-          <p class="font-bold text-gray-800">file-name.pdf</p>
-        </div>
-        <div>
-          <input type="file" class="w-0 h-0 opacity-0" disabled>
-          <button class="px-4 py-2 text-gray-600 bg-gray-300 rounded-lg cursor-not-allowed" disabled>Uploaded</button>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="w-full p-4 lg:w-1/3">
-    <div class="px-6 py-4 bg-white rounded-lg shadow-lg">
-      <div class="mb-4">
-        <h2 class="text-xl font-bold text-gray-800">April</h2>
-        <p class="text-gray-600">Status: Upcoming</p>
-      </div>
-      <div class="flex items-center justify-between">
-        <div class="flex">
-          <p class="text-gray-600">File uploaded:</p>
-       
-        </div> 
-        <div class="flex">
-          <input type="file" class="w-full" :disabled="!isUploadEnabled('April')" @change="onFileUpload('2023-04-01', $event)">
-          <button class="px-4 py-2 text-white bg-blue-500 rounded-lg hover:bg-blue-700" :disabled="!isUploadEnabled('April')">Upload</button>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="w-full p-4 lg:w-1/3">
-      <div class="px-6 py-4 bg-white rounded-lg shadow-lg">
-        <div class="mb-4">
-          <h2 class="text-xl font-bold text-gray-800">May</h2>
-          <p class="text-gray-600">Status: Upcoming</p>
-        </div>
-        <div class="flex items-center justify-between">
-          <div class="flex">
-            <p class="text-gray-600">File uploaded:</p>
-          </div>
-          <div class="flex">
-            <input type="file" class="w-full" :disabled="!isUploadEnabled('May')" @change="onFileUpload('2023-05-01', $event)">
-            <button class="px-4 py-2 text-white bg-blue-500 rounded-lg hover:bg-blue-700" :disabled="!isUploadEnabled('May')" :class="{'text-gray-600 bg-gray-300 rounded-lg cursor-not-allowed' : isUploadEnabled}">Upload</button>
-          </div>
-        </div>
-      </div>
-   </div>
-  <div class="w-full p-4 lg:w-1/3">
-    <div class="px-6 py-4 bg-white rounded-lg shadow-lg">
-      <div class="mb-4">
-        <h2 class="text-xl font-bold text-gray-800">June</h2>
-        <p class="text-gray-600">Status: Upcoming</p>
-      </div>
-      <div class="flex items-center justify-between">
-        <div class="flex">
-          <p class="text-gray-600">File uploaded:</p>
-       
-        </div>
-        <div class="flex">
-          <input type="file" class="w-full" :disabled="!isUploadEnabled(6)" @change="onFileUpload('2023-06-01', $event)">
-          <button class="px-4 py-2 text-white bg-blue-500 rounded-lg hover:bg-blue-700" :disabled="!isUploadEnabled(6)"  :class="{'text-gray-600 bg-gray-300 rounded-lg cursor-not-allowed' : isUploadEnabled}">Upload</button>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- ... and so on for the other months ... -->
-
-</div>
+  
     </div>
   </div>
 </template>

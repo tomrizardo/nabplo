@@ -11,7 +11,7 @@ class Advisory extends Model
 
 
     protected $connection = 'mysql';
-    protected $table='advisory';
+    protected $table='advisory_copy';
     protected $fillable=[
           
             'header',

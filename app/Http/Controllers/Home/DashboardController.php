@@ -15,7 +15,9 @@ use App\Models\Municipality;
 use App\Models\Attachments;
 use App\Models\Articles;
 use App\Models\Executive;
+use App\Models\Parti;
 use App\Models\Advisory;
+use App\Models\Directory;
 
 
 
@@ -32,13 +34,33 @@ class DashboardController extends Controller
     public function create()
     {
 
-        $info = Participants::select('region')->groupBy('region')->get();
+        $info = Directory::select('region')->groupBy('region')->get();
      
         // $recent_app_listing = Municipality::select('name')->get()->pluck('name');
         return Inertia::render('Auth/Home',[
         
             'info'=>    $info
                
+        ]);
+    
+    }
+
+       /**
+     * Display the registration view.
+     *
+     * @return \Inertia\Response
+     */
+    public function participants()
+    {
+            $info = Municipality::select('region') -> groupBy('region')->get();
+   
+        // $info = Parti::select('participants.*', 'muncipalities.*')
+        // ->join('muncipalities', 'participants.addr_municipality', '=', 'muncipalities.name')
+        // ->get();
+        return Inertia::render('Auth/Participants',[
+        
+            'info'=>    $info,
+                  
         ]);
     
     }
@@ -79,6 +101,49 @@ class DashboardController extends Controller
 
 
     
+    public function getRecordss(Request $req)
+    {
+   
+        
+        $paramOne=$req['keyword'];
+        $paramTwo = $req['region'];
+        $paramThree=$req['province'];
+    
+        // $info = Parti::with('municipal')->select('*')
+           $info = Parti::select('participants.*', 'muncipalities.*')
+       ->join('muncipalities', 'participants.addr_municipality', '=', 'muncipalities.name')
+            ->where ([   ['addr_municipality', 'LIKE', '%'.$paramOne.'%'],
+            ['region', 'LIKE', '%'.$paramTwo.'%'],
+            ['province', 'LIKE', '%'.$paramThree.'%']])
+            ->orderBy('first_name','ASC')
+            ->orWhere ([   ['last_name', 'LIKE', '%'.$paramOne.'%'],
+            ['region', 'LIKE', '%'.$paramTwo.'%'],
+            ['province', 'LIKE', '%'.$paramThree.'%']])
+            ->orderBy('first_name','ASC')
+         ->get();
+
+        if (empty($info)) {
+            $alert_typep = 'error';
+            $alert_message = "Unable to find reference number or it doesn't exists.";
+            $ser = [];
+
+        }
+        
+    else{
+        $ser  = $info;
+    }
+            
+                 
+
+        
+        return response()->json([
+
+            'info'=>$ser,
+         
+            
+            
+           ]); 
+        }
 
 
 
@@ -90,7 +155,7 @@ class DashboardController extends Controller
         $paramTwo = $req['region'];
         $paramThree=$req['province'];
     
-        $info = Participants::select()
+        $info = Directory::select()
             ->where ([   ['municipality', 'LIKE', '%'.$paramOne.'%'],
             ['region', 'LIKE', '%'.$paramTwo.'%'],
             ['province', 'LIKE', '%'.$paramThree.'%']])
@@ -294,7 +359,27 @@ class DashboardController extends Controller
         $paramOne=$req['province'];
 
      
-        $province = Participants::select('province')
+        $province = Directory::select('province')
+        ->where('region','LIKE','%'.$paramOne.'%'  )
+        ->groupBy('province')
+        ->get();
+        return response()->json([
+          
+            
+            'province'=>$province
+        ]);
+      
+      
+    }
+
+    public function pprovince(Request $req)
+    {
+
+          
+        $paramOne=$req['province'];
+
+     
+        $province = Municipality::select('province')
         ->where('region','LIKE','%'.$paramOne.'%'  )
         ->groupBy('province')
         ->get();
