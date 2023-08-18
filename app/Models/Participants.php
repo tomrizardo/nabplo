@@ -10,7 +10,7 @@ use DB;
 use Str;
 class Participants extends Model
 {    protected $connection = 'mysql';
-    protected $table = 'participants_copy';
+    protected $table = 'registrants';
     use HasFactory;
 
     protected $fillable = [
@@ -20,31 +20,32 @@ class Participants extends Model
         'mid_name',
         'membr_filename',
         'ext_name',
-		'membr_fee',
         'reciept_filename',
         'membr_since',
         'validation_status',
         'validation_remarks',
         'uploaded_datetime',
         'contact_no',
-        'contact_no_date_active',
         'email',
+        'addr_region',
+        'addr_province',
         'addr_municipality',
         'lgu_class',
-        'addr_type',
+        'payment_type',
+        // 'addr_type',
         'exec_name',
-        'others_org',
+        'others_department',
         'position',
         'department',
         'membr_type',
         'nat_employment',
-        'org_setup',
-        'bplo_func',
+        // 'org_setup',
+        // 'bplo_func',
         'full_addr',
         'paid',
-		'eboss',
-		'topics',
-		'mempaid',
+		// 'eboss',
+		// 'topics',
+	
 
 
     ];

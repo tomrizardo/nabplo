@@ -10,7 +10,7 @@ use DB;
 use Str;
 class Directory extends Model
 {    protected $connection = 'mysql';
-    protected $table = 'test';
+    protected $table = 'municipalities';
     use HasFactory;
 
     // protected $fillable = [

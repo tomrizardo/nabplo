@@ -28116,10 +28116,10 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/Pages/Auth/Dashboard copy.vue?vue&type=script&lang=js":
-/*!********************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/Pages/Auth/Dashboard copy.vue?vue&type=script&lang=js ***!
-  \********************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/Pages/Auth/Dashboard.vue?vue&type=script&lang=js":
+/*!***************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/Pages/Auth/Dashboard.vue?vue&type=script&lang=js ***!
+  \***************************************************************************************************************************************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -28210,10 +28210,10 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/Pages/Auth/Dashboard.vue?vue&type=script&lang=js":
-/*!***************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/Pages/Auth/Dashboard.vue?vue&type=script&lang=js ***!
-  \***************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/Pages/Auth/Dashboard_copy.vue?vue&type=script&lang=js":
+/*!********************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/Pages/Auth/Dashboard_copy.vue?vue&type=script&lang=js ***!
+  \********************************************************************************************************************************************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -29822,17 +29822,17 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 
 
-var test3 = ["Permanent", "Casual", "Job Order", "Consultant"];
+var test3 = ["Permanent", "Casual", "Job Order", "Consultant", "Coterminous"];
 var test6 = ["Colocation of offices involved in BPLS", "Integration of barangay clearance", "Adoption of online assessment and payment", " Integration of FSIC in BPLS"];
 var test2 = ["New", "Renewal"];
 var test7 = ["Setting up an Electronic Business One Stop Shop", "Integration of barangay clearance", "Use of online payment facility", "Integration of FSIC fees", "Use of electronic signature/official receipt"];
 var test4 = ["1st", "2nd", "3rd", "4th", "5th", "6th"];
-var year = ["1998", "1999", "2000", "2001", "2002", "2003", "2004", "2005", "2006", "2007", "2008", "2009", "2010", "2011", "2012", "2013", "2014", "2015", "2016", "2017", "2018", "2019", "2020", "2021", "2022"];
+var year = ["1998", "1999", "2000", "2001", "2002", "2003", "2004", "2005", "2006", "2007", "2008", "2009", "2010", "2011", "2012", "2013", "2014", "2015", "2016", "2017", "2018", "2019", "2020", "2021", "2022", "2023"];
 var test5 = ["Special Class", "Highly Urbanized", "Component"];
 var test1 = ["Business Permits And Licensing Office", "City Treasurer's Office/Municipal Treasurer's Office", 'Others'];
 var test = ["Yes", "No"];
-var ext_names = ["I", "II", "III", "IV", "V", "JR", "SR"];
-var fee = ["Highly Urbanized City - Php 10,000.00", "Component City - Php 5,000.00", "Municipality - Php 2,000.00"];
+var ext_names = ["I", "II", "III", "IV", "V", "JR", "SR"]; //   const fee=["Highly Urbanized City - Php 10,000.00","Component City - Php 5,000.00","Municipality - Php 2,000.00"]
+
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   components: {
     RegLayout: _Layouts_RegLayout_vue__WEBPACK_IMPORTED_MODULE_1__["default"],
@@ -29864,7 +29864,6 @@ var fee = ["Highly Urbanized City - Php 10,000.00", "Component City - Php 5,000.
       test5: test5,
       year: year,
       test6: test6,
-      fee: fee,
       test7: test7,
       currentStep: '',
       test: test,
@@ -29883,23 +29882,26 @@ var fee = ["Highly Urbanized City - Php 10,000.00", "Component City - Php 5,000.
       form: this.$inertia.form((_this$$inertia$form = {
         paid: "",
         ext_name: "",
-        topics: "",
+        //   topics:"",
         first_name: "",
         last_name: "",
         mid_name: "",
         position: "",
         department: "",
         exec_name: "",
+        payment_type: "",
         addr_municipality: '',
+        addr_province: '',
+        addr_region: '',
         //   addr_type:"",
         others_org: "",
         contact_no: "",
         full_addr: "",
         nat_employment: "",
-        org_setup: "",
-        bplo_func: "",
+        //   org_setup:"",
+        //   bplo_func:"",
         membr_type: ""
-      }, _defineProperty(_this$$inertia$form, "paid", ""), _defineProperty(_this$$inertia$form, "eboss", ""), _defineProperty(_this$$inertia$form, "membr_fee", ""), _defineProperty(_this$$inertia$form, "membr_filename", ""), _defineProperty(_this$$inertia$form, "membr_since", null), _defineProperty(_this$$inertia$form, "mempaid", ""), _defineProperty(_this$$inertia$form, "email", ""), _defineProperty(_this$$inertia$form, "reciept_filename", ""), _defineProperty(_this$$inertia$form, "lgu_class", ""), _this$$inertia$form))
+      }, _defineProperty(_this$$inertia$form, "paid", ""), _defineProperty(_this$$inertia$form, "membr_since", null), _defineProperty(_this$$inertia$form, "email", ""), _defineProperty(_this$$inertia$form, "reciept_filename", ""), _defineProperty(_this$$inertia$form, "lgu_class", ""), _this$$inertia$form))
     };
   },
   methods: {
@@ -29922,6 +29924,15 @@ var fee = ["Highly Urbanized City - Php 10,000.00", "Component City - Php 5,000.
     removeImage: function removeImage(e) {
       this.form.reciept_filename = "";
       this.holder = "";
+    },
+    checkMaxLength: function checkMaxLength(event) {
+      if (event.keyCode === 9) {
+        return;
+      }
+
+      if (this.form.contact_no.length >= 11 && event.key !== "Backspace") {
+        event.preventDefault();
+      }
     },
     onFileChanges: function onFileChanges(e) {
       var files = e.target.files || e.dataTransfer.files;
@@ -29957,7 +29968,7 @@ var fee = ["Highly Urbanized City - Php 10,000.00", "Component City - Php 5,000.
 
       this.hasErrors = false;
       this.error_fullname = '';
-      this.form.post(this.route("register"), {
+      this.form.post(this.route("submit"), {
         forceFormData: true,
         onFinish: function onFinish() {},
         onError: function onError(resp_data) {
@@ -29981,6 +29992,8 @@ var fee = ["Highly Urbanized City - Php 10,000.00", "Component City - Php 5,000.
       this.form.addr_municipality = item.municipality; // this.form.addr_type = item.lgu_type;
 
       this.form.lgu_class = item.category;
+      this.form.addr_province = item.province;
+      this.form.addr_region = item.region;
     },
     onInput: function onInput(event) {
       this.listFiltered = event.items;
@@ -30670,13 +30683,7 @@ __webpack_require__.r(__webpack_exports__);
 var _hoisted_1 = {
   "class": "logo"
 };
-
-var _hoisted_2 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("img", {
-  src: "https://nabploph.org/public/assets/nabplologo.png",
-  alt: "nabplo"
-}, null, -1
-/* HOISTED */
-);
+var _hoisted_2 = ["src"];
 
 var _hoisted_3 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)();
 
@@ -30686,9 +30693,13 @@ var _hoisted_4 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementV
 /* HOISTED */
 );
 
-var _hoisted_5 = [_hoisted_2, _hoisted_3, _hoisted_4];
 function render(_ctx, _cache) {
-  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_1, _hoisted_5);
+  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_1, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("img", {
+    src: _ctx.$page.props.base_url + 'img/logo/nabplologo.png',
+    alt: "nabplo"
+  }, null, 8
+  /* PROPS */
+  , _hoisted_2), _hoisted_3, _hoisted_4]);
 }
 
 /***/ }),
@@ -30851,7 +30862,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm-bundler.js");
 
 var _hoisted_1 = {
-  "class": "block font-semibold text-gray-700 text-md"
+  "class": "block mt-3 text-sm font-semibold text-gray-700 md:text-md md:mt-0"
 };
 var _hoisted_2 = {
   key: 0
@@ -31077,13 +31088,7 @@ __webpack_require__.r(__webpack_exports__);
 var _hoisted_1 = {
   "class": "logo"
 };
-
-var _hoisted_2 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("img", {
-  src: "https://nabploph.org/public/assets/nabplologo.png",
-  alt: "nabplo"
-}, null, -1
-/* HOISTED */
-);
+var _hoisted_2 = ["src"];
 
 var _hoisted_3 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)();
 
@@ -31093,9 +31098,13 @@ var _hoisted_4 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementV
 /* HOISTED */
 );
 
-var _hoisted_5 = [_hoisted_2, _hoisted_3, _hoisted_4];
 function render(_ctx, _cache) {
-  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_1, _hoisted_5);
+  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_1, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("img", {
+    src: _ctx.$page.props.base_url + 'img/logo/nabplologo.png',
+    alt: "nabplo"
+  }, null, 8
+  /* PROPS */
+  , _hoisted_2), _hoisted_3, _hoisted_4]);
 }
 
 /***/ }),
@@ -32345,7 +32354,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm-bundler.js");
 
 var _hoisted_1 = {
-  "class": "overflow-auto tablet:overflow-y-scroll tablet:h-screen"
+  "class": "tablet:h-screen"
 };
 var _hoisted_2 = {
   "class": "fixed z-10 flex items-center justify-between w-screen p-4 border-none sm:p-0 sm:justify-evenly bg"
@@ -32372,7 +32381,7 @@ var _hoisted_8 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNod
 
 var _hoisted_9 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" About Us ");
 
-var _hoisted_10 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" Loug Us ");
+var _hoisted_10 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" Track Status ");
 
 var _hoisted_11 = {
   "class": "hidden sm:flex"
@@ -32505,9 +32514,9 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
 
   }, 8
   /* PROPS */
-  , ["href", "active"]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_NavLink, {
-    href: _ctx.route('logout'),
-    active: _ctx.route().current('logout')
+  , ["href", "active"]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" <NavLink :href=\"route('logout')\" :active=\"route().current('logout')\">\r\n               Loug Us\r\n                </NavLink> "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_NavLink, {
+    href: _ctx.route('checkstatus'),
+    active: _ctx.route().current('checkstatus')
   }, {
     "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
       return [_hoisted_10];
@@ -32517,7 +32526,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
 
   }, 8
   /* PROPS */
-  , ["href", "active"]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" <NavLink :href=\"route('checkstatus')\" :active=\"route().current('checkstatus')\">\r\n              Track Status\r\n                </NavLink>  ")]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_11, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_Link, {
+  , ["href", "active"])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_11, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_Link, {
     href: _ctx.route('register')
   }, {
     "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
@@ -32592,7 +32601,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
   /* PROPS */
   , ["href"])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_22, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_BreezeResponsiveNavLink, {
     "class": "text",
-    href: _ctx.route('logout')
+    href: _ctx.route('checkstatus')
   }, {
     "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
       return [_hoisted_23];
@@ -35688,7 +35697,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm-bundler.js");
 
 
-var _hoisted_1 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" test ");
+var _hoisted_1 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" Dashboard ");
 
 function render(_ctx, _cache, $props, $setup, $data, $options) {
   var _component_Head = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("Head");
@@ -37638,9 +37647,47 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
 
 /***/ }),
 
-/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/Pages/Auth/Dashboard copy.vue?vue&type=template&id=15cffa62":
+/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/Pages/Auth/Dashboard.vue?vue&type=template&id=44d24236":
+/*!*******************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/Pages/Auth/Dashboard.vue?vue&type=template&id=44d24236 ***!
+  \*******************************************************************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* binding */ render)
+/* harmony export */ });
+/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm-bundler.js");
+
+var _hoisted_1 = {
+  "class": "min-h-screen"
+};
+var _hoisted_2 = {
+  "class": "text-4xl font-bold p-10 min-h-[23rem] text-blues"
+};
+
+var _hoisted_3 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" Welcome, ");
+
+var _hoisted_4 = {
+  "class": "capitalize"
+};
+
+var _hoisted_5 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", null, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" <div>\r\n     <table>\r\n      <thead>\r\n        <tr>\r\n          <th>Month</th>\r\n          <th>File Uploaded</th>\r\n          <th>Status</th>\r\n          <th>Upload File</th>\r\n        </tr>\r\n      </thead>\r\n      <tbody>\r\n        <tr v-for=\"(month, index) in months\" :key=\"month.name\">\r\n          <td>{{ month.name }}</td>\r\n          <td>{{ month.uploadedFile }}</td>\r\n          <td>{{ month.status }}</td>\r\n          <td>\r\n            <input\r\n              type=\"file\"\r\n              :disabled=\"isDisabled(index)\"\r\n              @change=\"onFileSelected($event, index)\"\r\n            />\r\n          </td>\r\n        </tr>\r\n      </tbody>\r\n    </table>\r\n  </div> ")], -1
+/* HOISTED */
+);
+
+function render(_ctx, _cache, $props, $setup, $data, $options) {
+  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_1, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_2, [_hoisted_3, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", _hoisted_4, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(_ctx.$page.props.auth.user.first_name) + " " + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(_ctx.$page.props.auth.user.last_name), 1
+  /* TEXT */
+  )]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" <div class=\"w-full h-full rounded-md\">\r\n    <img :src=\"$page.props.base_url + `public/img/logo/dsdh.png`\"\r\n    alt=\"\" class=\"mx-auto\">\r\n\r\n    </div> "), _hoisted_5]);
+}
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/Pages/Auth/Dashboard_copy.vue?vue&type=template&id=71ef540e":
 /*!************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/Pages/Auth/Dashboard copy.vue?vue&type=template&id=15cffa62 ***!
+  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/Pages/Auth/Dashboard_copy.vue?vue&type=template&id=71ef540e ***!
   \************************************************************************************************************************************************************************************************************************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
@@ -37818,44 +37865,6 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
   }, "Upload", 10
   /* CLASS, PROPS */
   , _hoisted_31)])])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" ... and so on for the other months ... ")])])]);
-}
-
-/***/ }),
-
-/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/Pages/Auth/Dashboard.vue?vue&type=template&id=44d24236":
-/*!*******************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/Pages/Auth/Dashboard.vue?vue&type=template&id=44d24236 ***!
-  \*******************************************************************************************************************************************************************************************************************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "render": () => (/* binding */ render)
-/* harmony export */ });
-/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm-bundler.js");
-
-var _hoisted_1 = {
-  "class": "min-h-screen"
-};
-var _hoisted_2 = {
-  "class": "text-4xl font-bold p-10 min-h-[23rem] text-blues"
-};
-
-var _hoisted_3 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" Welcome, ");
-
-var _hoisted_4 = {
-  "class": "capitalize"
-};
-
-var _hoisted_5 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", null, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" <div>\r\n     <table>\r\n      <thead>\r\n        <tr>\r\n          <th>Month</th>\r\n          <th>File Uploaded</th>\r\n          <th>Status</th>\r\n          <th>Upload File</th>\r\n        </tr>\r\n      </thead>\r\n      <tbody>\r\n        <tr v-for=\"(month, index) in months\" :key=\"month.name\">\r\n          <td>{{ month.name }}</td>\r\n          <td>{{ month.uploadedFile }}</td>\r\n          <td>{{ month.status }}</td>\r\n          <td>\r\n            <input\r\n              type=\"file\"\r\n              :disabled=\"isDisabled(index)\"\r\n              @change=\"onFileSelected($event, index)\"\r\n            />\r\n          </td>\r\n        </tr>\r\n      </tbody>\r\n    </table>\r\n  </div> ")], -1
-/* HOISTED */
-);
-
-function render(_ctx, _cache, $props, $setup, $data, $options) {
-  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_1, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_2, [_hoisted_3, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", _hoisted_4, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(_ctx.$page.props.auth.user.first_name) + " " + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(_ctx.$page.props.auth.user.last_name), 1
-  /* TEXT */
-  )]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" <div class=\"w-full h-full rounded-md\">\r\n    <img :src=\"$page.props.base_url + `public/img/logo/dsdh.png`\"\r\n    alt=\"\" class=\"mx-auto\">\r\n\r\n    </div> "), _hoisted_5]);
 }
 
 /***/ }),
@@ -39494,13 +39503,13 @@ var _hoisted_56 = {
   "class": "text-xs font-bold text-gray-600 capitalize sm:text-sm"
 };
 var _hoisted_57 = {
-  "class": "px-2 py-2 sm:px-4 sm:py-4 whitespace-nowrap max-w-[10rem]"
+  "class": "px-2 py-2 sm:px-4 sm:py-4 whitespace-pre-line break-all max-w-[10rem]"
 };
 var _hoisted_58 = {
   "class": "text-xs text-gray-500 sm:text-sm"
 };
 var _hoisted_59 = {
-  "class": "text-xs text-gray-500 sm:text-sm"
+  "class": "text-xs text-gray-500 sm:text-sm max-w-[10rem] break-all"
 };
 var _hoisted_60 = {
   "class": "text-xs text-gray-500 sm:text-sm"
@@ -41405,23 +41414,28 @@ var _hoisted_27 = {
 };
 var _hoisted_28 = {
   key: 0,
-  "class": "w-full ml-1 text-xs italic sm:text-sm"
-};
-var _hoisted_29 = {
-  "class": "mt-4"
-};
-var _hoisted_30 = {
-  key: 0,
   "class": "mt-3 ml-1 font-bold text-blue-500 text-md"
 };
-var _hoisted_31 = {
+var _hoisted_29 = {
   key: 1,
   "class": "mt-3 ml-1 font-bold text-blue-500 text-md"
 };
-var _hoisted_32 = {
+var _hoisted_30 = {
   key: 2,
   "class": "grid grid-cols-4 mt-6 mb-3 sm:grid-cols-3 sm:gap-2"
 };
+
+var _hoisted_31 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("hr", {
+  "class": "col-span-1 mt-3 bg-gray-200 border-2 sm:col-span-1"
+}, null, -1
+/* HOISTED */
+);
+
+var _hoisted_32 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+  "class": "col-span-2 text-lg font-bold text-center text-gray-500 sm:mx-auto sm:col-span-1"
+}, "Convention Attachment", -1
+/* HOISTED */
+);
 
 var _hoisted_33 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("hr", {
   "class": "col-span-1 mt-3 bg-gray-200 border-2 sm:col-span-1"
@@ -41429,87 +41443,32 @@ var _hoisted_33 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElement
 /* HOISTED */
 );
 
-var _hoisted_34 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
-  "class": "col-span-2 text-lg font-bold text-center text-gray-500 sm:mx-auto sm:col-span-1"
-}, "Membership Attachment", -1
-/* HOISTED */
-);
-
-var _hoisted_35 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("hr", {
-  "class": "col-span-1 mt-3 bg-gray-200 border-2 sm:col-span-1"
-}, null, -1
-/* HOISTED */
-);
-
-var _hoisted_36 = [_hoisted_33, _hoisted_34, _hoisted_35];
-var _hoisted_37 = {
+var _hoisted_34 = [_hoisted_31, _hoisted_32, _hoisted_33];
+var _hoisted_35 = {
   key: 3,
   "class": "mt-4"
 };
-var _hoisted_38 = {
+var _hoisted_36 = {
   "class": "py-3 mt-1 border-4 border-dashed"
 };
-var _hoisted_39 = {
+var _hoisted_37 = {
   key: 0,
   "class": "flex flex-col items-center justify-center mt-3"
 };
 
-var _hoisted_40 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<svg xmlns=\"http://www.w3.org/2000/svg\" class=\"w-10 h-10 mt-4\" fill=\"none\" viewBox=\"0 0 24 24\" stroke=\"black\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z\"></path><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M15 13a3 3 0 11-6 0 3 3 0 016 0z\"></path></svg><label for=\"trackorders\" class=\"p-2 mt-2 font-bold text-white bg-blue-500 rounded-md shadow cursor-pointer\"> Upload here</label><h2 class=\"mt-3 text-sm itallic\">Kindly Upload Proof Of Payment or Receipt Here</h2>", 3);
+var _hoisted_38 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<svg xmlns=\"http://www.w3.org/2000/svg\" class=\"w-10 h-10 mt-4\" fill=\"none\" viewBox=\"0 0 24 24\" stroke=\"black\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z\"></path><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M15 13a3 3 0 11-6 0 3 3 0 016 0z\"></path></svg><label for=\"test\" class=\"p-2 mt-2 font-bold text-white bg-blue-500 rounded-md shadow cursor-pointer\"> Upload here</label><h2 class=\"mt-3 text-sm itallic\">Kindly Upload Proof Of Payment or Receipt Here</h2>", 3);
 
+var _hoisted_41 = {
+  key: 1,
+  "class": "flex flex-col items-center justify-center mt-2"
+};
+var _hoisted_42 = ["src"];
 var _hoisted_43 = {
-  key: 1,
-  "class": "flex flex-col items-center justify-center mt-2"
-};
-var _hoisted_44 = ["src"];
-var _hoisted_45 = {
   key: 4,
-  "class": "grid grid-cols-4 mt-6 mb-3 sm:grid-cols-3 sm:gap-2"
-};
-
-var _hoisted_46 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("hr", {
-  "class": "col-span-1 mt-3 bg-gray-200 border-2 sm:col-span-1"
-}, null, -1
-/* HOISTED */
-);
-
-var _hoisted_47 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
-  "class": "col-span-2 text-lg font-bold text-center text-gray-500 sm:mx-auto sm:col-span-1"
-}, "Convention Attachment", -1
-/* HOISTED */
-);
-
-var _hoisted_48 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("hr", {
-  "class": "col-span-1 mt-3 bg-gray-200 border-2 sm:col-span-1"
-}, null, -1
-/* HOISTED */
-);
-
-var _hoisted_49 = [_hoisted_46, _hoisted_47, _hoisted_48];
-var _hoisted_50 = {
-  key: 5,
-  "class": "mt-4"
-};
-var _hoisted_51 = {
-  "class": "py-3 mt-1 border-4 border-dashed"
-};
-var _hoisted_52 = {
-  key: 0,
-  "class": "flex flex-col items-center justify-center mt-3"
-};
-
-var _hoisted_53 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<svg xmlns=\"http://www.w3.org/2000/svg\" class=\"w-10 h-10 mt-4\" fill=\"none\" viewBox=\"0 0 24 24\" stroke=\"black\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z\"></path><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M15 13a3 3 0 11-6 0 3 3 0 016 0z\"></path></svg><label for=\"test\" class=\"p-2 mt-2 font-bold text-white bg-blue-500 rounded-md shadow cursor-pointer\"> Upload here</label><h2 class=\"mt-3 text-sm itallic\">Kindly Upload Proof Of Payment or Receipt Here</h2>", 3);
-
-var _hoisted_56 = {
-  key: 1,
-  "class": "flex flex-col items-center justify-center mt-2"
-};
-var _hoisted_57 = ["src"];
-var _hoisted_58 = {
-  key: 6,
   "class": "flex justify-center mt-8 mb-9 item-center"
 };
 
-var _hoisted_59 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" Update Registration ");
+var _hoisted_44 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" Update Registration ");
 
 function render(_ctx, _cache, $props, $setup, $data, $options) {
   var _component_Head = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("Head");
@@ -41583,7 +41542,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
 
   }, 8
   /* PROPS */
-  , ["class", "disabled"])])]), $data.show_data ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_19, [$data.form.paid === 'PAY LATER' || $data.form.mempaid === 'PAY LATER' ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_20, " Please upload payment information below to update your registration ")) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_21, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_BreezeLabel, {
+  , ["class", "disabled"])])]), $data.show_data ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_19, [$data.form.paid === 'PAY LATER' ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_20, " Please upload payment information below to update your registration ")) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_21, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_BreezeLabel, {
     "for": "trackorder",
     value: "Participant Details",
     "class": "mb-2 ml-2 text-lg font-bold text-center text-gray-500"
@@ -41611,19 +41570,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     "class": "block w-full mt-1 bg-gray-200"
   }, null, 8
   /* PROPS */
-  , ["value"])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_25, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_BreezeLabel, {
-    "for": "trackorder",
-    value: "Membership Payment:",
-    "class": "mb-2 ml-2 font-bold text-gray-500 text-md"
-  }), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_BreezeInput, {
-    disabled: "",
-    type: "text",
-    "for": "trackorder",
-    value: $data.form.mempaid,
-    "class": "block w-full mt-1 bg-gray-200"
-  }, null, 8
-  /* PROPS */
-  , ["value"]), $data.form.mempaid === 'PAY LATER' ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("span", _hoisted_26, " Note: Please upload receipt below to update your registration ")) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true)]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_27, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_BreezeLabel, {
+  , ["value"])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" <div class=\"mt-4\">\r\n                    <BreezeLabel\r\n                        for=\"trackorder\"\r\n                        value=\"Membership Payment:\"\r\n                        class=\"mb-2 ml-2 font-bold text-gray-500 text-md\"\r\n                    />\r\n                    <BreezeInput\r\n                    disabled\r\n                       type=\"text\"\r\n                        for=\"trackorder\"\r\n                        :value=\"form.mempaid\"\r\n                        class=\"block w-full mt-1 bg-gray-200\"\r\n                    />\r\n                     <span class=\"w-full ml-1 text-xs italic sm:text-sm\" v-if=\"form.mempaid ==='PAY LATER'\">\r\n                        Note: Please upload receipt below to update your registration\r\n                    </span>\r\n                </div> "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_25, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_BreezeLabel, {
     "for": "trackorder",
     value: "Convention Payment:",
     "class": "mb-2 ml-2 font-bold text-gray-500 text-md"
@@ -41635,7 +41582,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     "class": "block w-full mt-1 bg-gray-200"
   }, null, 8
   /* PROPS */
-  , ["value"]), $data.form.paid === 'PAY LATER' ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("span", _hoisted_28, " Note: Please upload receipt below to update your registration ")) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true)]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_29, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_BreezeLabel, {
+  , ["value"]), $data.form.paid === 'PAY LATER' ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("span", _hoisted_26, " Note: Please upload receipt below to update your registration ")) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true)]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_27, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_BreezeLabel, {
     "for": "trackorder",
     value: "Status:",
     "class": "mb-2 ml-2 font-bold text-gray-500 text-md"
@@ -41647,65 +41594,32 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     "class": "block w-full mt-1 bg-gray-200"
   }, null, 8
   /* PROPS */
-  , ["value"])]), $data.verification_status === 'Verified' ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_30, " Your Application is on track, See you at the Convention ")) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true), $data.form.paid === 'PAID' && $data.form.mempaid === 'PAID' && $data.verification_status === 'PENDING' ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_31, " We are verifying your registration please come back soon. ")) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true), $data.form.mempaid === 'PAY LATER' ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_32, _hoisted_36)) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true), $data.form.mempaid === 'PAY LATER' ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_37, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_BreezeLabel, {
-    "for": "trackorders",
-    value: "Attachment:",
-    "class": "mb-2 ml-2 font-bold text-gray-500 text-md"
-  }), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_38, [!$data.holders ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_39, [_hoisted_40, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
-    type: "file",
-    id: "trackorders",
-    "class": "mb-5 upload-photo",
-    onInput: _cache[2] || (_cache[2] = function ($event) {
-      return $data.form.membr_filename = $event.target.files[0];
-    }),
-    name: "upload",
-    accept: "image/png, image/jpeg, image/jpg",
-    onChange: _cache[3] || (_cache[3] = function () {
-      return $options.onFileChanges && $options.onFileChanges.apply($options, arguments);
-    })
-  }, null, 32
-  /* HYDRATE_EVENTS */
-  )])) : ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_43, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("img", {
-    "class": "object-contain w-full max-h-40",
-    src: $data.holders
-  }, null, 8
-  /* PROPS */
-  , _hoisted_44), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
-    "class": "p-2 mt-4 text-red-500 border",
-    onClick: _cache[4] || (_cache[4] = function () {
-      return $options.removeImages && $options.removeImages.apply($options, arguments);
-    })
-  }, " Remove Image ")]))]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_InputError, {
-    "class": "mt-1",
-    message: $data.form.errors.membr_filename
-  }, null, 8
-  /* PROPS */
-  , ["message"])])) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true), $data.form.paid === 'PAY LATER' ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_45, _hoisted_49)) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true), $data.form.paid === 'PAY LATER' ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_50, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_BreezeLabel, {
+  , ["value"])]), $data.verification_status === 'Verified' ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_28, " Your Application is on track, See you at the Convention ")) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true), $data.form.paid === 'PAID' && $data.verification_status === 'PENDING' ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_29, " We are verifying your registration please come back soon. ")) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" <div class=\"grid grid-cols-4 mt-6 mb-3 sm:grid-cols-3 sm:gap-2\" v-if=\"form.mempaid ==='PAY LATER'\">\r\n                <hr class=\"col-span-1 mt-3 bg-gray-200 border-2 sm:col-span-1\">\r\n                <div class=\"col-span-2 text-lg font-bold text-center text-gray-500 sm:mx-auto sm:col-span-1\">Membership Attachment</div>\r\n                <hr class=\"col-span-1 mt-3 bg-gray-200 border-2 sm:col-span-1\">\r\n\r\n            </div>   "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" <div class=\"mt-4\"  v-if=\"form.mempaid ==='PAY LATER'\">\r\n                  <BreezeLabel\r\n                        for=\"trackorders\"\r\n                        value=\"Attachment:\"\r\n                        class=\"mb-2 ml-2 font-bold text-gray-500 text-md\"\r\n                    />\r\n   <div class=\"py-3 mt-1 border-4 border-dashed\">\r\n       \r\n          <div  class=\"flex flex-col items-center justify-center mt-3\"  v-if=\"!holders\">\r\n \r\n   <svg\r\n                                                    xmlns=\"http://www.w3.org/2000/svg\"\r\n                                                    class=\"w-10 h-10 mt-4 \"\r\n                                                    fill=\"none\"\r\n                                                    viewBox=\"0 0 24 24\"\r\n                                                    stroke=\"black\"\r\n                                                >\r\n                                                    <path\r\n                                                        stroke-linecap=\"round\"\r\n                                                        stroke-linejoin=\"round\"\r\n                                                        stroke-width=\"2\"\r\n                                                        d=\"M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z\"\r\n                                                    />\r\n                                                    <path\r\n                                                        stroke-linecap=\"round\"\r\n                                                        stroke-linejoin=\"round\"\r\n                                                        stroke-width=\"2\"\r\n                                                        d=\"M15 13a3 3 0 11-6 0 3 3 0 016 0z\"\r\n                                                    /></svg\r\n                                                >\r\n                                            <label\r\n                                                \r\n                                                for=\"trackorders\"\r\n                                                class=\"p-2 mt-2 font-bold text-white bg-blue-500 rounded-md shadow cursor-pointer\"\r\n                                                > Upload here</label\r\n                                            >\r\n    <h2 class=\"mt-3 text-sm itallic \">Kindly Upload Proof Of Payment or Receipt Here</h2>\r\n                                            <input\r\n                                          \r\n                                                type=\"file\"\r\n                                                id=\"trackorders\"\r\n                                                class=\"mb-5 upload-photo\"\r\n                                                 @input=\"\r\n                                                    form.membr_filename=$event.target.files[0]\"\r\n                                                name=\"upload\"\r\n                                                 accept=\"image/png, image/jpeg, image/jpg\"\r\n                                                @change=\"onFileChanges\"\r\n                                            />\r\n                             </div>\r\n                                      <div  class=\"flex flex-col items-center justify-center mt-2\" v-else>\r\n                                          <img\r\n                                                    class=\"object-contain w-full max-h-40\"\r\n                                                    :src=\"holders\"\r\n                                                />\r\n                                      \r\n                                  <button\r\n                                                    class=\"p-2 mt-4 text-red-500 border \"\r\n                                                    @click=\"removeImages\"\r\n                                                >\r\n                                                    Remove Image\r\n                                                </button>\r\n                                       \r\n        </div>\r\n         \r\n           </div>   \r\n\r\n     \r\n\r\n   <InputError class=\"mt-1\" :message=\"form.errors.membr_filename\"  />\r\n      \r\n\r\n                          \r\n       </div> "), $data.form.paid === 'PAY LATER' ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_30, _hoisted_34)) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true), $data.form.paid === 'PAY LATER' ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_35, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_BreezeLabel, {
     "for": "trackorder",
     value: "Attachments:",
     "class": "mb-2 ml-2 font-bold text-gray-500 text-md"
-  }), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_51, [!$data.holder ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_52, [_hoisted_53, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
+  }), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_36, [!$data.holder ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_37, [_hoisted_38, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
     type: "file",
     id: "test",
     "class": "mb-5 upload-photo",
-    onInput: _cache[5] || (_cache[5] = function ($event) {
+    onInput: _cache[2] || (_cache[2] = function ($event) {
       return $data.form.reciept_filename = $event.target.files[0];
     }),
     name: "upload",
     accept: "image/png, image/jpeg, image/jpg",
-    onChange: _cache[6] || (_cache[6] = function () {
+    onChange: _cache[3] || (_cache[3] = function () {
       return $options.onFileChange && $options.onFileChange.apply($options, arguments);
     })
   }, null, 32
   /* HYDRATE_EVENTS */
-  )])) : ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_56, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("img", {
+  )])) : ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_41, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("img", {
     "class": "object-contain w-full max-h-40",
     src: $data.holder
   }, null, 8
   /* PROPS */
-  , _hoisted_57), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
+  , _hoisted_42), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
     "class": "p-2 mt-4 text-red-500 border",
-    onClick: _cache[7] || (_cache[7] = function () {
+    onClick: _cache[4] || (_cache[4] = function () {
       return $options.removeImage && $options.removeImage.apply($options, arguments);
     })
   }, " Remove Image ")]))]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_InputError, {
@@ -41713,7 +41627,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     message: $data.form.errors.reciept_filename
   }, null, 8
   /* PROPS */
-  , ["message"])])) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true), $data.form.paid === 'PAY LATER' || $data.form.mempaid === 'PAY LATER' ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_58, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_BreezeButton, {
+  , ["message"])])) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true), $data.form.paid === 'PAY LATER' || $data.form.mempaid === 'PAY LATER' ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_43, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_BreezeButton, {
     "class": (0,vue__WEBPACK_IMPORTED_MODULE_0__.normalizeClass)(["w-full text-center rounded-2xl sm:w-1/2", {
       'opacity-25': $data.form.processing
     }]),
@@ -41721,7 +41635,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     onClick: $options.submit
   }, {
     "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
-      return [_hoisted_59];
+      return [_hoisted_44];
     }),
     _: 1
     /* STABLE */
@@ -41748,58 +41662,25 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm-bundler.js");
 
-var _hoisted_1 = {
-  "class": "flex flex-col items-center justify-center w-screen mt-14 min-h-[50rem]"
-};
 
-var _hoisted_2 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h1", {
-  "class": "text-4xl font-bold text-center text-blue-500"
-}, "Contact Us", -1
+var _hoisted_1 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+  "class": "min-h-[50rem] text-black w-screen mt-20 text-center"
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+  "class": "flex items-start justify-end gap-4"
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+  "class": "w-12 h-12 border border-black"
+}), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+  "class": "w-12 h-12 border border-black"
+}), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+  "class": "w-12 h-12 border border-black"
+}), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+  "class": "w-12 h-12 border border-black"
+})])], -1
 /* HOISTED */
 );
-
-var _hoisted_3 = {
-  "class": "relative w-full max-w-xl mt-12"
-};
-var _hoisted_4 = {
-  "class": "flex gap-6 justify-items-start"
-};
-var _hoisted_5 = {
-  "class": "mb-4"
-};
-
-var _hoisted_6 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)("Name");
-
-var _hoisted_7 = {
-  "class": "mb-4"
-};
-
-var _hoisted_8 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)("Email");
-
-var _hoisted_9 = {
-  "class": "mb-4"
-};
-
-var _hoisted_10 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)("Subject");
-
-var _hoisted_11 = {
-  "class": "flex items-start justify-between"
-};
-
-var _hoisted_12 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", null, null, -1
-/* HOISTED */
-);
-
-var _hoisted_13 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)("Submit");
 
 function render(_ctx, _cache, $props, $setup, $data, $options) {
   var _component_Head = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("Head");
-
-  var _component_InputLabel = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("InputLabel");
-
-  var _component_TextInput = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("TextInput");
-
-  var _component_PrimaryButton = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("PrimaryButton");
 
   var _component_GuestLayout = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("GuestLayout");
 
@@ -41807,83 +41688,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     title: "Contact Us"
   }), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_GuestLayout, null, {
     "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
-      return [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_1, [_hoisted_2, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_3, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("form", {
-        "class": "relative px-8 pt-6 pb-8 mb-4 bg-white rounded shadow-md",
-        onSubmit: _cache[3] || (_cache[3] = (0,vue__WEBPACK_IMPORTED_MODULE_0__.withModifiers)(function () {
-          return _ctx.submitForm && _ctx.submitForm.apply(_ctx, arguments);
-        }, ["prevent"]))
-      }, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_4, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_5, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_InputLabel, {
-        "class": "block mb-2 font-bold text-gray-700",
-        "for": "name"
-      }, {
-        "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
-          return [_hoisted_6];
-        }),
-        _: 1
-        /* STABLE */
-
-      }), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_TextInput, {
-        modelValue: $data.form.name,
-        "onUpdate:modelValue": _cache[0] || (_cache[0] = function ($event) {
-          return $data.form.name = $event;
-        }),
-        "class": "input-field",
-        id: "name",
-        type: "text"
-      }, null, 8
-      /* PROPS */
-      , ["modelValue"])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_7, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_InputLabel, {
-        "class": "block mb-2 font-bold text-gray-700",
-        "for": "email"
-      }, {
-        "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
-          return [_hoisted_8];
-        }),
-        _: 1
-        /* STABLE */
-
-      }), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_TextInput, {
-        modelValue: $data.form.email,
-        "onUpdate:modelValue": _cache[1] || (_cache[1] = function ($event) {
-          return $data.form.email = $event;
-        }),
-        "class": "input-field",
-        id: "email",
-        type: "email"
-      }, null, 8
-      /* PROPS */
-      , ["modelValue"])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_9, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_InputLabel, {
-        "class": "block mb-2 font-bold text-gray-700",
-        "for": "subject"
-      }, {
-        "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
-          return [_hoisted_10];
-        }),
-        _: 1
-        /* STABLE */
-
-      }), (0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("textarea", {
-        "onUpdate:modelValue": _cache[2] || (_cache[2] = function ($event) {
-          return $data.form.subject = $event;
-        }),
-        rows: "6",
-        "class": "w-full border-gray-200 textarea-field",
-        placeholder: "Write your thoughts here..."
-      }, null, 512
-      /* NEED_PATCH */
-      ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $data.form.subject]])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_11, [_hoisted_12, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_PrimaryButton, {
-        type: "submit",
-        "class": "text-white bg-blues"
-      }, {
-        "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
-          return [_hoisted_13];
-        }),
-        _: 1
-        /* STABLE */
-
-      })])], 32
-      /* HYDRATE_EVENTS */
-      )])])];
+      return [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" <div class=\"flex flex-col items-center justify-center w-screen mt-14 min-h-[50rem] \"> "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" <h1 class=\"text-4xl font-bold text-center text-blue-500\">Contact Us</h1> "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" <div class=\"relative w-full max-w-xl mt-12\">\r\n      \r\n        <form class=\"relative px-8 pt-6 pb-8 mb-4 bg-white rounded shadow-md\" @submit.prevent=\"submitForm\">\r\n          <div class=\"flex gap-6 justify-items-start\">\r\n\r\n          <div class=\"mb-4\">\r\n            <InputLabel class=\"block mb-2 font-bold text-gray-700\" for=\"name\">Name</InputLabel>\r\n            <TextInput v-model=\"form.name\" class=\"input-field\" id=\"name\" type=\"text\"  />\r\n          </div>\r\n          <div class=\"mb-4\">\r\n            <InputLabel class=\"block mb-2 font-bold text-gray-700\" for=\"email\">Email</InputLabel>\r\n            <TextInput v-model=\"form.email\" class=\"input-field\" id=\"email\" type=\"email\"  />\r\n          </div>\r\n          </div>\r\n          <div class=\"mb-4\">\r\n            <InputLabel class=\"block mb-2 font-bold text-gray-700\" for=\"subject\">Subject</InputLabel>\r\n            <textarea v-model=\"form.subject\" rows=\"6\" class=\"w-full border-gray-200 textarea-field\" placeholder=\"Write your thoughts here...\"></textarea>\r\n          </div>\r\n          <div class=\"flex items-start justify-between\">\r\n            <div></div>\r\n            <PrimaryButton  type=\"submit\" class=\"text-white bg-blues\">Submit</PrimaryButton>\r\n          </div>\r\n        </form>\r\n      </div> "), _hoisted_1, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" </div> ")];
     }),
     _: 1
     /* STABLE */
@@ -42530,7 +42335,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm-bundler.js");
 
 var _hoisted_1 = {
-  "class": "items-start mx-auto justify-evenly laptop:flex tablet:block"
+  "class": "items-start mx-auto md:max-h-screen justify-evenly laptop:flex tablet:block"
 };
 var _hoisted_2 = {
   key: 0,
@@ -42577,12 +42382,12 @@ var _hoisted_11 = {
 };
 var _hoisted_12 = ["src"];
 var _hoisted_13 = {
-  "class": "container w-screen mx-auto laptop:overflow-y-scroll test",
+  "class": "w-screen mx-auto laptop:overflow-y-scroll test",
   ref: "main"
 };
 
 var _hoisted_14 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
-  "class": "container items-center justify-center mx-auto ml-3 text-3xl font-bold text-gray-600 mt-14 tablet:max-w-2xl laptop:mx-auto tablet:ml-10 tablet:flex-col laptop:max-w-xl text-start"
+  "class": "items-center justify-center mx-auto ml-3 text-3xl font-bold text-gray-600 mt-14 tablet:max-w-2xl laptop:mx-auto tablet:ml-10 tablet:flex-col laptop:max-w-xl text-start"
 }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" Lets get started "), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
   "class": "mt-2 text-sm italic font-medium text-gray-500"
 }, " Please tell us about yourself ")], -1
@@ -42661,96 +42466,7 @@ var _hoisted_30 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElement
 /* HOISTED */
 );
 
-var _hoisted_31 = {
-  "class": "mt-4"
-};
-
-var _hoisted_32 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("option", {
-  value: "",
-  selected: "",
-  hidden: "",
-  disabled: ""
-}, " Select one ", -1
-/* HOISTED */
-);
-
-var _hoisted_33 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("option", {
-  value: "Paid"
-}, " Paid ", -1
-/* HOISTED */
-);
-
-var _hoisted_34 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("option", {
-  value: "Pay Later"
-}, " Pay Later ", -1
-/* HOISTED */
-);
-
-var _hoisted_35 = [_hoisted_32, _hoisted_33, _hoisted_34];
-var _hoisted_36 = {
-  key: 2,
-  "class": "mt-4"
-};
-
-var _hoisted_37 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("option", {
-  value: "",
-  selected: "",
-  disabled: ""
-}, " Select one ", -1
-/* HOISTED */
-);
-
-var _hoisted_38 = {
-  key: 3
-};
-var _hoisted_39 = {
-  "class": "py-3 mt-1 border-4 border-dashed"
-};
-var _hoisted_40 = {
-  key: 0,
-  "class": "flex flex-col items-center justify-center mt-3"
-};
-
-var _hoisted_41 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("svg", {
-  xmlns: "http://www.w3.org/2000/svg",
-  "class": "w-10 h-10 mt-4",
-  fill: "none",
-  viewBox: "0 0 24 24",
-  stroke: "black"
-}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("path", {
-  "stroke-linecap": "round",
-  "stroke-linejoin": "round",
-  "stroke-width": "2",
-  d: "M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"
-}), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("path", {
-  "stroke-linecap": "round",
-  "stroke-linejoin": "round",
-  "stroke-width": "2",
-  d: "M15 13a3 3 0 11-6 0 3 3 0 016 0z"
-})], -1
-/* HOISTED */
-);
-
-var _hoisted_42 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("label", {
-  "for": "proof",
-  "class": "p-2 mt-2 font-bold text-white bg-blue-500 rounded-md shadow cursor-pointer"
-}, " Upload here", -1
-/* HOISTED */
-);
-
-var _hoisted_43 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h2", {
-  "class": "mt-3 text-sm itallic"
-}, "Kindly Upload Proof Of Payment for membership", -1
-/* HOISTED */
-);
-
-var _hoisted_44 = {
-  key: 1,
-  "class": "flex flex-col items-center justify-center mt-2"
-};
-var _hoisted_45 = ["src"];
-
-var _hoisted_46 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+var _hoisted_31 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
   "class": "grid grid-cols-4 mt-6 mb-6 sm:grid-cols-3 sm:gap-2"
 }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("hr", {
   "class": "col-span-1 mt-3 bg-gray-200 border-2 sm:col-span-1"
@@ -42762,39 +42478,39 @@ var _hoisted_46 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElement
 /* HOISTED */
 );
 
-var _hoisted_47 = {
+var _hoisted_32 = {
   "class": "mt-4"
 };
-var _hoisted_48 = {
+var _hoisted_33 = {
   "class": "mt-4"
 };
-var _hoisted_49 = {
+var _hoisted_34 = {
   "class": "mt-4 demo"
 };
-var _hoisted_50 = {
+var _hoisted_35 = {
   "class": "row"
 };
-var _hoisted_51 = {
+var _hoisted_36 = {
   "class": "w-full"
 };
 
-var _hoisted_52 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+var _hoisted_37 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
   "class": "column column-40"
 }, null, -1
 /* HOISTED */
 );
 
-var _hoisted_53 = {
+var _hoisted_38 = {
   "class": "grid-cols-1 mt-4 sm:grid sm:grid-cols-2"
 };
-var _hoisted_54 = {
+var _hoisted_39 = {
   "class": "col-span-1 mt-1"
 };
-var _hoisted_55 = {
+var _hoisted_40 = {
   "class": "col-span-1 mt-1 sm:ml-4"
 };
 
-var _hoisted_56 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("option", {
+var _hoisted_41 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("option", {
   value: "",
   selected: "",
   hidden: "",
@@ -42803,40 +42519,11 @@ var _hoisted_56 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElement
 /* HOISTED */
 );
 
-var _hoisted_57 = {
+var _hoisted_42 = {
   "class": "mt-4"
 };
 
-var _hoisted_58 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
-  "class": "grid grid-cols-4 mt-6 mb-6 sm:grid-cols-3 sm:gap-2"
-}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("hr", {
-  "class": "col-span-1 mt-3 bg-gray-200 border-2 sm:col-span-1"
-}), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
-  "class": "col-span-2 text-lg font-bold text-center text-gray-500 sm:mx-auto sm:col-span-1"
-}, "Survey on BPLS"), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("hr", {
-  "class": "col-span-1 mt-3 bg-gray-200 border-2 sm:col-span-1"
-})], -1
-/* HOISTED */
-);
-
-var _hoisted_59 = {
-  "class": "mt-4"
-};
-
-var _hoisted_60 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("option", {
-  value: "",
-  selected: "",
-  hidden: "",
-  disabled: ""
-}, " Select one ", -1
-/* HOISTED */
-);
-
-var _hoisted_61 = {
-  "class": "mt-4"
-};
-
-var _hoisted_62 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("option", {
+var _hoisted_43 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("option", {
   value: "",
   selected: "",
   hidden: "",
@@ -42845,37 +42532,12 @@ var _hoisted_62 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElement
 /* HOISTED */
 );
 
-var _hoisted_63 = {
-  key: 4,
-  "class": "mt-4"
-};
-var _hoisted_64 = {
+var _hoisted_44 = {
+  key: 2,
   "class": "mt-4"
 };
 
-var _hoisted_65 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("option", {
-  value: "",
-  selected: "",
-  hidden: "",
-  disabled: ""
-}, " Select one ", -1
-/* HOISTED */
-);
-
-var _hoisted_66 = {
-  "class": "mt-4"
-};
-
-var _hoisted_67 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("option", {
-  value: "",
-  selected: "",
-  hidden: "",
-  disabled: ""
-}, " Select one ", -1
-/* HOISTED */
-);
-
-var _hoisted_68 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+var _hoisted_45 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
   "class": "grid grid-cols-4 mt-6 mb-3 sm:grid-cols-3 sm:gap-2"
 }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("hr", {
   "class": "col-span-1 mt-3 bg-gray-200 border-2 sm:col-span-1"
@@ -42887,11 +42549,11 @@ var _hoisted_68 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElement
 /* HOISTED */
 );
 
-var _hoisted_69 = {
+var _hoisted_46 = {
   "class": "mt-4"
 };
 
-var _hoisted_70 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("option", {
+var _hoisted_47 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("option", {
   value: "",
   selected: "",
   hidden: "",
@@ -42900,31 +42562,31 @@ var _hoisted_70 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElement
 /* HOISTED */
 );
 
-var _hoisted_71 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("option", {
+var _hoisted_48 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("option", {
   value: "Paid"
 }, " Paid ", -1
 /* HOISTED */
 );
 
-var _hoisted_72 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("option", {
+var _hoisted_49 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("option", {
   value: "Pay Later"
 }, " Pay Later ", -1
 /* HOISTED */
 );
 
-var _hoisted_73 = [_hoisted_70, _hoisted_71, _hoisted_72];
-var _hoisted_74 = {
-  key: 5
+var _hoisted_50 = [_hoisted_47, _hoisted_48, _hoisted_49];
+var _hoisted_51 = {
+  key: 3
 };
-var _hoisted_75 = {
+var _hoisted_52 = {
   "class": "py-3 mt-1 border-4 border-dashed"
 };
-var _hoisted_76 = {
+var _hoisted_53 = {
   key: 0,
   "class": "flex flex-col items-center justify-center mt-3"
 };
 
-var _hoisted_77 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("svg", {
+var _hoisted_54 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("svg", {
   xmlns: "http://www.w3.org/2000/svg",
   "class": "w-10 h-10 mt-4",
   fill: "none",
@@ -42944,31 +42606,31 @@ var _hoisted_77 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElement
 /* HOISTED */
 );
 
-var _hoisted_78 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("label", {
+var _hoisted_55 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("label", {
   "for": "govtid",
   "class": "p-2 mt-2 font-bold text-white bg-blue-500 rounded-md shadow cursor-pointer"
 }, " Upload here", -1
 /* HOISTED */
 );
 
-var _hoisted_79 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h2", {
+var _hoisted_56 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h2", {
   "class": "mt-3 text-sm itallic"
 }, "Kindly Upload Proof Of Payment or Receipt Here", -1
 /* HOISTED */
 );
 
-var _hoisted_80 = {
+var _hoisted_57 = {
   key: 1,
   "class": "flex flex-col items-center justify-center mt-2"
 };
-var _hoisted_81 = ["src"];
-var _hoisted_82 = {
+var _hoisted_58 = ["src"];
+var _hoisted_59 = {
   "class": "flex justify-center mt-6 mb-9 item-center"
 };
 
-var _hoisted_83 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" Register ");
+var _hoisted_60 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" Register ");
 
-var _hoisted_84 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", null, null, -1
+var _hoisted_61 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", null, null, -1
 /* HOISTED */
 );
 
@@ -43146,10 +42808,11 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
         }),
         onBlur: _cache[6] || (_cache[6] = function ($event) {
           return $data.form.errors.contact_no == false;
-        })
+        }),
+        onKeydown: $options.checkMaxLength
       }, null, 8
       /* PROPS */
-      , ["modelValue", "class"]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_InputError, {
+      , ["modelValue", "class", "onKeydown"]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_InputError, {
         "class": "mt-2",
         message: $data.form.errors.contact_no
       }, null, 8
@@ -43204,82 +42867,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
         message: $data.form.errors.membr_since
       }, null, 8
       /* PROPS */
-      , ["message"])])) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_31, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_InputLabel, {
-        "for": "memPaid",
-        value: "Membership Payment Options"
-      }), (0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("select", {
-        name: "memPaid",
-        id: "memPaid",
-        "onUpdate:modelValue": _cache[9] || (_cache[9] = function ($event) {
-          return $data.form.mempaid = $event;
-        }),
-        "class": "block w-full mt-1 border-gray-300 rounded-md"
-      }, _hoisted_35, 512
-      /* NEED_PATCH */
-      ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelSelect, $data.form.mempaid]]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_InputError, {
-        "class": "mt-2",
-        message: $data.form.errors.mempaid
-      }, null, 8
-      /* PROPS */
-      , ["message"])]), $data.form.mempaid === 'Paid' ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_36, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_InputLabel, {
-        "for": "since",
-        value: "Membership Fee"
-      }), (0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("select", {
-        name: "since",
-        id: "since",
-        "onUpdate:modelValue": _cache[10] || (_cache[10] = function ($event) {
-          return $data.form.membr_fee = $event;
-        }),
-        "class": "block w-full mt-1 border-gray-300 rounded-md"
-      }, [_hoisted_37, ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)($data.fee, function (dept) {
-        return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("option", {
-          key: dept
-        }, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(dept), 1
-        /* TEXT */
-        );
-      }), 128
-      /* KEYED_FRAGMENT */
-      ))], 512
-      /* NEED_PATCH */
-      ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelSelect, $data.form.membr_fee]]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_InputError, {
-        "class": "mt-2",
-        message: $data.form.errors.membr_fee
-      }, null, 8
-      /* PROPS */
-      , ["message"])])) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true), $data.form.mempaid === 'Paid' ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_38, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_InputLabel, {
-        "for": "proof",
-        value: "Membership Attachment",
-        "class": "mt-4"
-      }), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_39, [!$data.holders ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_40, [_hoisted_41, _hoisted_42, _hoisted_43, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
-        type: "file",
-        id: "proof",
-        "class": "mb-5 upload-photo",
-        onInput: _cache[11] || (_cache[11] = function ($event) {
-          return $data.form.membr_filename = $event.target.files[0];
-        }),
-        name: "proof",
-        accept: "image/png, image/jpeg, image/jpg",
-        onChange: _cache[12] || (_cache[12] = function () {
-          return $options.onFileChanges && $options.onFileChanges.apply($options, arguments);
-        })
-      }, null, 32
-      /* HYDRATE_EVENTS */
-      )])) : ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_44, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("img", {
-        "class": "object-contain w-full max-h-40",
-        src: $data.holders
-      }, null, 8
-      /* PROPS */
-      , _hoisted_45), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
-        "class": "p-2 mt-4 text-red-500 border",
-        onClick: _cache[13] || (_cache[13] = function () {
-          return $options.removeImages && $options.removeImages.apply($options, arguments);
-        })
-      }, " Remove Image ")]))]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_InputError, {
-        "class": "mt-1",
-        message: $data.form.errors.membr_filename
-      }, null, 8
-      /* PROPS */
-      , ["message"])])) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true), _hoisted_46, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_47, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_InputLabel, {
+      , ["message"])])) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" <div class=\"mt-4\">\r\n                 <InputLabel for=\"memPaid\" value=\"Membership Payment Options\" />\r\n                    <select name=\"memPaid\" id=\"memPaid\"  v-model=\"form.mempaid\"  class=\"block w-full mt-1 border-gray-300 rounded-md \">\r\n                            <option value=\"\" selected hidden disabled>\r\n                                    Select one\r\n\r\n                            </option>\r\n                            <option value=\"Paid\">\r\n                                 Paid\r\n\r\n                            </option>\r\n                            <option value=\"Pay Later\">\r\n                                   Pay Later\r\n\r\n                            </option>\r\n                           \r\n\r\n                    </select>\r\n                    <InputError class=\"mt-2\" :message=\"form.errors.mempaid\" />\r\n            </div> "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" <div class=\"mt-4\" v-if=\"form.mempaid ==='Paid'\">\r\n                <InputLabel for=\"since\" value=\"Membership Fee\" />\r\n        \r\n          \r\n                    <select name=\"since\" id=\"since\"  v-model=\"form.membr_fee\"  class=\"block w-full mt-1 border-gray-300 rounded-md \">\r\n                            <option value=\"\" selected  disabled>\r\n                                    Select one\r\n\r\n                            </option>\r\n                            <option  v-for=\"dept in fee\" :key=\"dept\" >\r\n                                    {{dept}}\r\n                            </option>\r\n\r\n                    </select>\r\n                     <InputError class=\"mt-2\" :message=\"form.errors.membr_fee\" />\r\n      \r\n           \r\n            </div>\r\n              \t\t "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" <div v-if=\"form.mempaid ==='Paid'\" >\r\n  <InputLabel for=\"proof\" value=\"Membership Attachment\" class=\"mt-4\"/>\r\n   <div class=\"py-3 mt-1 border-4 border-dashed\">\r\n       \r\n          <div  class=\"flex flex-col items-center justify-center mt-3\"  v-if=\"!holders\">\r\n \r\n   <svg\r\n                                                    xmlns=\"http://www.w3.org/2000/svg\"\r\n                                                    class=\"w-10 h-10 mt-4 \"\r\n                                                    fill=\"none\"\r\n                                                    viewBox=\"0 0 24 24\"\r\n                                                    stroke=\"black\"\r\n                                                >\r\n                                                    <path\r\n                                                        stroke-linecap=\"round\"\r\n                                                        stroke-linejoin=\"round\"\r\n                                                        stroke-width=\"2\"\r\n                                                        d=\"M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z\"\r\n                                                    />\r\n                                                    <path\r\n                                                        stroke-linecap=\"round\"\r\n                                                        stroke-linejoin=\"round\"\r\n                                                        stroke-width=\"2\"\r\n                                                        d=\"M15 13a3 3 0 11-6 0 3 3 0 016 0z\"\r\n                                                    /></svg\r\n                                                >\r\n                                            <label\r\n                                                \r\n                                                for=\"proof\"\r\n                                                class=\"p-2 mt-2 font-bold text-white bg-blue-500 rounded-md shadow cursor-pointer\"\r\n                                                > Upload here</label\r\n                                            >\r\n    <h2 class=\"mt-3 text-sm itallic \">Kindly Upload Proof Of Payment for membership</h2>\r\n                                            <input\r\n                                          \r\n                                                type=\"file\"\r\n                                                id=\"proof\"\r\n                                                class=\"mb-5 upload-photo\"\r\n                                                 @input=\"\r\n                                                    form.membr_filename=$event.target.files[0]\"\r\n                                                name=\"proof\"\r\n                                                 accept=\"image/png, image/jpeg, image/jpg\"\r\n                                                @change=\"onFileChanges\"\r\n                                            />\r\n                             </div>\r\n                                      <div  class=\"flex flex-col items-center justify-center mt-2\" v-else>\r\n                                          <img\r\n                                                    class=\"object-contain w-full max-h-40\"\r\n                                                    :src=\"holders\"\r\n                                                />\r\n                                      \r\n                                  <button\r\n                                                    class=\"p-2 mt-4 text-red-500 border \"\r\n                                                    @click=\"removeImages\"\r\n                                                >\r\n                                                    Remove Image\r\n                                                </button>\r\n                                       \r\n        </div>\r\n         \r\n              \r\n</div>\r\n     \r\n\r\n   <InputError class=\"mt-1\" :message=\"form.errors.membr_filename\" />\r\n        </div> "), _hoisted_31, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_32, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_InputLabel, {
         "for": "exec",
         value: "Full Name of Local Chief Executive"
       }), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_TextInput, {
@@ -43287,7 +42875,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
         type: "text",
         "class": "block w-full mt-1",
         modelValue: $data.form.exec_name,
-        "onUpdate:modelValue": _cache[14] || (_cache[14] = function ($event) {
+        "onUpdate:modelValue": _cache[9] || (_cache[9] = function ($event) {
           return $data.form.exec_name = $event;
         })
       }, null, 8
@@ -43297,7 +42885,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
         message: $data.form.errors.exec_name
       }, null, 8
       /* PROPS */
-      , ["message"])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_48, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_InputLabel, {
+      , ["message"])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_33, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_InputLabel, {
         "for": "addr",
         value: "Office Address"
       }), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_TextInput, {
@@ -43305,7 +42893,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
         type: "text",
         "class": "block w-full mt-1",
         modelValue: $data.form.full_addr,
-        "onUpdate:modelValue": _cache[15] || (_cache[15] = function ($event) {
+        "onUpdate:modelValue": _cache[10] || (_cache[10] = function ($event) {
           return $data.form.full_addr = $event;
         })
       }, null, 8
@@ -43315,7 +42903,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
         message: $data.form.errors.full_addr
       }, null, 8
       /* PROPS */
-      , ["message"])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_49, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_50, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_51, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_InputLabel, {
+      , ["message"])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_34, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_35, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_36, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_InputLabel, {
         "for": "municipality",
         value: "City / Municipality",
         "class": "mb-1"
@@ -43342,7 +42930,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
         key: 0,
         "class": "mt-2",
         message: "Please select from the results"
-      })) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true)]), _hoisted_52])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_53, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_54, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_InputLabel, {
+      })) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true)]), _hoisted_37])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_38, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_39, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_InputLabel, {
         "for": "position",
         value: "Position"
       }), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_TextInput, {
@@ -43350,7 +42938,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
         type: "text",
         "class": "block w-full mt-1",
         modelValue: $data.form.position,
-        "onUpdate:modelValue": _cache[16] || (_cache[16] = function ($event) {
+        "onUpdate:modelValue": _cache[11] || (_cache[11] = function ($event) {
           return $data.form.position = $event;
         })
       }, null, 8
@@ -43360,17 +42948,17 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
         message: $data.form.errors.position
       }, null, 8
       /* PROPS */
-      , ["message"])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_55, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_InputLabel, {
+      , ["message"])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_40, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_InputLabel, {
         "for": "nat",
         value: "Nature of Employment"
       }), (0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("select", {
         name: "nat",
         id: "nat",
-        "onUpdate:modelValue": _cache[17] || (_cache[17] = function ($event) {
+        "onUpdate:modelValue": _cache[12] || (_cache[12] = function ($event) {
           return $data.form.nat_employment = $event;
         }),
         "class": "block w-full mt-1 border-gray-300 rounded-md"
-      }, [_hoisted_56, ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)($data.test3, function (depts) {
+      }, [_hoisted_41, ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)($data.test3, function (depts) {
         return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("option", {
           key: depts
         }, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(depts), 1
@@ -43385,60 +42973,17 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
         message: $data.form.errors.nat_employment
       }, null, 8
       /* PROPS */
-      , ["message"])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_57, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_InputLabel, {
-        "for": "dept",
-        value: "Department / Office"
-      }), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_TextInput, {
-        id: "dept",
-        type: "text",
-        "class": "block w-full mt-1",
-        modelValue: $data.form.department,
-        "onUpdate:modelValue": _cache[18] || (_cache[18] = function ($event) {
-          return $data.form.department = $event;
-        })
-      }, null, 8
-      /* PROPS */
-      , ["modelValue"]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_InputError, {
-        "class": "mt-2",
-        message: $data.form.errors.department
-      }, null, 8
-      /* PROPS */
-      , ["message"])]), _hoisted_58, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" <div class=\"grid-cols-1 sm:grid sm:grid-cols-2 \">\r\n                   <div class=\"col-span-1 mt-1\">\r\n                <InputLabel for=\"position\" value=\"Position\" />\r\n                <TextInput id=\"position\" type=\"text\" class=\"block w-full mt-1 \" v-model=\"form.position\" />\r\n                <InputError class=\"mt-2\" :message=\"form.errors.position\" />\r\n            </div>\r\n            <div class=\"col-span-1 mt-1 sm:ml-4\">\r\n                 <InputLabel for=\"nat\" value=\"Nature of Employment\" />\r\n                    <select name=\"nat\" id=\"nat\"  v-model=\"form.nat_employment\"  class=\"block w-full mt-1 border-gray-300 rounded-md \">\r\n                            <option value=\"\" selected hidden disabled>\r\n                                    Select One\r\n\r\n                            </option>\r\n                            <option  v-for=\"depts in test3\" :key=\"depts\" >\r\n                                    {{depts}}\r\n                            </option>\r\n                        \r\n                    </select>\r\n                    <InputError class=\"mt-2\" :message=\"form.errors.nat_employment\" />\r\n            </div>\r\n           \r\n                </div>\r\n\r\n            <div class=\"mt-4 \">\r\n                \r\n                <InputLabel for=\"depts\" value=\"Department / Office\" />\r\n                <TextInput id=\"depts\" type=\"text\" class=\"block w-full mt-1\" v-model=\"form.department\"  />\r\n                <InputError class=\"mt-2\" :message=\"form.errors.department\" />\r\n           \r\n            </div>\r\n              "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_59, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_InputLabel, {
-        "for": "org",
-        value: "1. Is your BPLO a separate department/office?"
-      }), (0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("select", {
-        name: "org",
-        id: "org",
-        "onUpdate:modelValue": _cache[19] || (_cache[19] = function ($event) {
-          return $data.form.org_setup = $event;
-        }),
-        "class": "block w-full mt-1 border-gray-300 rounded-md"
-      }, [_hoisted_60, ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)($data.test, function (dept) {
-        return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("option", {
-          key: dept
-        }, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(dept), 1
-        /* TEXT */
-        );
-      }), 128
-      /* KEYED_FRAGMENT */
-      ))], 512
-      /* NEED_PATCH */
-      ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelSelect, $data.form.org_setup]]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_InputError, {
-        "class": "mt-2",
-        message: $data.form.errors.org_setup
-      }, null, 8
-      /* PROPS */
-      , ["message"])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_61, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_InputLabel, {
+      , ["message"])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" \r\n            <div class=\"mt-4 \">\r\n                \r\n                <InputLabel for=\"dept\" value=\"Department / Office\" />\r\n                <TextInput id=\"dept\" type=\"text\" class=\"block w-full mt-1\" v-model=\"form.department\"  />\r\n                <InputError class=\"mt-2\" :message=\"form.errors.department\" />\r\n           \r\n            </div> "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_42, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_InputLabel, {
         "for": "local",
-        value: "2. Which of the following  offices does assessment for local business tax?"
+        value: "Department / Office"
       }), (0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("select", {
         name: "local",
         id: "local",
-        "onUpdate:modelValue": _cache[20] || (_cache[20] = function ($event) {
-          return $data.form.bplo_func = $event;
+        "onUpdate:modelValue": _cache[13] || (_cache[13] = function ($event) {
+          return $data.form.department = $event;
         }),
         "class": "block w-full mt-1 border-gray-300 rounded-md"
-      }, [_hoisted_62, ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)($data.test1, function (depts) {
+      }, [_hoisted_43, ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)($data.test1, function (depts) {
         return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("option", {
           key: depts
         }, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(depts), 1
@@ -43448,20 +42993,21 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
       /* KEYED_FRAGMENT */
       ))], 512
       /* NEED_PATCH */
-      ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelSelect, $data.form.bplo_func]]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_InputError, {
+      ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelSelect, $data.form.department]]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_InputError, {
         "class": "mt-2",
-        message: $data.form.errors.bplo_func
+        message: $data.form.errors.department
       }, null, 8
       /* PROPS */
-      , ["message"])]), $data.form.bplo_func === 'Others' ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_63, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_InputLabel, {
+      , ["message"])]), $data.form.department === 'Others' ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_44, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_InputLabel, {
         "for": "oth",
-        value: "Others: Please Specify"
+        value: "Others: Please Specify Department",
+        "class": "text-sm"
       }), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_TextInput, {
         id: "oth",
         type: "text",
         "class": "block w-full mt-1",
         modelValue: $data.form.others_org,
-        "onUpdate:modelValue": _cache[21] || (_cache[21] = function ($event) {
+        "onUpdate:modelValue": _cache[14] || (_cache[14] = function ($event) {
           return $data.form.others_org = $event;
         })
       }, null, 8
@@ -43471,99 +43017,49 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
         message: $data.form.errors.others_org
       }, null, 8
       /* PROPS */
-      , ["message"])])) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_64, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_InputLabel, {
-        "for": "eboss",
-        value: "3.  In setting up an Electronic Business One Stop Shop (e-BOSS), which of the following reform has not been implemented in your LGU?"
-      }), (0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("select", {
-        name: "eboss",
-        id: "eboss",
-        "onUpdate:modelValue": _cache[22] || (_cache[22] = function ($event) {
-          return $data.form.eboss = $event;
-        }),
-        "class": "block w-full mt-1 border-gray-300 rounded-md"
-      }, [_hoisted_65, ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)($data.test6, function (dept) {
-        return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("option", {
-          key: dept
-        }, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(dept), 1
-        /* TEXT */
-        );
-      }), 128
-      /* KEYED_FRAGMENT */
-      ))], 512
-      /* NEED_PATCH */
-      ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelSelect, $data.form.eboss]]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_InputError, {
-        "class": "mt-2",
-        message: $data.form.errors.eboss
-      }, null, 8
-      /* PROPS */
-      , ["message"])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_66, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_InputLabel, {
-        "for": "topics",
-        value: "4. Which of the following session topics would you like to attend?"
-      }), (0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("select", {
-        name: "topics",
-        id: "topics",
-        "onUpdate:modelValue": _cache[23] || (_cache[23] = function ($event) {
-          return $data.form.topics = $event;
-        }),
-        "class": "block w-full mt-1 border-gray-300 rounded-md"
-      }, [_hoisted_67, ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)($data.test7, function (dept) {
-        return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("option", {
-          key: dept
-        }, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(dept), 1
-        /* TEXT */
-        );
-      }), 128
-      /* KEYED_FRAGMENT */
-      ))], 512
-      /* NEED_PATCH */
-      ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelSelect, $data.form.topics]]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_InputError, {
-        "class": "mt-2",
-        message: $data.form.errors.topics
-      }, null, 8
-      /* PROPS */
-      , ["message"])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" \r\n              <div class=\"flex items-center mt-4\">\r\n              \r\n\r\n                          \r\n    <h2 class=\"mt-1 text-xs itallic\">Scanned Documents With Signatures</h2>\r\n                                            <input\r\n                                          \r\n                                                type=\"file\"\r\n                                                id=\"govtid\"\r\n                                                class=\"mb-5 upload-photo\"\r\n                                                    @input=\"\r\n                                                    form.reciept_filename =\r\n                                                        $event.target.files[0]\r\n                                                \"\r\n                                                name=\"upload\"\r\n                                                 accept=\"image/png, image/jpeg, image/jpg\"\r\n                                                @change=\"onFileChange\"\r\n                                            />\r\n                             </div> "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" <div  class=\"flex flex-col items-center justify-center mt-2\">\r\n                                          <img\r\n                                                    class=\"object-contain w-full max-h-40\"\r\n                                                    :src=\"holder\"\r\n                                                />\r\n                                      \r\n                                  <button\r\n                                                    class=\"p-2 mt-4 text-red-500 border \"\r\n                                                    @click=\"removeImage\"\r\n                                                >\r\n                                                    Remove Image\r\n                                                </button>\r\n\r\n            </div> "), _hoisted_68, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_69, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_InputLabel, {
+      , ["message"])])) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" <div class=\"grid grid-cols-4 mt-6 mb-6 sm:grid-cols-3 sm:gap-2\">\r\n                <hr class=\"col-span-1 mt-3 bg-gray-200 border-2 sm:col-span-1\">\r\n                <div class=\"col-span-2 text-lg font-bold text-center text-gray-500 sm:mx-auto sm:col-span-1\">Survey on BPLS</div>\r\n                <hr class=\"col-span-1 mt-3 bg-gray-200 border-2 sm:col-span-1\">\r\n\r\n            </div>   "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" <div class=\"grid-cols-1 sm:grid sm:grid-cols-2 \">\r\n                   <div class=\"col-span-1 mt-1\">\r\n                <InputLabel for=\"position\" value=\"Position\" />\r\n                <TextInput id=\"position\" type=\"text\" class=\"block w-full mt-1 \" v-model=\"form.position\" />\r\n                <InputError class=\"mt-2\" :message=\"form.errors.position\" />\r\n            </div>\r\n            <div class=\"col-span-1 mt-1 sm:ml-4\">\r\n                 <InputLabel for=\"nat\" value=\"Nature of Employment\" />\r\n                    <select name=\"nat\" id=\"nat\"  v-model=\"form.nat_employment\"  class=\"block w-full mt-1 border-gray-300 rounded-md \">\r\n                            <option value=\"\" selected hidden disabled>\r\n                                    Select One\r\n\r\n                            </option>\r\n                            <option  v-for=\"depts in test3\" :key=\"depts\" >\r\n                                    {{depts}}\r\n                            </option>\r\n                        \r\n                    </select>\r\n                    <InputError class=\"mt-2\" :message=\"form.errors.nat_employment\" />\r\n            </div>\r\n           \r\n                </div>\r\n\r\n            <div class=\"mt-4 \">\r\n                \r\n                <InputLabel for=\"depts\" value=\"Department / Office\" />\r\n                <TextInput id=\"depts\" type=\"text\" class=\"block w-full mt-1\" v-model=\"form.department\"  />\r\n                <InputError class=\"mt-2\" :message=\"form.errors.department\" />\r\n           \r\n            </div>\r\n              "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" <div class=\"mt-4\">\r\n                 <InputLabel for=\"org\" value=\"1. Is your BPLO a separate department/office?\" />\r\n                    <select name=\"org\" id=\"org\"  v-model=\"form.org_setup\"  class=\"block w-full mt-1 border-gray-300 rounded-md \">\r\n                            <option value=\"\" selected hidden disabled>\r\n                                    Select one\r\n\r\n                            </option>\r\n                            <option  v-for=\"dept in test\" :key=\"dept\" >\r\n                                    {{dept}}\r\n                            </option>\r\n\r\n                    </select>\r\n                    <InputError class=\"mt-2\" :message=\"form.errors.org_setup\" />\r\n            </div>\r\n\r\n                  <div class=\"mt-4\">\r\n                 <InputLabel for=\"local\" value=\"2. Which of the following  offices does assessment for local business tax?\" />\r\n                    <select name=\"local\" id=\"local\"  v-model=\"form.bplo_func\"  class=\"block w-full mt-1 border-gray-300 rounded-md \">\r\n                            <option value=\"\" selected hidden disabled>\r\n                                    Select One\r\n\r\n                            </option>\r\n                            <option  v-for=\"depts in test1\" :key=\"depts\" >\r\n                                    {{depts}}\r\n                            </option>\r\n\r\n                    </select>\r\n                    <InputError class=\"mt-2\" :message=\"form.errors.bplo_func\" />\r\n            </div>\r\n          <div class=\"mt-4\" v-if=\"form.bplo_func==='Others'\">\r\n                <InputLabel for=\"oth\" value=\"Others: Please Specify\" />\r\n                <TextInput id=\"oth\" type=\"text\" class=\"block w-full mt-1\" v-model=\"form.others_org\"  />\r\n                <InputError class=\"mt-2\" :message=\"form.errors.others_org\" />\r\n            </div>\r\n\r\n<div class=\"mt-4\">\r\n                 <InputLabel for=\"eboss\" value=\"3.  In setting up an Electronic Business One Stop Shop (e-BOSS), which of the following reform has not been implemented in your LGU?\"/>\r\n                    <select name=\"eboss\" id=\"eboss\"  v-model=\"form.eboss\"  class=\"block w-full mt-1 border-gray-300 rounded-md \">\r\n                            <option value=\"\" selected hidden disabled>\r\n                                    Select one\r\n\r\n                            </option>\r\n                            <option  v-for=\"dept in test6\" :key=\"dept\" >\r\n                                    {{dept}}\r\n                            </option>\r\n\r\n                    </select>\r\n                    <InputError class=\"mt-2\" :message=\"form.errors.eboss\" />\r\n            </div>\r\n<div class=\"mt-4\">\r\n                 <InputLabel for=\"topics\" value=\"4. Which of the following session topics would you like to attend?\"/>\r\n                    <select name=\"topics\" id=\"topics\"  v-model=\"form.topics\"  class=\"block w-full mt-1 border-gray-300 rounded-md \">\r\n                            <option value=\"\" selected hidden disabled>\r\n                                    Select one\r\n\r\n                            </option>\r\n                            <option  v-for=\"dept in test7\" :key=\"dept\" >\r\n                                    {{dept}}\r\n                            </option>\r\n\r\n                    </select>\r\n                    <InputError class=\"mt-2\" :message=\"form.errors.topics\" />\r\n            </div> "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" \r\n              <div class=\"flex items-center mt-4\">\r\n              \r\n\r\n                          \r\n    <h2 class=\"mt-1 text-xs itallic\">Scanned Documents With Signatures</h2>\r\n                                            <input\r\n                                          \r\n                                                type=\"file\"\r\n                                                id=\"govtid\"\r\n                                                class=\"mb-5 upload-photo\"\r\n                                                    @input=\"\r\n                                                    form.reciept_filename =\r\n                                                        $event.target.files[0]\r\n                                                \"\r\n                                                name=\"upload\"\r\n                                                 accept=\"image/png, image/jpeg, image/jpg\"\r\n                                                @change=\"onFileChange\"\r\n                                            />\r\n                             </div> "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" <div  class=\"flex flex-col items-center justify-center mt-2\">\r\n                                          <img\r\n                                                    class=\"object-contain w-full max-h-40\"\r\n                                                    :src=\"holder\"\r\n                                                />\r\n                                      \r\n                                  <button\r\n                                                    class=\"p-2 mt-4 text-red-500 border \"\r\n                                                    @click=\"removeImage\"\r\n                                                >\r\n                                                    Remove Image\r\n                                                </button>\r\n\r\n            </div> "), _hoisted_45, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_46, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_InputLabel, {
         "for": "Paid",
         value: "Payment Options"
       }), (0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("select", {
         name: "Paid",
         id: "Paid",
-        "onUpdate:modelValue": _cache[24] || (_cache[24] = function ($event) {
+        "onUpdate:modelValue": _cache[15] || (_cache[15] = function ($event) {
           return $data.form.paid = $event;
         }),
         "class": "block w-full mt-1 border-gray-300 rounded-md"
-      }, _hoisted_73, 512
+      }, _hoisted_50, 512
       /* NEED_PATCH */
       ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelSelect, $data.form.paid]]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_InputError, {
         "class": "mt-2",
         message: $data.form.errors.paid
       }, null, 8
       /* PROPS */
-      , ["message"])]), $data.form.paid == "Paid" ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_74, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_InputLabel, {
+      , ["message"])]), $data.form.paid == "Paid" ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_51, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_InputLabel, {
         "for": "govtid",
         value: "Attachment",
         "class": "mt-4"
-      }), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_75, [!$data.holder ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_76, [_hoisted_77, _hoisted_78, _hoisted_79, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
+      }), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_52, [!$data.holder ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_53, [_hoisted_54, _hoisted_55, _hoisted_56, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
         type: "file",
         id: "govtid",
         "class": "mb-5 upload-photo",
-        onInput: _cache[25] || (_cache[25] = function ($event) {
+        onInput: _cache[16] || (_cache[16] = function ($event) {
           return $data.form.reciept_filename = $event.target.files[0];
         }),
         name: "upload",
         accept: "image/png, image/jpeg, image/jpg",
-        onChange: _cache[26] || (_cache[26] = function () {
+        onChange: _cache[17] || (_cache[17] = function () {
           return $options.onFileChange && $options.onFileChange.apply($options, arguments);
         })
       }, null, 32
       /* HYDRATE_EVENTS */
-      )])) : ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_80, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("img", {
+      )])) : ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_57, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("img", {
         "class": "object-contain w-full max-h-40",
         src: $data.holder
       }, null, 8
       /* PROPS */
-      , _hoisted_81), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
+      , _hoisted_58), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
         "class": "p-2 mt-4 text-red-500 border",
-        onClick: _cache[27] || (_cache[27] = function () {
+        onClick: _cache[18] || (_cache[18] = function () {
           return $options.removeImage && $options.removeImage.apply($options, arguments);
         })
       }, " Remove Image ")]))]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_InputError, {
@@ -43571,7 +43067,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
         message: $data.form.errors.reciept_filename
       }, null, 8
       /* PROPS */
-      , ["message"])])) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_82, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_PrimaryButton, {
+      , ["message"])])) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_59, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_PrimaryButton, {
         "class": (0,vue__WEBPACK_IMPORTED_MODULE_0__.normalizeClass)(["w-full text-center rounded-2xl sm:w-1/2", {
           'opacity-25': $data.form.processing
         }]),
@@ -43579,7 +43075,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
         onClick: $options.submit
       }, {
         "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
-          return [_hoisted_83];
+          return [_hoisted_60];
         }),
         _: 1
         /* STABLE */
@@ -43590,7 +43086,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
       /* PROPS, HYDRATE_EVENTS */
       , _hoisted_15)], 512
       /* NEED_PATCH */
-      )]), _hoisted_84];
+      )]), _hoisted_61];
     }),
     _: 1
     /* STABLE */
@@ -94172,34 +93668,6 @@ if (false) {}
 
 /***/ }),
 
-/***/ "./resources/js/Pages/Auth/Dashboard copy.vue":
-/*!****************************************************!*\
-  !*** ./resources/js/Pages/Auth/Dashboard copy.vue ***!
-  \****************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var _Dashboard_copy_vue_vue_type_template_id_15cffa62__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Dashboard copy.vue?vue&type=template&id=15cffa62 */ "./resources/js/Pages/Auth/Dashboard copy.vue?vue&type=template&id=15cffa62");
-/* harmony import */ var _Dashboard_copy_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Dashboard copy.vue?vue&type=script&lang=js */ "./resources/js/Pages/Auth/Dashboard copy.vue?vue&type=script&lang=js");
-/* harmony import */ var C_xampp_htdocs_nabplo_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
-
-
-
-
-;
-const __exports__ = /*#__PURE__*/(0,C_xampp_htdocs_nabplo_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__["default"])(_Dashboard_copy_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__["default"], [['render',_Dashboard_copy_vue_vue_type_template_id_15cffa62__WEBPACK_IMPORTED_MODULE_0__.render],['__file',"resources/js/Pages/Auth/Dashboard copy.vue"]])
-/* hot reload */
-if (false) {}
-
-
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__exports__);
-
-/***/ }),
-
 /***/ "./resources/js/Pages/Auth/Dashboard.vue":
 /*!***********************************************!*\
   !*** ./resources/js/Pages/Auth/Dashboard.vue ***!
@@ -94220,6 +93688,34 @@ __webpack_require__.r(__webpack_exports__);
 
 ;
 const __exports__ = /*#__PURE__*/(0,C_xampp_htdocs_nabplo_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__["default"])(_Dashboard_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__["default"], [['render',_Dashboard_vue_vue_type_template_id_44d24236__WEBPACK_IMPORTED_MODULE_0__.render],['__file',"resources/js/Pages/Auth/Dashboard.vue"]])
+/* hot reload */
+if (false) {}
+
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__exports__);
+
+/***/ }),
+
+/***/ "./resources/js/Pages/Auth/Dashboard_copy.vue":
+/*!****************************************************!*\
+  !*** ./resources/js/Pages/Auth/Dashboard_copy.vue ***!
+  \****************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _Dashboard_copy_vue_vue_type_template_id_71ef540e__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Dashboard_copy.vue?vue&type=template&id=71ef540e */ "./resources/js/Pages/Auth/Dashboard_copy.vue?vue&type=template&id=71ef540e");
+/* harmony import */ var _Dashboard_copy_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Dashboard_copy.vue?vue&type=script&lang=js */ "./resources/js/Pages/Auth/Dashboard_copy.vue?vue&type=script&lang=js");
+/* harmony import */ var C_xampp_htdocs_nabplo_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
+
+
+
+
+;
+const __exports__ = /*#__PURE__*/(0,C_xampp_htdocs_nabplo_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__["default"])(_Dashboard_copy_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__["default"], [['render',_Dashboard_copy_vue_vue_type_template_id_71ef540e__WEBPACK_IMPORTED_MODULE_0__.render],['__file',"resources/js/Pages/Auth/Dashboard_copy.vue"]])
 /* hot reload */
 if (false) {}
 
@@ -95348,22 +94844,6 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./resources/js/Pages/Auth/Dashboard copy.vue?vue&type=script&lang=js":
-/*!****************************************************************************!*\
-  !*** ./resources/js/Pages/Auth/Dashboard copy.vue?vue&type=script&lang=js ***!
-  \****************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (/* reexport safe */ _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_Dashboard_copy_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_0__["default"])
-/* harmony export */ });
-/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_Dashboard_copy_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!../../../../node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./Dashboard copy.vue?vue&type=script&lang=js */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/Pages/Auth/Dashboard copy.vue?vue&type=script&lang=js");
- 
-
-/***/ }),
-
 /***/ "./resources/js/Pages/Auth/Dashboard.vue?vue&type=script&lang=js":
 /*!***********************************************************************!*\
   !*** ./resources/js/Pages/Auth/Dashboard.vue?vue&type=script&lang=js ***!
@@ -95376,6 +94856,22 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (/* reexport safe */ _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_Dashboard_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_0__["default"])
 /* harmony export */ });
 /* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_Dashboard_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!../../../../node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./Dashboard.vue?vue&type=script&lang=js */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/Pages/Auth/Dashboard.vue?vue&type=script&lang=js");
+ 
+
+/***/ }),
+
+/***/ "./resources/js/Pages/Auth/Dashboard_copy.vue?vue&type=script&lang=js":
+/*!****************************************************************************!*\
+  !*** ./resources/js/Pages/Auth/Dashboard_copy.vue?vue&type=script&lang=js ***!
+  \****************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* reexport safe */ _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_Dashboard_copy_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_0__["default"])
+/* harmony export */ });
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_Dashboard_copy_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!../../../../node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./Dashboard_copy.vue?vue&type=script&lang=js */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/Pages/Auth/Dashboard_copy.vue?vue&type=script&lang=js");
  
 
 /***/ }),
@@ -96244,22 +95740,6 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./resources/js/Pages/Auth/Dashboard copy.vue?vue&type=template&id=15cffa62":
-/*!**********************************************************************************!*\
-  !*** ./resources/js/Pages/Auth/Dashboard copy.vue?vue&type=template&id=15cffa62 ***!
-  \**********************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "render": () => (/* reexport safe */ _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_dist_templateLoader_js_ruleSet_1_rules_2_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_Dashboard_copy_vue_vue_type_template_id_15cffa62__WEBPACK_IMPORTED_MODULE_0__.render)
-/* harmony export */ });
-/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_dist_templateLoader_js_ruleSet_1_rules_2_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_Dashboard_copy_vue_vue_type_template_id_15cffa62__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!../../../../node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!../../../../node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./Dashboard copy.vue?vue&type=template&id=15cffa62 */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/Pages/Auth/Dashboard copy.vue?vue&type=template&id=15cffa62");
-
-
-/***/ }),
-
 /***/ "./resources/js/Pages/Auth/Dashboard.vue?vue&type=template&id=44d24236":
 /*!*****************************************************************************!*\
   !*** ./resources/js/Pages/Auth/Dashboard.vue?vue&type=template&id=44d24236 ***!
@@ -96272,6 +95752,22 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "render": () => (/* reexport safe */ _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_dist_templateLoader_js_ruleSet_1_rules_2_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_Dashboard_vue_vue_type_template_id_44d24236__WEBPACK_IMPORTED_MODULE_0__.render)
 /* harmony export */ });
 /* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_dist_templateLoader_js_ruleSet_1_rules_2_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_Dashboard_vue_vue_type_template_id_44d24236__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!../../../../node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!../../../../node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./Dashboard.vue?vue&type=template&id=44d24236 */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/Pages/Auth/Dashboard.vue?vue&type=template&id=44d24236");
+
+
+/***/ }),
+
+/***/ "./resources/js/Pages/Auth/Dashboard_copy.vue?vue&type=template&id=71ef540e":
+/*!**********************************************************************************!*\
+  !*** ./resources/js/Pages/Auth/Dashboard_copy.vue?vue&type=template&id=71ef540e ***!
+  \**********************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* reexport safe */ _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_dist_templateLoader_js_ruleSet_1_rules_2_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_Dashboard_copy_vue_vue_type_template_id_71ef540e__WEBPACK_IMPORTED_MODULE_0__.render)
+/* harmony export */ });
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_dist_templateLoader_js_ruleSet_1_rules_2_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_Dashboard_copy_vue_vue_type_template_id_71ef540e__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!../../../../node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!../../../../node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./Dashboard_copy.vue?vue&type=template&id=71ef540e */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/Pages/Auth/Dashboard_copy.vue?vue&type=template&id=71ef540e");
 
 
 /***/ }),
@@ -98278,8 +97774,8 @@ var map = {
 	"./Admin/Verification.vue": "./resources/js/Pages/Admin/Verification.vue",
 	"./Articles.vue": "./resources/js/Pages/Articles.vue",
 	"./Auth/ConfirmPassword.vue": "./resources/js/Pages/Auth/ConfirmPassword.vue",
-	"./Auth/Dashboard copy.vue": "./resources/js/Pages/Auth/Dashboard copy.vue",
 	"./Auth/Dashboard.vue": "./resources/js/Pages/Auth/Dashboard.vue",
+	"./Auth/Dashboard_copy.vue": "./resources/js/Pages/Auth/Dashboard_copy.vue",
 	"./Auth/ForgotPassword.vue": "./resources/js/Pages/Auth/ForgotPassword.vue",
 	"./Auth/Home.vue": "./resources/js/Pages/Auth/Home.vue",
 	"./Auth/Login.vue": "./resources/js/Pages/Auth/Login.vue",

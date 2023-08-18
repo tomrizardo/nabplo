@@ -31,7 +31,7 @@ class RegisteredUserController extends Controller
      */
     public function create()
     {
-        $recent_app_listing = DB::table('test')->orderBy('municipality')->get();
+        $recent_app_listing = DB::table('municipalities')->orderBy('municipality')->get();
         // $recent_app_listing = Municipality::select('name')->get()->pluck('name');
         return Inertia::render('Registers',[
            'municipality'=>$recent_app_listing
@@ -67,24 +67,25 @@ class RegisteredUserController extends Controller
             'mid_name' => 'nullable|max:160|regex:'.$regx_alpha,
             // 'addr_region' => 'nullable|max:160',
             'addr_municipality' => 'required|max:160',
+            // 'payment_type' => 'required|max:160',
             // 'addr_province' => 'nullable|max:160',
             'department' => 'required|max:160',
             'position' => 'required|max:160',
-            'org_setup' => 'required|max:30',
-            'bplo_func' => 'required|max:160',
+            // 'org_setup' => 'required|max:30',
+            // 'bplo_func' => 'required|max:160',
             'membr_filename'=> ['required_if:mempaid,Paid','nullable','max:'.$max_filesize, 'mimes:jpeg,jpg,png'],
             'nat_employment' => 'required|max:60',
-            'addr_type' => 'max:160',
-            'others_org'=>['nullable','required_if:bplo_func,Others'],
+            // 'addr_type' => 'max:160',
+            'others_department'=>['nullable','required_if:department,Others'],
             'lgu_class'=>'max:160',
             'paid'=>'required|max:30',
-            'eboss'=>'required|max:120',
-            'topics'=>'required|max:120',
-            'exec_name' => 'required|max:160'.$regx_alpha,
+            // 'eboss'=>'required|max:120',
+            // 'topics'=>'required|max:120',
+            'exec_name' => 'required|max:160',
             'full_addr' => 'required|max:255',
             'membr_type' => 'required|max:160',
-                'membr_fee' => ['required_if:mempaid,Paid','nullable','max:160'],
-			'mempaid' => 'required|max:30',
+                // 'membr_fee' => ['required_if:mempaid,Paid','nullable','max:160'],
+			// 'mempaid' => 'required|max:30',
             'membr_since' => ['nullable', 'required_if:membr_type,Renewal','max:20'],
             'reciept_filename' => ['required_if:paid,Paid','nullable', 'max:'.$max_filesize, 'mimes:jpeg,jpg,png'],
             'email' => 'required|string|email|max:255|unique:participants'],[],['reciept_filename' => 'Attachment','addr_municipality'=>'Municipality', 'contact_no' => 'Mobile Number',
@@ -109,6 +110,7 @@ class RegisteredUserController extends Controller
                 'last_name' => $request->last_name,
                 'first_name' => $request->first_name, 
                  'mid_name'  =>$request->mid_name,
+                 'contact_no' =>$request->contact_no
             ]
         )->first();
         if (!empty($find_info)) {
@@ -150,11 +152,11 @@ class RegisteredUserController extends Controller
                 $insert_bene['reciept_filename']=$insert['reciept_filename'];
             }
     
-            if (!empty($request->file('membr_filename'))) {
-                $insert=$this->uploadAttachments($request->file('membr_filename'), $user_city,$userfull);
+            // if (!empty($request->file('membr_filename'))) {
+            //     $insert=$this->uploadAttachments($request->file('membr_filename'), $user_city,$userfull);
             
-                $insert_bene['membr_filename']=$insert['membr_filename'];
-            }
+            //     $insert_bene['membr_filename']=$insert['membr_filename'];
+            // }
     
 
             $all_caps_exceptionn = ['email'];
@@ -229,7 +231,7 @@ class RegisteredUserController extends Controller
     public function uploadAttachment(Object $request_file,String $user_city,String $userfull)
     {
        
-        $folder = 'receipt_files/'.$user_city.'/'.$userfull.'/';
+        $folder = 'sixth_receipt_files/'.$user_city.'/'.$userfull.'/';
 
         $full_path = storage_path('app/'.$folder);
         $up_filename = preg_replace('/[^a-zA-Z0-9\-\._ ]/', '-', $request_file->getClientOriginalName()); // sanitize illegal string and replace it wtith dash(-)

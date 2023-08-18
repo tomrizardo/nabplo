@@ -4,7 +4,7 @@
 <Head title="Register" />
     <RegLayout>
 
-     <div class="items-start mx-auto justify-evenly laptop:flex tablet:block">
+     <div class="items-start mx-auto md:max-h-screen justify-evenly laptop:flex tablet:block">
          <div
  
   class="fixed inset-0 z-10 flex items-center justify-center w-full modal bg-semi-75"
@@ -61,9 +61,9 @@ I hereby consent the National Association of the Business Permits and Licensing 
      <!-- <img :src="$page.props.base_url + 'assets/ann.png' " alt="" class="object-contain w-screen laptop:h-screen desktop:h-screen"> -->
 
 </div>
-<div  class="container w-screen mx-auto laptop:overflow-y-scroll test " ref="main">
+<div  class="w-screen mx-auto laptop:overflow-y-scroll test" ref="main">
             <!-- <div class="desktop:pl-[7rem] laptop:pl-[8rem] mt-10 mb-6 ml-0 text-3xl bg-black font-bold laptop:text-left ease-in-out desktop:ml-28   "> -->
-                <div class="container items-center justify-center mx-auto ml-3 text-3xl font-bold text-gray-600 mt-14 tablet:max-w-2xl laptop:mx-auto tablet:ml-10 tablet:flex-col laptop:max-w-xl text-start ">
+                <div class="items-center justify-center mx-auto ml-3 text-3xl font-bold text-gray-600 mt-14 tablet:max-w-2xl laptop:mx-auto tablet:ml-10 tablet:flex-col laptop:max-w-xl text-start">
                Lets get started
                     <div class="mt-2 text-sm italic font-medium text-gray-500 ">
                 Please tell us about yourself
@@ -137,7 +137,7 @@ I hereby consent the National Association of the Business Permits and Licensing 
             </div>
               <div class="mt-4">
                 <InputLabel for="contact_no" value="Mobile No." />
-                <TextInput id="contact_no" type="number" class="block w-full mt-1" v-model="form.contact_no" :class="{'border-red-500': form.errors.contact_no } " @blur="form.errors.contact_no == false"/>
+                <TextInput id="contact_no" type="number" class="block w-full mt-1" v-model="form.contact_no" :class="{'border-red-500': form.errors.contact_no } " @blur="form.errors.contact_no == false"  @keydown="checkMaxLength"/>
                 <InputError class="mt-2" :message="form.errors.contact_no" />
             </div>
                
@@ -176,7 +176,7 @@ I hereby consent the National Association of the Business Permits and Licensing 
       
            
             </div>   
-    <div class="mt-4">
+    <!-- <div class="mt-4">
                  <InputLabel for="memPaid" value="Membership Payment Options" />
                     <select name="memPaid" id="memPaid"  v-model="form.mempaid"  class="block w-full mt-1 border-gray-300 rounded-md ">
                             <option value="" selected hidden disabled>
@@ -195,8 +195,8 @@ I hereby consent the National Association of the Business Permits and Licensing 
 
                     </select>
                     <InputError class="mt-2" :message="form.errors.mempaid" />
-            </div>
-                <div class="mt-4" v-if="form.mempaid ==='Paid'">
+            </div> -->
+                <!-- <div class="mt-4" v-if="form.mempaid ==='Paid'">
                 <InputLabel for="since" value="Membership Fee" />
         
           
@@ -214,10 +214,10 @@ I hereby consent the National Association of the Business Permits and Licensing 
       
            
             </div>
-              		
+              		 -->
 
              
-              <div v-if="form.mempaid ==='Paid'" >
+              <!-- <div v-if="form.mempaid ==='Paid'" >
   <InputLabel for="proof" value="Membership Attachment" class="mt-4"/>
    <div class="py-3 mt-1 border-4 border-dashed">
        
@@ -282,7 +282,7 @@ I hereby consent the National Association of the Business Permits and Licensing 
      
 
    <InputError class="mt-1" :message="form.errors.membr_filename" />
-        </div>
+        </div> -->
    <div class="grid grid-cols-4 mt-6 mb-6 sm:grid-cols-3 sm:gap-2">
                 <hr class="col-span-1 mt-3 bg-gray-200 border-2 sm:col-span-1">
                 <div class="col-span-2 text-lg font-bold text-center text-gray-500 sm:mx-auto sm:col-span-1">LGU Information</div>
@@ -338,21 +338,42 @@ I hereby consent the National Association of the Business Permits and Licensing 
             </div>
            
                 </div>
-
+<!-- 
             <div class="mt-4 ">
                 
                 <InputLabel for="dept" value="Department / Office" />
                 <TextInput id="dept" type="text" class="block w-full mt-1" v-model="form.department"  />
                 <InputError class="mt-2" :message="form.errors.department" />
            
+            </div> -->
+
+                    <div class="mt-4">
+                 <InputLabel for="local" value="Department / Office" />
+                    <select name="local" id="local"  v-model="form.department"  class="block w-full mt-1 border-gray-300 rounded-md ">
+                            <option value="" selected hidden disabled>
+                                    Select One
+
+                            </option>
+                            <option  v-for="depts in test1" :key="depts" >
+                                    {{depts}}
+                            </option>
+
+                    </select>
+                    <InputError class="mt-2" :message="form.errors.department" />
+            </div>
+
+              <div class="mt-4" v-if="form.department==='Others'">
+                <InputLabel for="oth" value="Others: Please Specify Department" class="text-sm" />
+                <TextInput id="oth" type="text" class="block w-full mt-1" v-model="form.others_org"  />
+                <InputError class="mt-2" :message="form.errors.others_org" />
             </div>
          
-         <div class="grid grid-cols-4 mt-6 mb-6 sm:grid-cols-3 sm:gap-2">
+         <!-- <div class="grid grid-cols-4 mt-6 mb-6 sm:grid-cols-3 sm:gap-2">
                 <hr class="col-span-1 mt-3 bg-gray-200 border-2 sm:col-span-1">
                 <div class="col-span-2 text-lg font-bold text-center text-gray-500 sm:mx-auto sm:col-span-1">Survey on BPLS</div>
                 <hr class="col-span-1 mt-3 bg-gray-200 border-2 sm:col-span-1">
 
-            </div>  
+            </div>   -->
                <!-- <div class="grid-cols-1 sm:grid sm:grid-cols-2 ">
                    <div class="col-span-1 mt-1">
                 <InputLabel for="position" value="Position" />
@@ -386,7 +407,7 @@ I hereby consent the National Association of the Business Permits and Licensing 
               -->
             
          
-<div class="mt-4">
+<!-- <div class="mt-4">
                  <InputLabel for="org" value="1. Is your BPLO a separate department/office?" />
                     <select name="org" id="org"  v-model="form.org_setup"  class="block w-full mt-1 border-gray-300 rounded-md ">
                             <option value="" selected hidden disabled>
@@ -448,7 +469,7 @@ I hereby consent the National Association of the Business Permits and Licensing 
 
                     </select>
                     <InputError class="mt-2" :message="form.errors.topics" />
-            </div>
+            </div> -->
 
 <!-- 
               <div class="flex items-center mt-4">
@@ -605,17 +626,17 @@ import InputLabel from '@/Components/InputLabel.vue';
 import PrimaryButton from '@/Components/Rebutton.vue';
 import TextInput from '@/Components/TextInput.vue';
 import {Link,Head } from '@inertiajs/inertia-vue3';
- const test3= ["Permanent","Casual","Job Order", "Consultant"]
+ const test3= ["Permanent","Casual","Job Order", "Consultant","Coterminous"]
   const test6= ["Colocation of offices involved in BPLS","Integration of barangay clearance","Adoption of online assessment and payment"," Integration of FSIC in BPLS"]
  const test2= ["New","Renewal"]
   const test7 = ["Setting up an Electronic Business One Stop Shop","Integration of barangay clearance","Use of online payment facility", "Integration of FSIC fees","Use of electronic signature/official receipt"]
  const test4 = ["1st","2nd","3rd", "4th","5th","6th"]
-  const year = ["1998","1999","2000","2001","2002","2003","2004","2005","2006","2007","2008","2009","2010","2011","2012","2013","2014","2015","2016","2017","2018", "2019","2020","2021","2022"]
+  const year = ["1998","1999","2000","2001","2002","2003","2004","2005","2006","2007","2008","2009","2010","2011","2012","2013","2014","2015","2016","2017","2018", "2019","2020","2021","2022","2023"]
  const test5=["Special Class","Highly Urbanized","Component"]
  const test1= ["Business Permits And Licensing Office","City Treasurer's Office/Municipal Treasurer's Office",'Others']
  const test= ["Yes","No"]
   const ext_names=["I","II","III","IV","V","JR","SR"]
-  const fee=["Highly Urbanized City - Php 10,000.00","Component City - Php 5,000.00","Municipality - Php 2,000.00"]
+//   const fee=["Highly Urbanized City - Php 10,000.00","Component City - Php 5,000.00","Municipality - Php 2,000.00"]
   
 export default{
  
@@ -636,7 +657,6 @@ test4,
 test5,
 year,
 test6,
-fee,
 test7,
     currentStep:'',
     test,
@@ -655,28 +675,31 @@ options: {
   form: this.$inertia.form({
                 paid:"",
               ext_name:"",
-              topics:"",
+            //   topics:"",
                 first_name: "",
                  last_name: "",
                   mid_name: "",
                   position:"",
                   department:"",
                   exec_name:"",
+                  payment_type:"",
                       addr_municipality:'',
+                      addr_province:'',
+                      addr_region:'',
                     //   addr_type:"",
                         others_org:"",
                       contact_no:"",
                           full_addr:"",
                           nat_employment:"",
-                          org_setup:"",
-                          bplo_func:"",
+                        //   org_setup:"",
+                        //   bplo_func:"",
                           membr_type:"",
                         paid:"",
-                        eboss:"",
-                        membr_fee:"",
-                        membr_filename:"",
+                        // eboss:"",
+                        // membr_fee:"",
+                        // membr_filename:"",
                           membr_since:null,    
-						mempaid:"",						  
+						// mempaid:"",						  
                 email: "",
                 reciept_filename:"",
          
@@ -715,7 +738,14 @@ methods:{
                 this.holder=""
         },
 
-
+checkMaxLength(event) {
+      if (event.keyCode === 9) {
+        return;
+      }
+      if (this.form.contact_no.length >= 11 && event.key !== "Backspace") {
+        event.preventDefault();
+      }
+    },
           onFileChanges(e) {
             var files = e.target.files || e.dataTransfer.files;
             if (!files.length) return;
@@ -751,7 +781,7 @@ methods:{
 
             this.error_fullname = '';
 
-            this.form.post(this.route("register"), {
+            this.form.post(this.route("submit"), {
                   forceFormData: true,
                 onFinish: () => {},
                   onError: (resp_data) => {
@@ -789,11 +819,13 @@ methods:{
 
 
   
-         selectItem(item) {
-		 this.form.addr_municipality = item.municipality;
-			// this.form.addr_type = item.lgu_type;
-            this.form.lgu_class = item.category;
-		},
+selectItem(item) {
+    this.form.addr_municipality = item.municipality;
+    // this.form.addr_type = item.lgu_type;
+    this.form.lgu_class = item.category;
+    this.form.addr_province = item.province;
+    this.form.addr_region = item.region;
+},
 		onInput(event) {
 			
 

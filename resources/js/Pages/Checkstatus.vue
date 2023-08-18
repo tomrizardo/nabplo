@@ -145,7 +145,7 @@
             class="max-w-xl mx-3 sm:p-6 sm:mt-0 md:mx-auto"
             v-if="show_data"
         >
-        <div v-if="form.paid === 'PAY LATER' ||form.mempaid ==='PAY LATER' " class="mb-6 font-semibold text-red-500 text-md">
+        <div v-if="form.paid === 'PAY LATER' " class="mb-6 font-semibold text-red-500 text-md">
                 Please upload payment information below to update your registration
         </div>
        
@@ -190,7 +190,7 @@
                         class="block w-full mt-1 bg-gray-200"
                     />
                 </div>
-                   <div class="mt-4">
+                   <!-- <div class="mt-4">
                     <BreezeLabel
                         for="trackorder"
                         value="Membership Payment:"
@@ -206,7 +206,7 @@
                      <span class="w-full ml-1 text-xs italic sm:text-sm" v-if="form.mempaid ==='PAY LATER'">
                         Note: Please upload receipt below to update your registration
                     </span>
-                </div>
+                </div> -->
                 <div class="mt-4">
                     <BreezeLabel
                         for="trackorder"
@@ -244,18 +244,18 @@
         </div>
 
 
-            <div v-if="form.paid === 'PAID' && form.mempaid === 'PAID'  && verification_status ==='PENDING'" class="mt-3 ml-1 font-bold text-blue-500 text-md">
+            <div v-if="form.paid === 'PAID'   && verification_status ==='PENDING'" class="mt-3 ml-1 font-bold text-blue-500 text-md">
                We are verifying your registration please come back soon.
         </div>
 
-                   <div class="grid grid-cols-4 mt-6 mb-3 sm:grid-cols-3 sm:gap-2" v-if="form.mempaid ==='PAY LATER'">
+                   <!-- <div class="grid grid-cols-4 mt-6 mb-3 sm:grid-cols-3 sm:gap-2" v-if="form.mempaid ==='PAY LATER'">
                 <hr class="col-span-1 mt-3 bg-gray-200 border-2 sm:col-span-1">
                 <div class="col-span-2 text-lg font-bold text-center text-gray-500 sm:mx-auto sm:col-span-1">Membership Attachment</div>
                 <hr class="col-span-1 mt-3 bg-gray-200 border-2 sm:col-span-1">
 
-            </div>  
+            </div>   -->
      
-  <div class="mt-4"  v-if="form.mempaid ==='PAY LATER'">
+  <!-- <div class="mt-4"  v-if="form.mempaid ==='PAY LATER'">
                   <BreezeLabel
                         for="trackorders"
                         value="Attachment:"
@@ -327,7 +327,7 @@
       
 
                           
-       </div>
+       </div> -->
 
        <div class="grid grid-cols-4 mt-6 mb-3 sm:grid-cols-3 sm:gap-2" v-if="form.paid ==='PAY LATER'">
                 <hr class="col-span-1 mt-3 bg-gray-200 border-2 sm:col-span-1">
