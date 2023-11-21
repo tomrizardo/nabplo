@@ -17,8 +17,8 @@ Route::get('/staff', function () {
 Route::get('/staffregister', function () {
     return Inertia::render('Admin/AdminRegister');
 })->middleware('guest:staff')->name('staff.register');
-Route::group(['prefix' => 'staff'], function() {
-    Route::post('login', [StaffLogin::class, 'store'])->name('staff.login');
+Route::group(['prefix' => 'staff' ], function() {
+    Route::post('login', [StaffLogin::class, 'store'])->name('staff.logins');
     Route::post('logout', [StaffLogin::class, 'destroy'])->name('staff.auth_logout');
     
     Route::post('article', [StaffDashboard::class, 'saveArticles'])->middleware('auth:staff')->name('saveArticless');

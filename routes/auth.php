@@ -14,7 +14,7 @@ use App\Http\Controllers\Home\DashboardController;
 Route::middleware('guest')->group(function () {
     Route::get('registers', [RegisteredUserController::class, 'create'])
                 ->name('register');
-  Route::get('reports', [DashboardController::class, 'create'])
+  Route::get('reports', [DashboardController::class, 'reports'])
                 ->name('reports');
     Route::post('registerss', [RegisteredUserController::class, 'store'])
      ->name('submit'); 

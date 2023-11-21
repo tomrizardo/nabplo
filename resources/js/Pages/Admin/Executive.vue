@@ -177,10 +177,10 @@ data(){
 saveRow(row) {
   const formData = new FormData();
     formData.append('sort', row.sort);
-    formData.append('prefix', row.prefix);
+    formData.append('prefix', row.prefix  || '');
   formData.append('first_name', row.first_name);
   formData.append('last_name', row.last_name);
-  formData.append('mid_name', row.mid_name);
+  formData.append('mid_name', row.mid_name || '');
   formData.append('position', row.position);
   // formData.append('description', row.description);
   formData.append('picture_filename', row.picture_filename);

@@ -10,7 +10,7 @@ use DB;
 use Str;
 class Participants extends Model
 {    protected $connection = 'mysql';
-    protected $table = 'registrants';
+    protected $table = 'registrants_copy';
     use HasFactory;
 
     protected $fillable = [
@@ -42,6 +42,7 @@ class Participants extends Model
         // 'org_setup',
         // 'bplo_func',
         'full_addr',
+        'reg_type',
         'paid',
 		// 'eboss',
 		// 'topics',

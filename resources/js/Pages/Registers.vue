@@ -140,7 +140,22 @@ I hereby consent the National Association of the Business Permits and Licensing 
                 <TextInput id="contact_no" type="number" class="block w-full mt-1" v-model="form.contact_no" :class="{'border-red-500': form.errors.contact_no } " @blur="form.errors.contact_no == false"  @keydown="checkMaxLength"/>
                 <InputError class="mt-2" :message="form.errors.contact_no" />
             </div>
-               
+                   <div class="mt-4">
+                
+                <InputLabel for="membr" value="Type of Participant" />
+              
+                    <select name="membr" id="membr"  v-model="form.reg_type"  class="block w-full mt-1 border-gray-300 rounded-md ">
+                            <option value="" selected hidden>
+                                    Select one
+
+                            </option>
+                            <option  v-for="dept in reg_type" :key="dept" >
+                                    {{dept}}
+                            </option>
+
+                    </select>
+                    <InputError class="mt-2" :message="form.errors.reg_type" />
+            </div>
               <div class="mt-4">
                 
                 <InputLabel for="membr" value="Type of Membership" />
@@ -364,7 +379,7 @@ I hereby consent the National Association of the Business Permits and Licensing 
 
               <div class="mt-4" v-if="form.department==='Others'">
                 <InputLabel for="oth" value="Others: Please Specify Department" class="text-sm" />
-                <TextInput id="oth" type="text" class="block w-full mt-1" v-model="form.others_org"  />
+                <TextInput id="oth" type="text" class="block w-full mt-1" v-model="form.others_department"  />
                 <InputError class="mt-2" :message="form.errors.others_org" />
             </div>
          
@@ -531,7 +546,26 @@ I hereby consent the National Association of the Business Permits and Licensing 
                     </select>
                     <InputError class="mt-2" :message="form.errors.paid" />
             </div>
-            
+                    <div class="mt-4">
+                 <InputLabel for="Paid" value="Payment Type" />
+                    <select name="Paid" id="Paid"  v-model="form.payment_type"  class="block w-full mt-1 border-gray-300 rounded-md ">
+                            <option value="" selected hidden disabled>
+                                    Select one
+
+                            </option>
+                            <option value="cash">
+                                 Cash
+
+                            </option>
+                            <option value="cheque">
+                                   Cheque
+
+                            </option>
+                           
+
+                    </select>
+                    <InputError class="mt-2" :message="form.errors.paid" />
+            </div>
             <div v-if='form.paid=="Paid"'>
   <InputLabel for="govtid" value="Attachment" class="mt-4" />
    <div class="py-3 mt-1 border-4 border-dashed">
@@ -627,8 +661,10 @@ import PrimaryButton from '@/Components/Rebutton.vue';
 import TextInput from '@/Components/TextInput.vue';
 import {Link,Head } from '@inertiajs/inertia-vue3';
  const test3= ["Permanent","Casual","Job Order", "Consultant","Coterminous"]
+ const payment= ["Cash","Cheque"]
   const test6= ["Colocation of offices involved in BPLS","Integration of barangay clearance","Adoption of online assessment and payment"," Integration of FSIC in BPLS"]
  const test2= ["New","Renewal"]
+ const reg_type= ["New Participant","Participated in Previous Conventions"]
   const test7 = ["Setting up an Electronic Business One Stop Shop","Integration of barangay clearance","Use of online payment facility", "Integration of FSIC fees","Use of electronic signature/official receipt"]
  const test4 = ["1st","2nd","3rd", "4th","5th","6th"]
   const year = ["1998","1999","2000","2001","2002","2003","2004","2005","2006","2007","2008","2009","2010","2011","2012","2013","2014","2015","2016","2017","2018", "2019","2020","2021","2022","2023"]
@@ -657,7 +693,9 @@ test4,
 test5,
 year,
 test6,
+payment,
 test7,
+reg_type,
     currentStep:'',
     test,
     test1,
@@ -676,6 +714,7 @@ options: {
                 paid:"",
               ext_name:"",
             //   topics:"",
+            reg_type:"",
                 first_name: "",
                  last_name: "",
                   mid_name: "",
@@ -687,7 +726,7 @@ options: {
                       addr_province:'',
                       addr_region:'',
                     //   addr_type:"",
-                        others_org:"",
+                        others_department:"",
                       contact_no:"",
                           full_addr:"",
                           nat_employment:"",

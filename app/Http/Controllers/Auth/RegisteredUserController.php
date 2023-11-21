@@ -31,10 +31,10 @@ class RegisteredUserController extends Controller
      */
     public function create()
     {
-        $recent_app_listing = DB::table('municipalities')->orderBy('municipality')->get();
+        // $recent_app_listing = DB::table('municipalities')->orderBy('municipality')->get();
         // $recent_app_listing = Municipality::select('name')->get()->pluck('name');
         return Inertia::render('Registers',[
-           'municipality'=>$recent_app_listing
+        //    'municipality'=>$recent_app_listing
 
         ]);
     }
@@ -60,7 +60,7 @@ class RegisteredUserController extends Controller
         $regx_alpha = '/^[a-zA-Z .ñÑ]+$/';
         $request->validate([
             
-            'contact_no' => 'required|numeric|digits:11|unique:participants',
+            'contact_no' => 'required|numeric|digits:11|unique:registrants',
             'ext_name' => 'nullable|max:10',
             'last_name' => 'required|max:160|regex:'.$regx_alpha,
             'first_name' => 'required|max:160|regex:'.$regx_alpha,
@@ -84,14 +84,15 @@ class RegisteredUserController extends Controller
             'exec_name' => 'required|max:160',
             'full_addr' => 'required|max:255',
             'membr_type' => 'required|max:160',
+            'reg_type' => 'required|max:160',
                 // 'membr_fee' => ['required_if:mempaid,Paid','nullable','max:160'],
 			// 'mempaid' => 'required|max:30',
             'membr_since' => ['nullable', 'required_if:membr_type,Renewal','max:20'],
             'reciept_filename' => ['required_if:paid,Paid','nullable', 'max:'.$max_filesize, 'mimes:jpeg,jpg,png'],
-            'email' => 'required|string|email|max:255|unique:participants'],[],['reciept_filename' => 'Attachment','addr_municipality'=>'Municipality', 'contact_no' => 'Mobile Number',
+            'email' => 'required|string|email|max:255|unique:registrants'],[],['reciept_filename' => 'Attachment','addr_municipality'=>'Municipality', 'contact_no' => 'Mobile Number',
             'membr_since' =>'Member Since', 'membr_type'=> 'Membership Type', 'full_addr' => 'Business Address','nat_employment'=> 'Natural Employment' ,'bplo_func'=>'Scope of BPLO FUNCTION','org_setup'=>'Organizational Setup'
             ,'exec_name'=>"Local Executive Full name",'position'=>'Position','department'=>'Department','last_name'=>'Last Name','first_name'=>'First Name','email'=>'Email', 'paid'=>'Payment Option' , 'membr_fee' => 'Membership Fee', 'membr_filename'=>'Proof of payment for membership'
-            , 'eboss'=>'E-boss','topics'=>'Session Topics', 'mempaid'=>'Membership Payment Option'
+            , 'eboss'=>'E-boss','topics'=>'Session Topics', 'mempaid'=>'Membership Payment Option', 'reg_type'=>'Registration Type',
             
         ]);
 

@@ -17,7 +17,7 @@ use App\Http\Controllers\Staff\StaffDashboard;
 |
 */
 
-Route::middleware(['guest', 'check.session.timeout'])->get('/', function () {
+Route::middleware(['guest'])->get('/', function () {
     return Inertia::render('Welcome', [
         'canLogin' => Route::has('login'),
         'canRegister' => Route::has('register'),

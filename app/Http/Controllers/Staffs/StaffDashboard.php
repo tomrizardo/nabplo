@@ -210,7 +210,7 @@ class StaffDashboard extends Controller
         $request->validate([
             'first_name' => 'required|max:160|regex:'.$regx_alpha,
             'last_name' => 'required|max:160',
-            'mid_name' => 'nullable|max:160|regex:'.$regx_alpha,
+            'mid_name' => 'max:160',
             'position' => 'required|max:160',
             'prefix' => 'max:160',
             'sort' => 'int',
@@ -230,10 +230,10 @@ class StaffDashboard extends Controller
     
         $executive->first_name = $request->input('first_name');
         $executive->last_name = $request->input('last_name');
-        $executive->mid_name = $request->input('mid_name');
+        $executive->mid_name = $request->input('mid_name')?? '';
         $executive->position = $request->input('position');
         $executive->sort = $request->input('sort');
-        $executive->prefix = $request->input('prefix');
+        $executive->prefix = $request->input('prefix')?? '';
     
         if ($request->hasFile('picture_filename')) {
             $path = $request->file('picture_filename')->store('app/public/profile');

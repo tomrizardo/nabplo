@@ -25,6 +25,29 @@ use DB;
 class DashboardController extends Controller
 {
 
+ /**
+     * Display the registration view.
+     *
+     * @return \Inertia\Response
+     */
+    public function reports()
+    {
+
+        $info = Participants::select('*')->get();
+        $uniqueMunicipalities = Participants::distinct('addr_municipality')->pluck('addr_municipality');
+        $uniqueMunicipalityCount = $uniqueMunicipalities->count();
+    
+
+
+        // $recent_app_listing = Municipality::select('name')->get()->pluck('name');
+        return Inertia::render('Reports',[
+        
+            'info'=>    $info,
+            'count' => $uniqueMunicipalityCount
+               
+        ]);
+    
+    }
 
     /**
      * Display the registration view.
